@@ -1,4 +1,4 @@
-#include "Triangle/triangle.h"
+#include "Triangle/triangle.hpp"
 #include <iostream>
 
 using namespace std;
@@ -9,7 +9,7 @@ int main()
     int sideLength2;
     int sideLength3;
 
-    cout << "Trangle Calculator" << endl;
+    cout << "Triangle Calculator" << endl;
     cout << "Enter First Side Length:" << endl;
     cin >> sideLength1;
 
@@ -24,8 +24,10 @@ int main()
                                       sideLength3);
     if (triangle->IsValidTriangle())
     {
+        cout << "This is a(n) <" + triangle->GetTringleTypeString() + "> Triangle" << endl;
         return 0;
     }
 
+    cout << "This is not a valid triangle" << endl;
     return 1;
 }
