@@ -15,15 +15,28 @@ int main()
     int sideLength3;
 
     // Print to screen and store user input values
-    cout << "Triangle Calculator" << endl;
-    cout << "Enter First Side Length:" << endl;
+    cout << "Triangle Side Type Calculator" << endl;
+    cout << "Enter First Side Length as an Integer:" << endl;
     cin >> sideLength1;
 
-    cout << "Enter Second Side Length:" << endl;
-    cin >> sideLength2;
+    if (!cin.fail())
+    {
+        cout << "Enter Second Side Length as an Integer:" << endl;
+        cin >> sideLength2;
+    }
 
-    cout << "Enter Third Side Length:" << endl;
-    cin >> sideLength3;
+    if (!cin.fail())
+    {
+        cout << "Enter Third Side Length as an Integer:" << endl;
+        cin >> sideLength3;
+    }
+
+    // Return error if given value is not an integer
+    if (cin.fail())
+    {
+        cout << "Side Lengths must be Integers" << endl;
+        return 1;
+    }
 
     // Create Triangle
     Triangle *triangle = new Triangle(sideLength1,
