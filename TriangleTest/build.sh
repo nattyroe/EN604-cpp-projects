@@ -1,5 +1,5 @@
 rm -f *.o
 rm -f TriangleTest
 
-g++ -c Triangle/triangle.cpp
-g++ triangle.o TriangleTest.cpp  -o TriangleTest
+g++ -c src/Triangle/triangle.cpp
+g++ triangle.o src/triangle-test.cpp  -o TriangleTest
