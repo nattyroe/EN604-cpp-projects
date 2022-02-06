@@ -10,33 +10,32 @@ Statistic::Statistic()
 
 double Statistic::average() const
 {
-    return this->mMean;
+    return this->sum / this->numPoints;
 }
 
 double Statistic::STD() const
 {
-    return sqrt(this->mVariance);
+    return sqrt(calcSampleVarience());
 }
 
 void Statistic::add(double x)
 {
-    cout << "Adding " << x << endl;
-    this->mValues.push_back(x);
-    this->recalculateStats(x);
-    cout << mNumPoints << endl;
+    ++this->numPoints;
+
+    this->sum += x;
+    this->summedSquares += x * x;
 }
 
-void Statistic::recalculateStats(double x)
+double Statistic::calcSampleVarience() const
 {
-    ++mNumPoints;
-
-    mMean += (x - mMean) / mNumPoints;
-    cout << mMean << endl;
-
-    double summedSquares = 0;
-    for (double x : this->mValues)
+    if (numPoints > 1)
     {
-        summedSquares += pow(x - mMean, 2.0);
+        // Integer numPoints is promoted to double
+        double squaredSum = this->sum * this->sum / this->numPoints;
+        return (this->summedSquares - squaredSum) / (this->numPoints - 1);
     }
-    this->mVariance = summedSquares / mNumPoints;
+    else
+    {
+        return 0;
+    }
 }

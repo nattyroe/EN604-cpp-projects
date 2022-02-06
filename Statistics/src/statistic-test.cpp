@@ -8,10 +8,12 @@ int main()
 {
     Statistic *statCalc = new Statistic();
 
-    array<double, 5> test = {1.0, 2.0, 3.0, 4.0, 5.0};
-    for (int i = 0; i < test.size(); i++)
+    //array<double, 5> test = {1.0, 2.0, 3.0, 4.0, 5.0};
+    array<double, 8> test = {10.0, 12.0, 23.0, 23.0, 16.0, 23.0, 21.0, 16.0};
+    for (double x : test)
     {
-        statCalc->add(test[i]);
+        cout << "value: " << x << endl;
+        statCalc->add(x);
     }
 
     cout << "Mean: " << statCalc->average() << endl;

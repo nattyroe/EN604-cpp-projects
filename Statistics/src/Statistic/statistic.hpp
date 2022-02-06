@@ -13,9 +13,8 @@ public:
     double STD() const;
 
 private:
-    int mNumPoints = 0;
-    double mMean = 0;
-    double mVariance = 0;
-    list<double> mValues = {};
-    void recalculateStats(double x);
+    int numPoints = 0;
+    double sum = 0;
+    double summedSquares = 0;
+    double calcSampleVarience() const;
 };
