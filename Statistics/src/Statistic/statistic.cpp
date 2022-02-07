@@ -1,7 +1,6 @@
 #include "statistic.hpp"
 #include <iostream>
 #include <cmath>
-
 using namespace std;
 
 // Function to calculate and retrieve the average
@@ -21,8 +20,8 @@ double Statistic::average() const
     }
 } // End function average
 
-// Function to calculate and retrieve the sample
-// standard deviation of the current distribution
+// Function to calculate and retrieve the sample standard deviation of
+// the current distribution
 double Statistic::STD() const
 {
     return sqrt(calcSampleVarience());
@@ -40,8 +39,7 @@ void Statistic::add(double x)
     this->summedSquares += x * x;
 } // End function add
 
-// Function to calculate the sample varience of
-// the current distribution
+// Function to calculate the sample varience of the current distribution
 double Statistic::calcSampleVarience() const
 {
     // Var = [Σx^2 * (Σx*Σx/n)] / (n-1)
