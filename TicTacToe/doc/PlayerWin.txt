@@ -1,0 +1,54 @@
+Welcome to Tic Tac Toe
+You will play as x and you're up First
+Enter your Move as <row column>, ie '1 2'
+
+Current Board:
+ | | 
+_ _ _
+ | | 
+_ _ _
+ | | 
+
+Your Move: 1 1
+Opponent Turn
+Choosing Randomly
+
+Current Board:
+X|O| 
+_ _ _
+ | | 
+_ _ _
+ | | 
+
+Your Move: 2 2
+Opponent Turn
+Defending
+
+Current Board:
+X|O| 
+_ _ _
+ |X| 
+_ _ _
+ | |O
+
+Your Move: 3 1
+Opponent Turn
+Defending
+
+Current Board:
+X|O|O
+_ _ _
+ |X| 
+_ _ _
+X| |O
+
+Your Move: 2 1
+Current Board:
+X|O|O
+_ _ _
+X|X| 
+_ _ _
+X| |O
+
+You Win!
+Game Over!

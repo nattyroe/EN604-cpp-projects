@@ -1,0 +1,72 @@
+Welcome to Tic Tac Toe
+You will play as x and you're up First
+Enter your Move as <row column>, ie '1 2'
+
+Current Board:
+ | | 
+_ _ _
+ | | 
+_ _ _
+ | | 
+
+Your Move: 1 a
+Make sure your values are between 1 and 3.
+Your Move: 4 4
+Make sure your values are between 1 and 3.
+Your Move: asdf
+Please Submit Your move in the form <row column>, i.e.:
+1 2
+Your Move: 12 1
+Please Submit Your move in the form <row column>, i.e.:
+1 2
+Your Move: 01 1
+Please Submit Your move in the form <row column>, i.e.:
+1 2
+Your Move: 1 1
+Opponent Turn
+Choosing Randomly
+
+Current Board:
+X|O| 
+_ _ _
+ | | 
+_ _ _
+ | | 
+
+Your Move: 1 2
+That Space is already Played.
+Your Move: 1 3
+Opponent Turn
+Choosing Randomly
+
+Current Board:
+X|O|X
+_ _ _
+O| | 
+_ _ _
+ | | 
+
+Your Move: 2 2
+Opponent Turn
+Defending
+
+Current Board:
+X|O|X
+_ _ _
+O|X| 
+_ _ _
+O| | 
+
+Your Move: 2 2
+That Space is already Played.
+Your Move: 3 3
+
+Current Board:
+X|O|X
+_ _ _
+O|X| 
+_ _ _
+O| |X
+
+You Win!
+Game Over!

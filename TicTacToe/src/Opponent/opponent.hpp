@@ -1,5 +1,12 @@
 #pragma once
 
+/// @file
+/// @author Nathan Roe
+/// Opponent for Single-Player TicTacToe Game
+///
+/// Evaluates a 3x3 matrix to find a move, then
+/// saves selected location. Chosen location can
+/// be accessed with getRow and getColumn
 class Opponent
 {
 public:
