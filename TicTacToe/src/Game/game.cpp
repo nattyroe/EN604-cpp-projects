@@ -1,11 +1,15 @@
+// Main Game Object for TicTacToe
+
 #include "game.hpp"
 #include <iostream>
 #include <sstream>
 
 using namespace std;
 
+// Run Main Gameplay Loop
 void Game::playGame()
 {
+    // Main Gameplay Loop
     do
     {
         printCurrentGameBoard();
@@ -15,6 +19,7 @@ void Game::playGame()
 
     printCurrentGameBoard();
 
+    // Print game results
     switch (this->gameResult)
     {
     case Game::GameResultType::Player:
@@ -27,8 +32,9 @@ void Game::playGame()
         cout << "It's a Tie." << endl;
         break;
     }
-}
+} // End function playGame
 
+// Print out current Game Board with Xs and Os
 void Game::printCurrentGameBoard()
 {
     cout << "\nCurrent Board:" << endl;
@@ -38,8 +44,9 @@ void Game::printCurrentGameBoard()
     cout << "_ _ _" << endl;
     cout << this->board[2][0] << "|" << this->board[2][1] << "|" << this->board[2][2] << "\n"
          << endl;
-}
+} // End function prinCurrentGameBoard
 
+// Check the status of a Game Board
 Game::GameResultType Game::checkGameResult(char *board, int rows, int cols)
 {
     // Check Rows
@@ -106,13 +113,15 @@ Game::GameResultType Game::checkGameResult(char *board, int rows, int cols)
         }
     }
     return Game::GameResultType::Tie;
-}
+} // End function checkGameResult
 
+// Getter for the current 3x3 Game Board matrix
 char *Game::getBoard()
 {
     return *this->board;
 }
 
+// Run a round of turns.
 void Game::playRound()
 {
     takePlayerTurn();
@@ -121,17 +130,19 @@ void Game::playRound()
     {
         takeOpponentTurn();
     }
-}
+} // End function playRound
 
-// https://www.geeksforgeeks.org/extract-integers-string-c/
+// Runs Player Turn
 void Game::takePlayerTurn()
 {
+    // Run loop until a valid move is made
     while (true)
     {
         int row, column;
         cout << "Your Move: ";
         string result;
         getline(cin, result);
+        // Verify the form is <char char>
         if (!(result.length() == 3))
         {
             cout << "Please Submit Your move in the form <row column>, i.e.:" << endl;
@@ -140,6 +151,7 @@ void Game::takePlayerTurn()
         }
         else
         {
+            // Iterate through input string, and find integers
             stringstream ss;
             ss << result;
             string temp;
@@ -157,6 +169,7 @@ void Game::takePlayerTurn()
             column = found[1];
         }
 
+        // Validate integers are valid spaces
         if (row <= 0 || row > BOARD_SIZE ||
             column <= 0 || column > BOARD_SIZE)
         {
@@ -164,6 +177,7 @@ void Game::takePlayerTurn()
         }
         else
         {
+            // Validate that move location is empty
             if (!(this->board[row - 1][column - 1] == EMPTY))
             {
                 cout << "That Space is already Played." << endl;
@@ -175,8 +189,9 @@ void Game::takePlayerTurn()
             }
         }
     }
-}
+} // End function takePlayerTurn
 
+// Runs Opponent Turn
 void Game::takeOpponentTurn()
 {
     cout << "Opponent Turn" << endl;
@@ -190,4 +205,4 @@ void Game::takeOpponentTurn()
         col = this->opponent->getColumn();
         this->board[row][col] = 'O';
     }
-}
+} // End function takeOpponentTurn
