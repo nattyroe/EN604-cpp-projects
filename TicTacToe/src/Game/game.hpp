@@ -1,25 +1,14 @@
+#pragma once
+#include "../Base/ttt-base.hpp"
 #include "../Opponent/opponent.hpp"
 
-class Game
+class Game : public TTTBase
 {
 public:
-    enum class GameResultType
-    {
-        Player,
-        Opponent,
-        Tie,
-        Ongoing
-    };
     void playGame();
-    GameResultType checkGameResult(char board[3][3]);
     char *getBoard();
-    void printCurrentGameBoard();
 
 private:
-    char board[3][3] = {
-        {' ', ' ', ' '},
-        {' ', ' ', ' '},
-        {' ', ' ', ' '}};
     Opponent *opponent = new Opponent();
     GameResultType gameResult = GameResultType::Ongoing;
 
