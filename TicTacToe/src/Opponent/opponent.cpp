@@ -25,7 +25,6 @@ bool Opponent::chooseMove(char *board, int rows, int cols)
     {
         for (int col = 0; col < cols; ++col)
         {
-            cout << *(board + (row * cols) + col) << endl;
             this->board[row][col] = *(board + (row * cols) + col);
         }
     }
@@ -66,7 +65,7 @@ bool Opponent::attack()
             {
                 this->board[row][col] = 'O';
                 Game::GameResultType result;
-                result == Game::checkGameResult(*this->board, BOARD_SIZE, BOARD_SIZE);
+                result = Game::checkGameResult(*this->board, BOARD_SIZE, BOARD_SIZE);
                 if (result == Game::GameResultType::Opponent)
                 {
                     this->row = row;
@@ -94,7 +93,7 @@ bool Opponent::defend()
             {
                 this->board[row][col] = 'X';
                 Game::GameResultType result;
-                result == Game::checkGameResult(*this->board, BOARD_SIZE, BOARD_SIZE);
+                result = Game::checkGameResult(*this->board, BOARD_SIZE, BOARD_SIZE);
                 if (result == Game::GameResultType::Player)
                 {
                     this->board[row][col] = 'O';

@@ -26,7 +26,7 @@ private:
     Opponent *opponent = new Opponent();
     GameResultType gameResult = GameResultType::Ongoing;
 
-    void takeTurn();
+    void playRound();
     void takePlayerTurn();
     void takeOpponentTurn();
 };

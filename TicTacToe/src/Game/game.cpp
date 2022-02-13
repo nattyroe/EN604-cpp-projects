@@ -9,9 +9,24 @@ void Game::playGame()
     do
     {
         printCurrentGameBoard();
-        takeTurn();
+        playRound();
         this->gameResult = checkGameResult(*this->board, BOARD_SIZE, BOARD_SIZE);
     } while (this->gameResult == Game::GameResultType::Ongoing);
+
+    printCurrentGameBoard();
+
+    switch (this->gameResult)
+    {
+    case Game::GameResultType::Player:
+        cout << "You Win!" << endl;
+        break;
+    case Game::GameResultType::Opponent:
+        cout << "You Lose!" << endl;
+        break;
+    default:
+        cout << "It's a Tie." << endl;
+        break;
+    }
 }
 
 void Game::printCurrentGameBoard()
@@ -36,12 +51,10 @@ Game::GameResultType Game::checkGameResult(char *board, int rows, int cols)
         {
             if (*(board + (row * cols) + 0) == 'X')
             {
-                cout << "Row" << endl;
                 return Game::GameResultType::Player;
             }
             else if (*(board + (row * cols) + 0) == 'O')
             {
-                cout << "Row" << endl;
                 return Game::GameResultType::Opponent;
             }
         }
@@ -56,12 +69,10 @@ Game::GameResultType Game::checkGameResult(char *board, int rows, int cols)
         {
             if (*(board + (0 * cols) + col) == 'X')
             {
-                cout << "Column" << endl;
                 return Game::GameResultType::Player;
             }
             else if (*(board + (0 * cols) + col) == 'O')
             {
-                cout << "Column" << endl;
                 return Game::GameResultType::Opponent;
             }
         }
@@ -83,7 +94,18 @@ Game::GameResultType Game::checkGameResult(char *board, int rows, int cols)
         }
     }
 
-    return Game::GameResultType::Ongoing;
+    // Check For Tie
+    for (int row = 0; row < rows; ++row)
+    {
+        for (int col = 0; col < cols; ++col)
+        {
+            if (' ' == *(board + (row * cols) + col))
+            {
+                return Game::GameResultType::Ongoing;
+            }
+        }
+    }
+    return Game::GameResultType::Tie;
 }
 
 char *Game::getBoard()
@@ -91,7 +113,7 @@ char *Game::getBoard()
     return *this->board;
 }
 
-void Game::takeTurn()
+void Game::playRound()
 {
     takePlayerTurn();
     this->gameResult = checkGameResult(*this->board, BOARD_SIZE, BOARD_SIZE);
@@ -149,7 +171,6 @@ void Game::takePlayerTurn()
             else
             {
                 this->board[row - 1][column - 1] = 'X';
-                printCurrentGameBoard();
                 break;
             }
         }
