@@ -1,6 +1,7 @@
 # Builds
 TriangleTest/TriangleTest
 Statistics/StatisticTest
+TicTacToe/PlayTicTacToe
 
 # Prerequisites
 *.d
