@@ -1,7 +1,18 @@
 #include "opponent.hpp"
+#include "../Game/game.hpp"
 #include <iostream>
 
 using namespace std;
+
+int Opponent::getRow()
+{
+    return this->row;
+}
+
+int Opponent::getColumn()
+{
+    return this->column;
+}
 
 bool Opponent::chooseMove(char *board, int rows, int cols)
 {
@@ -34,6 +45,17 @@ bool Opponent::chooseMove(char *board, int rows, int cols)
     return moveChosen;
 }
 
+void Opponent::printCurrentGameBoard()
+{
+    cout << "\nCurrent Board:" << endl;
+    cout << this->board[0][0] << "|" << this->board[0][1] << "|" << this->board[0][2] << endl;
+    cout << "_ _ _" << endl;
+    cout << this->board[1][0] << "|" << this->board[1][1] << "|" << this->board[1][2] << endl;
+    cout << "_ _ _" << endl;
+    cout << this->board[2][0] << "|" << this->board[2][1] << "|" << this->board[2][2] << "\n"
+         << endl;
+}
+
 bool Opponent::attack()
 {
     for (int row = 0; row < BOARD_SIZE; ++row)
@@ -43,9 +65,9 @@ bool Opponent::attack()
             if (this->board[row][col] == EMPTY)
             {
                 this->board[row][col] = 'O';
-                GameResultType result;
-                result == checkGameResult(*this->board, BOARD_SIZE, BOARD_SIZE);
-                if (result == GameResultType::Opponent)
+                Game::GameResultType result;
+                result == Game::checkGameResult(*this->board, BOARD_SIZE, BOARD_SIZE);
+                if (result == Game::GameResultType::Opponent)
                 {
                     this->row = row;
                     this->column = col;
@@ -71,9 +93,9 @@ bool Opponent::defend()
             if (this->board[row][col] == EMPTY)
             {
                 this->board[row][col] = 'X';
-                GameResultType result;
-                result == checkGameResult(*this->board, BOARD_SIZE, BOARD_SIZE);
-                if (result == GameResultType::Player)
+                Game::GameResultType result;
+                result == Game::checkGameResult(*this->board, BOARD_SIZE, BOARD_SIZE);
+                if (result == Game::GameResultType::Player)
                 {
                     this->board[row][col] = 'O';
                     this->row = row;
