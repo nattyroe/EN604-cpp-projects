@@ -2,6 +2,7 @@
 TriangleTest/TriangleTest
 Statistics/StatisticTest
 TicTacToe/PlayTicTacToe
+PokerHands/PokerHandsTest
 
 # Prerequisites
 *.d
