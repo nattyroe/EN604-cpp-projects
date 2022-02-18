@@ -36,3 +36,4 @@ PokerHands/PokerHandsTest
 *.exe
 *.out
 *.app
+/PokerHands/build/x64
