@@ -12,6 +12,8 @@ PokerHands/PokerHandsTest
 *.lo
 *.o
 *.obj
+**/temp/
+**/x64/
 
 # Precompiled Headers
 *.gch
