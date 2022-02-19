@@ -4,6 +4,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 16.0.31005.135
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PokerHands", "PokerHands\PokerHands.vcxproj", "{AA2806AC-6F5C-4294-B4EF-64050D941486}"
+	ProjectSection(ProjectDependencies) = postProject
+		{A0C36CE7-D908-4573-8B69-249EEEB7D2BE} = {A0C36CE7-D908-4573-8B69-249EEEB7D2BE}
+	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libconfig++", "..\..\libconfig-1.7.3\lib\libconfig++.vcxproj", "{A0C36CE7-D908-4573-8B69-249EEEB7D2BE}"
 EndProject

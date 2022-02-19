@@ -2,8 +2,4 @@
 C:\Users\nater\source\libconfig-1.7.3\lib\libconfig.h++(57,63): warning C4275: non dll-interface class 'std::exception' used as base for dll-interface class 'libconfig::ConfigException'
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\include\vcruntime_exception.h(48): message : see declaration of 'std::exception'
 C:\Users\nater\source\libconfig-1.7.3\lib\libconfig.h++(57): message : see declaration of 'libconfig::ConfigException'
-C:\Users\nater\source\repos\PokerHands\PokerHands\PokerHands.cpp(20,39): warning C4101: 'fioex': unreferenced local variable
-PokerHands.obj : error LNK2019: unresolved external symbol "__declspec(dllimport) public: __cdecl libconfig::Config::Config(void)" (__imp_??0Config@libconfig@@QEAA@XZ) referenced in function main
-PokerHands.obj : error LNK2019: unresolved external symbol "__declspec(dllimport) public: virtual __cdecl libconfig::Config::~Config(void)" (__imp_??1Config@libconfig@@UEAA@XZ) referenced in function "public: virtual void * __cdecl libconfig::Config::`scalar deleting destructor'(unsigned int)" (??_GConfig@libconfig@@UEAAPEAXI@Z)
-PokerHands.obj : error LNK2001: unresolved external symbol "public: virtual char const * * __cdecl libconfig::Config::evaluateIncludePath(char const *,char const * *)" (?evaluateIncludePath@Config@libconfig@@UEAAPEAPEBDPEBDPEAPEBD@Z)
-C:\Users\nater\source\repos\PokerHands\x64\Debug\PokerHands.exe : fatal error LNK1120: 3 unresolved externals
+  PokerHands.vcxproj -> C:\Users\nater\source\repos\PokerHands\x64\Debug\PokerHands.exe
