@@ -14,6 +14,12 @@ Card::Card(int value, char suit)
     this->suit = static_cast<Suit>(suit);
 }
 
+bool Card::isValid()
+{
+    return (!(this->suit == Card::Suit::Invalid) &&
+            !(this->value == Card::Value::Invalid));
+}
+
 bool Card::operator<(const Card& card)
 {
     return this->value < card.value;

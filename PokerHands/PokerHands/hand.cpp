@@ -9,8 +9,8 @@ using namespace std;
 void Hand::deal(const Card& card)
 {
     this->cards.push_back(card);
-    sort(this->cards.begin(), this->cards.end());
-    reverse(this->cards.begin(), this->cards.end());
+    //sort(this->cards.begin(), this->cards.end());
+    //reverse(this->cards.begin(), this->cards.end());
 }
 
 Card Hand::discard(const Card& card)
@@ -29,6 +29,11 @@ Card Hand::discard(const Card& card)
     return discard;
 }
 
+int Hand::size()
+{
+    return this->cards.size();
+}
+
 void Hand::printCards()
 {
     for (Card card : this->cards)
@@ -36,4 +41,19 @@ void Hand::printCards()
         cout << static_cast<underlying_type<Card::Value>::type>(card.value) << " " << (char)static_cast<underlying_type<Card::Suit>::type>(card.suit) << ", ";
     }
     cout << endl;
+}
+
+void Hand::setHandType(HandType handType)
+{
+    this->handType = handType;
+}
+
+Hand::HandType Hand::getHandType()
+{
+    return this->handType;
+}
+
+vector<Card> Hand::getCards()
+{
+    return this->cards;
 }

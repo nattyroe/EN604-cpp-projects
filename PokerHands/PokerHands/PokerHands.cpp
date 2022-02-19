@@ -1,20 +1,135 @@
-#include "card.h"
+﻿#include "card.h"
 #include "hand.h"
+#include "Scorer.h"
 #include <iostream>
+#include <vector>
 #include <libconfig.h++>
 
 using namespace std;
 using namespace libconfig;
 
+Card  makeCard(int value, string suit)
+{
+    Card::Value cardValue = Card::Value::Invalid;
+    Card::Suit cardSuit = Card::Suit::Invalid;
+    try
+    {
+        cardValue = static_cast<Card::Value>(value);
+    }
+    catch (const exception &e)
+    {
+        cout << e.what() << endl;
+        cout << "Invalid Card Value: " << value << endl;
+        cardValue = Card::Value::Invalid;
+    }
 
+    if (suit.size() > 0)
+    {
+        char cardChar = suit[0];
+        switch (cardChar)
+        {
+        case 'C':
+            cardSuit = Card::Suit::Clubs;
+            break;
+        case 'D':
+            cardSuit = Card::Suit::Diamonds;
+            break;
+        case 'H':
+            cardSuit = Card::Suit::Hearts;
+            break;
+        case 'S':
+            cardSuit = Card::Suit::Spades;
+            break;
+        default:
+            cardSuit = Card::Suit::Invalid;
+            break;
+        }
+    }
+
+    return Card(cardValue, cardSuit);    
+}
+
+Card  makeCard(string value, string suit)
+{
+    Card::Value cardValue = Card::Value::Invalid;
+    Card::Suit cardSuit = Card::Suit::Invalid;
+
+    if (value == "Ten" || value == "T")
+    {
+        cardValue = Card::Value::Ten;
+    }
+    else if (value == "Jack" || value == "J")
+    {
+        cardValue = Card::Value::Jack;
+    }
+    else if (value == "Queen" || value == "Q")
+    {
+        cardValue = Card::Value::Queen;
+    }
+    else if (value == "King" || value == "K")
+    {
+        cardValue = Card::Value::King;
+    }
+    else if (value == "Ace" || value == "A")
+    {
+        cardValue = Card::Value::Ace;
+    }
+    else
+    {
+        try
+        {
+
+            cardValue = static_cast<Card::Value>(stoi(value));
+        }
+        catch (const invalid_argument &e)
+        {
+            cout << "Invalid Card Value: " << value << endl;
+            cardValue = Card::Value::Invalid;
+        }
+        catch (const exception &e)
+        {
+            cout << e.what() << endl;
+            cardValue = Card::Value::Invalid;
+        }
+    }
+
+
+    if (suit.size() > 0)
+    {
+        char cardChar = suit[0];
+        switch (cardChar)
+        {
+        case 'C':
+            cardSuit = Card::Suit::Clubs;
+            break;
+        case 'D':
+            cardSuit = Card::Suit::Diamonds;
+            break;
+        case 'H':
+            cardSuit = Card::Suit::Hearts;
+            break;
+        case 'S':
+            cardSuit = Card::Suit::Spades;
+            break;
+        default:
+            cardSuit = Card::Suit::Invalid;
+            break;
+        }
+    }
+
+    return Card(cardValue, cardSuit);
+}
 
 
 int main(int argc, char** argv)
 {
+    Scorer *scorer = new Scorer();
+
     for (int idx = 1; idx < argc; ++idx)
     {
         Config* cfg = new Config();
         char* path = argv[idx];
+
         try
         {
             cout << path << endl;
@@ -32,6 +147,8 @@ int main(int argc, char** argv)
             return(EXIT_FAILURE);
         }
 
+        vector<Hand> *players = new vector<Hand>;
+
         const Setting& root = cfg->getRoot();
         try
         {
@@ -40,6 +157,9 @@ int main(int argc, char** argv)
 
             for (int handIdx = 0; handIdx < numHands; ++handIdx)
             {
+
+                Hand* hand = new Hand();
+
                 const Setting& cards = hands[handIdx];
                 int numCards = cards.getLength();
                 for (int cardIdx = 0; cardIdx < numCards; ++cardIdx)
@@ -58,14 +178,22 @@ int main(int argc, char** argv)
                         valueFound = card.lookupValue("value", value);
                         if (valueFound)
                         {
-                            cout << "INT value found" << endl;
+                            Card card = makeCard(value, suit);
+                            if (card.isValid())
+                            {
+                                hand->deal(card);
+                            }
                         }
                         else
                         {
                             valueFound = card.lookupValue("value", valueString);
                             if (valueFound)
                             {
-                                cout << "STRING value found" << endl;
+                                Card card = makeCard(valueString, suit);
+                                if (card.isValid())
+                                {
+                                    hand->deal(card);
+                                }
                             }
                         }
                     }
@@ -74,16 +202,25 @@ int main(int argc, char** argv)
                         cout << "Could not find 'suit' and/or 'value' in Hand " << handIdx + 1 << " Card " << cardIdx + 1 << endl;
                     }
                 }
+                hand->printCards();
+                players->push_back(*hand);
             }
+
+            if (players->size() > 1)
+            {
+                Hand curPlayer = players->at(0);
+                for (int idx = 1; idx < players->size(); ++idx)
+                {
+                    int result = scorer->compareHands(&curPlayer, &players->at(idx));
+                }
+            }
+
+
         }
         catch (const SettingNotFoundException& nfex)
         {
             cout << nfex.what() << ": Could not find 'hands' in " << path << endl;
         }
-
-        Hand* hand = new Hand();
-
-        hand->printCards();
     }
     return 0;
 }

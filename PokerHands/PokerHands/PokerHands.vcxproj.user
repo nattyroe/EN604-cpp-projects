@@ -5,7 +5,7 @@
     <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <LocalDebuggerCommandArguments>C:\Users\nater\source\repos\PokerHands\test.cfg</LocalDebuggerCommandArguments>
+    <LocalDebuggerCommandArguments>C:\Users\nater\source\repos\PokerHands\Input\FullHouse1.cfg</LocalDebuggerCommandArguments>
     <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
   </PropertyGroup>
 </Project>

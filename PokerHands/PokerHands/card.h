@@ -5,6 +5,7 @@ class Card
 public:
     enum class Value
     {
+        Invalid = 0,
         Two = 2,
         Three = 3,
         Four = 4,
@@ -22,6 +23,7 @@ public:
 
     enum class Suit
     {
+        Invalid = ' ',
         Clubs = 'C',
         Diamonds = 'D',
         Hearts = 'H',
@@ -32,10 +34,12 @@ public:
     Card(Value value, Suit suit);
     Card(int value, char suit);
 
+    bool isValid();
+
     bool operator<(const Card& card);
     bool operator>(const Card& card);
     bool operator==(const Card& card);
 
-    Suit suit;
-    Value value;
+    Suit suit = Suit::Invalid;
+    Value value = Value::Invalid;
 };
