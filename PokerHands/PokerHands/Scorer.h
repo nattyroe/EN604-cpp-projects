@@ -8,7 +8,8 @@ using namespace std;
 class Scorer
 {
 public:
-    int compareHands(Hand *hand1, Hand *hand2);
+    int findBestHand(vector<Hand> *hands);
+    int compareHands(Hand hand1, Hand hand2);
     vector<Card> checkHandType(Hand *hand);
 
 private:

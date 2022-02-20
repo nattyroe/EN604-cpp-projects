@@ -6,16 +6,54 @@
 
 using namespace std;
 
-int Scorer::compareHands(Hand *hand1, Hand *hand2)
+int Scorer::findBestHand(vector<Hand> *hands)
 {
-    if (!(hand1->size() == HAND_SIZE) ||
-        !(hand2->size() == HAND_SIZE))
+    if (hands->size() < 2)
     {
         return -1;
     }
 
-    checkHandType(hand1);
-    checkHandType(hand2);
+    int numTied = 0;
+    Hand *bestHand = &hands->at(0);
+    for (int idx = 1; idx < hands->size(); ++idx)
+    {
+        int result = compareHands(*bestHand, hands->at(idx));
+        if (result == 0)
+        {
+            ++numTied;
+            Hand hand = hands->at(idx);
+            hands->erase(hands->begin() + idx);
+            hands->insert(hands->begin() + numTied, hand);
+        }
+        else if (result == 1)
+        {
+            numTied = 0;
+        }
+        else if (result == 2)
+        {
+            numTied = 0;
+            Hand hand = hands->at(idx);
+            hands->erase(hands->begin() + idx);
+            hands->insert(hands->begin(), hand);
+        }
+        else
+        {
+            return -1;
+        }
+    }
+    return numTied;
+}
+
+int Scorer::compareHands(Hand hand1, Hand hand2)
+{
+    if (!(hand1.size() == HAND_SIZE) ||
+        !(hand2.size() == HAND_SIZE))
+    {
+        return -1;
+    }
+
+    checkHandType(&hand1);
+    checkHandType(&hand2);
 }
 
 vector<Card> Scorer::checkHandType(Hand *hand)

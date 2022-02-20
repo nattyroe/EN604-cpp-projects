@@ -8,7 +8,7 @@
 using namespace std;
 using namespace libconfig;
 
-Card  makeCard(int value, string suit)
+Card makeCard(int value, string suit)
 {
     Card::Value cardValue = Card::Value::Invalid;
     Card::Suit cardSuit = Card::Suit::Invalid;
@@ -46,10 +46,10 @@ Card  makeCard(int value, string suit)
         }
     }
 
-    return Card(cardValue, cardSuit);    
+    return Card(cardValue, cardSuit);
 }
 
-Card  makeCard(string value, string suit)
+Card makeCard(string value, string suit)
 {
     Card::Value cardValue = Card::Value::Invalid;
     Card::Suit cardSuit = Card::Suit::Invalid;
@@ -93,7 +93,6 @@ Card  makeCard(string value, string suit)
         }
     }
 
-
     if (suit.size() > 0)
     {
         char cardChar = suit[0];
@@ -120,36 +119,35 @@ Card  makeCard(string value, string suit)
     return Card(cardValue, cardSuit);
 }
 
-
-int main(int argc, char** argv)
+int main(int argc, char **argv)
 {
     Scorer *scorer = new Scorer();
 
     for (int idx = 1; idx < argc; ++idx)
     {
-        Config* cfg = new Config();
-        char* path = argv[idx];
+        Config *cfg = new Config();
+        char *path = argv[idx];
 
         try
         {
             cout << path << endl;
             cfg->readFile(path);
         }
-        catch (const FileIOException& fioex)
+        catch (const FileIOException &fioex)
         {
             cerr << fioex.what() << " while reading file " << path << endl;
-            return(EXIT_FAILURE);
+            return (EXIT_FAILURE);
         }
-        catch (const ParseException& pex)
+        catch (const ParseException &pex)
         {
             cerr << "Parse error at " << pex.getFile() << ":" << pex.getLine()
-                << " - " << pex.getError() << endl;
-            return(EXIT_FAILURE);
+                 << " - " << pex.getError() << endl;
+            return (EXIT_FAILURE);
         }
 
         vector<Hand> *players = new vector<Hand>;
 
-        const Setting& root = cfg->getRoot();
+        const Setting &root = cfg->getRoot();
         try
         {
             const Setting &hands = root["hands"];
@@ -158,13 +156,13 @@ int main(int argc, char** argv)
             for (int handIdx = 0; handIdx < numHands; ++handIdx)
             {
 
-                Hand* hand = new Hand();
+                Hand *hand = new Hand();
 
-                const Setting& cards = hands[handIdx];
+                const Setting &cards = hands[handIdx];
                 int numCards = cards.getLength();
                 for (int cardIdx = 0; cardIdx < numCards; ++cardIdx)
                 {
-                    const Setting& card = cards[cardIdx];
+                    const Setting &card = cards[cardIdx];
 
                     string suit;
                     bool suitFound = false;
@@ -208,16 +206,10 @@ int main(int argc, char** argv)
 
             if (players->size() > 1)
             {
-                Hand curPlayer = players->at(0);
-                for (int idx = 1; idx < players->size(); ++idx)
-                {
-                    int result = scorer->compareHands(&curPlayer, &players->at(idx));
-                }
+                int winnerIdx = scorer->findBestHand(players);
             }
-
-
         }
-        catch (const SettingNotFoundException& nfex)
+        catch (const SettingNotFoundException &nfex)
         {
             cout << nfex.what() << ": Could not find 'hands' in " << path << endl;
         }
