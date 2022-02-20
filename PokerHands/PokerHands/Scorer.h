@@ -20,4 +20,6 @@ private:
     bool hasStraight(vector<Card> *cards);
     bool hasThreeOfAKind(vector<Card> *cards);
     bool hasTwoPair(vector<Card> *cards);
+    bool hasOnePair(vector<Card> *cards);
+    bool hasHighCard(vector<Card> *cards);
 };

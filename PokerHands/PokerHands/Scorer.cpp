@@ -57,6 +57,14 @@ vector<Card> Scorer::checkHandType(Hand *hand)
     {
         hand->setHandType(Hand::HandType::TwoPair);
     }
+    else if (hasOnePair(&cards))
+    {
+        hand->setHandType(Hand::HandType::OnePair);
+    }
+    else if (hasHighCard(&cards))
+    {
+        hand->setHandType(Hand::HandType::HighCard);
+    }
     else
     {
         hand->setHandType(Hand::HandType::None);
@@ -355,9 +363,6 @@ bool Scorer::hasTwoPair(vector<Card> *cards)
     reverse(cards->begin(), cards->end());
 
     bool foundTP = false;
-    Card::Value pair1val = Card::Value::Invalid;
-    Card::Value pair2val = Card::Value::Invalid;
-
     vector<Card> pair1;
     vector<Card> pair2;
 
@@ -414,4 +419,53 @@ bool Scorer::hasTwoPair(vector<Card> *cards)
     }
 
     return foundTP;
+}
+
+bool Scorer::hasOnePair(vector<Card> *cards)
+{
+    if (!(cards->size() == HAND_SIZE))
+    {
+        return false;
+    }
+
+    sort(cards->begin(), cards->end());
+    reverse(cards->begin(), cards->end());
+
+    bool foundPair = false;
+    vector<Card> pair;
+
+    for (int idx = 1; idx < cards->size(); ++idx)
+    {
+        Card *card = &cards->at(idx);
+        Card *prevCard = &cards->at(idx - 1);
+        if (card->value == prevCard->value)
+        {
+            foundPair = true;
+            pair.push_back(*prevCard);
+            pair.push_back(*card);
+            cards->erase(cards->begin() + idx - 1);
+            cards->erase(cards->begin() + idx - 1);
+        }
+    }
+
+    if (foundPair)
+    {
+        cards->insert(cards->begin(), pair.front());
+        cards->insert(cards->begin(), pair.back());
+    }
+
+    return foundPair;
+}
+
+bool Scorer::hasHighCard(vector<Card> *cards)
+{
+    if (!(cards->size() == HAND_SIZE))
+    {
+        return false;
+    }
+
+    sort(cards->begin(), cards->end());
+    reverse(cards->begin(), cards->end());
+
+    return true;
 }
