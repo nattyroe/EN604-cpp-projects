@@ -1,3 +1,0 @@
-﻿  Scorer.cpp
-C:\Users\nater\source\repos\PokerHands\PokerHands\Scorer.cpp(21): warning C4715: 'Scorer::compareHands': not all control paths return a value
-  PokerHands.vcxproj -> C:\Users\nater\source\repos\PokerHands\x64\Debug\PokerHands.exe

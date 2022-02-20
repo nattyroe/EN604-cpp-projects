@@ -14,7 +14,8 @@ public:
 private:
     const int HAND_SIZE = 5;
     bool hasStraightFlush(vector<Card> *cards);
-    bool hasFourOfAKind(vector<Card>* cards);
-    bool hasFullHouse(vector<Card>* cards);
+    bool hasFourOfAKind(vector<Card> *cards);
+    bool hasFullHouse(vector<Card> *cards);
+    bool hasFlush(vector<Card> *cards);
+    bool hasStraight(vector<Card> *cards);
 };
-

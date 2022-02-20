@@ -16,11 +16,9 @@ int Scorer::compareHands(Hand *hand1, Hand *hand2)
 
     checkHandType(hand1);
     checkHandType(hand2);
-
-
 }
 
-vector<Card> Scorer::checkHandType(Hand* hand)
+vector<Card> Scorer::checkHandType(Hand *hand)
 {
     vector<Card> cards = hand->getCards();
     for (Card card : cards)
@@ -42,6 +40,14 @@ vector<Card> Scorer::checkHandType(Hand* hand)
     else if (hasFullHouse(&cards))
     {
         hand->setHandType(Hand::HandType::FullHouse);
+    }
+    else if (hasFlush(&cards))
+    {
+        hand->setHandType(Hand::HandType::Flush);
+    }
+    else if (hasStraight(&cards))
+    {
+        hand->setHandType(Hand::HandType::Straight);
     }
     else
     {
@@ -102,7 +108,7 @@ bool Scorer::hasStraightFlush(vector<Card> *cards)
     return true;
 }
 
-bool Scorer::hasFourOfAKind(vector<Card>* cards)
+bool Scorer::hasFourOfAKind(vector<Card> *cards)
 {
     if (!(cards->size() == HAND_SIZE))
     {
@@ -157,7 +163,7 @@ bool Scorer::hasFourOfAKind(vector<Card>* cards)
     return foundFOAK;
 }
 
-bool Scorer::hasFullHouse(vector<Card>* cards)
+bool Scorer::hasFullHouse(vector<Card> *cards)
 {
     if (!(cards->size() == HAND_SIZE))
     {
@@ -204,4 +210,73 @@ bool Scorer::hasFullHouse(vector<Card>* cards)
         }
     }
     return foundFF;
+}
+
+bool Scorer::hasFlush(vector<Card> *cards)
+{
+    if (!(cards->size() == HAND_SIZE))
+    {
+        return false;
+    }
+
+    sort(cards->begin(), cards->end());
+    reverse(cards->begin(), cards->end());
+
+    Card::Suit startSuit = cards->at(0).suit;
+    for (int idx = 1; idx < cards->size(); ++idx)
+    {
+        Card::Suit cardSuit = cards->at(idx).suit;
+        if (!(cards->at(idx).isValid()) ||
+            !(cardSuit == startSuit))
+        {
+            return false;
+        }
+    }
+
+    return true;
+}
+
+bool Scorer::hasStraight(vector<Card> *cards)
+{
+    if (!(cards->size() == HAND_SIZE))
+    {
+        return false;
+    }
+
+    sort(cards->begin(), cards->end());
+    reverse(cards->begin(), cards->end());
+
+    // Special case for Ace-Low
+    if (cards->at(0).value == Card::Value::Ace &&
+        cards->at(1).value == Card::Value::Five)
+    {
+        int startVal = static_cast<typename std::underlying_type<Card::Value>::type>(cards->at(1).value);
+        for (int idx = 2; idx < cards->size(); ++idx)
+        {
+            int cardVal = static_cast<typename std::underlying_type<Card::Value>::type>(cards->at(idx).value);
+            if (!(cards->at(idx).isValid()) ||
+                !(cardVal == startVal-- - 1))
+            {
+                return false;
+            }
+        }
+        Card ace = cards->front();
+        cards->erase(cards->begin());
+        cards->push_back(ace);
+    }
+    // Check Cases with no Aces
+    else
+    {
+        int startVal = static_cast<typename std::underlying_type<Card::Value>::type>(cards->at(0).value);
+        for (int idx = 1; idx < cards->size(); ++idx)
+        {
+            int cardVal = static_cast<typename std::underlying_type<Card::Value>::type>(cards->at(idx).value);
+            if (!(cards->at(idx).isValid()) ||
+                !(cardVal == startVal-- - 1))
+            {
+                return false;
+            }
+        }
+    }
+    return true;
 }
