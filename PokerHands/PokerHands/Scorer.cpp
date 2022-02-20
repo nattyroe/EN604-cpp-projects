@@ -49,6 +49,14 @@ vector<Card> Scorer::checkHandType(Hand *hand)
     {
         hand->setHandType(Hand::HandType::Straight);
     }
+    else if (hasThreeOfAKind(&cards))
+    {
+        hand->setHandType(Hand::HandType::ThreeOfAKind);
+    }
+    else if (hasTwoPair(&cards))
+    {
+        hand->setHandType(Hand::HandType::TwoPair);
+    }
     else
     {
         hand->setHandType(Hand::HandType::None);
@@ -279,4 +287,131 @@ bool Scorer::hasStraight(vector<Card> *cards)
         }
     }
     return true;
+}
+
+bool Scorer::hasThreeOfAKind(vector<Card> *cards)
+{
+    if (!(cards->size() == HAND_SIZE))
+    {
+        return false;
+    }
+
+    sort(cards->begin(), cards->end());
+    reverse(cards->begin(), cards->end());
+
+    int TOAK = 3;
+    int foundTOAK = false;
+    Card::Value startVal = Card::Value::Invalid;
+    for (int idx = 0; idx <= cards->size() - TOAK; ++idx)
+    {
+        foundTOAK = true;
+        startVal = cards->at(idx).value;
+        for (int innerIdx = idx + 1; innerIdx < idx + TOAK; ++innerIdx)
+        {
+            Card::Value cardVal = cards->at(innerIdx).value;
+            if (!(cards->at(innerIdx).isValid()) ||
+                !(startVal == cardVal))
+            {
+                foundTOAK = false;
+                break;
+            }
+        }
+        if (foundTOAK)
+        {
+            break;
+        }
+    }
+
+    if (foundTOAK)
+    {
+        vector<Card> unusedCards;
+        for (int idx = 0; idx < cards->size(); ++idx)
+        {
+            if (!(cards->at(idx).value == startVal))
+            {
+                unusedCards.push_back(cards->at(idx));
+                cards->erase(cards->begin() + idx);
+            }
+        }
+        sort(unusedCards.begin(), unusedCards.end());
+        for (int idx = 0; idx < unusedCards.size(); ++idx)
+        {
+            cards->push_back(unusedCards.back());
+            unusedCards.pop_back();
+        }
+    }
+
+    return foundTOAK;
+}
+
+bool Scorer::hasTwoPair(vector<Card> *cards)
+{
+    if (!(cards->size() == HAND_SIZE))
+    {
+        return false;
+    }
+
+    sort(cards->begin(), cards->end());
+    reverse(cards->begin(), cards->end());
+
+    bool foundTP = false;
+    Card::Value pair1val = Card::Value::Invalid;
+    Card::Value pair2val = Card::Value::Invalid;
+
+    vector<Card> pair1;
+    vector<Card> pair2;
+
+    for (int idx = 1; idx < cards->size(); ++idx)
+    {
+        Card *card = &cards->at(idx);
+        Card *prevCard = &cards->at(idx - 1);
+        if (card->value == prevCard->value)
+        {
+            foundTP = true;
+            pair1.push_back(*prevCard);
+            pair1.push_back(*card);
+            cards->erase(cards->begin() + idx - 1);
+            cards->erase(cards->begin() + idx - 1);
+        }
+    }
+
+    if (foundTP)
+    {
+        foundTP = false;
+        for (int idx = 1; idx < cards->size(); ++idx)
+        {
+            Card *card = &cards->at(idx);
+            Card *prevCard = &cards->at(idx - 1);
+            if (card->value == prevCard->value)
+            {
+                foundTP = true;
+                pair2.push_back(*prevCard);
+                pair2.push_back(*card);
+                cards->erase(cards->begin() + idx - 1);
+                cards->erase(cards->begin() + idx - 1);
+            }
+        }
+    }
+
+    if (foundTP)
+    {
+        if (pair1.front().value > pair2.front().value)
+        {
+            cards->push_back(pair1.front());
+            cards->push_back(pair1.back());
+            cards->push_back(pair2.front());
+            cards->push_back(pair2.back());
+        }
+        else
+        {
+            cards->push_back(pair2.front());
+            cards->push_back(pair2.back());
+            cards->push_back(pair1.front());
+            cards->push_back(pair1.back());
+        }
+        cards->push_back(cards->front());
+        cards->erase(cards->begin());
+    }
+
+    return foundTP;
 }

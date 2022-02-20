@@ -18,4 +18,6 @@ private:
     bool hasFullHouse(vector<Card> *cards);
     bool hasFlush(vector<Card> *cards);
     bool hasStraight(vector<Card> *cards);
+    bool hasThreeOfAKind(vector<Card> *cards);
+    bool hasTwoPair(vector<Card> *cards);
 };
