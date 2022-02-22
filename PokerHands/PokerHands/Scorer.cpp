@@ -52,8 +52,46 @@ int Scorer::compareHands(Hand hand1, Hand hand2)
         return -1;
     }
 
-    checkHandType(&hand1);
-    checkHandType(&hand2);
+    vector<Card> cards1 = checkHandType(&hand1);
+    vector<Card> cards2 = checkHandType(&hand2);
+
+    if (hand1.getHandType() == Hand::HandType::None ||
+        hand2.getHandType() == Hand::HandType::None)
+    {
+        return -1;
+    }
+
+    int result = -1;
+
+    if (hand1.getHandType() > hand2.getHandType())
+    {
+        result = 1;
+    }
+    else if (hand1.getHandType() < hand2.getHandType())
+    {
+        result = 2;
+    }
+    else
+    {
+        for (int idx = 0; idx < HAND_SIZE; ++idx)
+        {
+            if (cards1.at(idx) > cards2.at(idx))
+            {
+                result = 1;
+                break;
+            }
+            else if (cards1.at(idx) < cards2.at(idx))
+            {
+                result = 2;
+                break;
+            }
+            else
+            {
+                result = 0;
+            }
+        }
+    }
+    return result;
 }
 
 vector<Card> Scorer::checkHandType(Hand *hand)
@@ -371,16 +409,20 @@ bool Scorer::hasThreeOfAKind(vector<Card> *cards)
     if (foundTOAK)
     {
         vector<Card> unusedCards;
-        for (int idx = 0; idx < cards->size(); ++idx)
+        int cardsMoved = 0;
+        for (int idx = 0; idx < HAND_SIZE; ++idx)
         {
-            if (!(cards->at(idx).value == startVal))
+            int cardIdx = idx - cardsMoved;
+            if (!(cards->at(cardIdx).value == startVal))
             {
-                unusedCards.push_back(cards->at(idx));
-                cards->erase(cards->begin() + idx);
+                unusedCards.push_back(cards->at(cardIdx));
+                cards->erase(cards->begin() + cardIdx);
+                ++cardsMoved;
             }
         }
         sort(unusedCards.begin(), unusedCards.end());
-        for (int idx = 0; idx < unusedCards.size(); ++idx)
+        int startSize = unusedCards.size();
+        for (int idx = 0; idx < startSize; ++idx)
         {
             cards->push_back(unusedCards.back());
             unusedCards.pop_back();
@@ -406,15 +448,16 @@ bool Scorer::hasTwoPair(vector<Card> *cards)
 
     for (int idx = 1; idx < cards->size(); ++idx)
     {
+        int prevIdx = idx - 1;
         Card *card = &cards->at(idx);
-        Card *prevCard = &cards->at(idx - 1);
+        Card *prevCard = &cards->at(prevIdx);
         if (card->value == prevCard->value)
         {
             foundTP = true;
             pair1.push_back(*prevCard);
             pair1.push_back(*card);
-            cards->erase(cards->begin() + idx - 1);
-            cards->erase(cards->begin() + idx - 1);
+            cards->erase(cards->begin() + prevIdx);
+            cards->erase(cards->begin() + prevIdx);
         }
     }
 
@@ -423,15 +466,16 @@ bool Scorer::hasTwoPair(vector<Card> *cards)
         foundTP = false;
         for (int idx = 1; idx < cards->size(); ++idx)
         {
+            int prevIdx = idx - 1;
             Card *card = &cards->at(idx);
-            Card *prevCard = &cards->at(idx - 1);
+            Card *prevCard = &cards->at(prevIdx);
             if (card->value == prevCard->value)
             {
                 foundTP = true;
                 pair2.push_back(*prevCard);
                 pair2.push_back(*card);
-                cards->erase(cards->begin() + idx - 1);
-                cards->erase(cards->begin() + idx - 1);
+                cards->erase(cards->begin() + prevIdx);
+                cards->erase(cards->begin() + prevIdx);
             }
         }
     }
@@ -455,6 +499,11 @@ bool Scorer::hasTwoPair(vector<Card> *cards)
         cards->push_back(cards->front());
         cards->erase(cards->begin());
     }
+    else if (pair1.size() > 0)
+    {
+        cards->push_back(pair1.front());
+        cards->push_back(pair1.back());
+    }
 
     return foundTP;
 }
@@ -474,15 +523,16 @@ bool Scorer::hasOnePair(vector<Card> *cards)
 
     for (int idx = 1; idx < cards->size(); ++idx)
     {
+        int prevIdx = idx - 1;
         Card *card = &cards->at(idx);
-        Card *prevCard = &cards->at(idx - 1);
+        Card *prevCard = &cards->at(prevIdx);
         if (card->value == prevCard->value)
         {
             foundPair = true;
             pair.push_back(*prevCard);
             pair.push_back(*card);
-            cards->erase(cards->begin() + idx - 1);
-            cards->erase(cards->begin() + idx - 1);
+            cards->erase(cards->begin() + prevIdx);
+            cards->erase(cards->begin() + prevIdx);
         }
     }
 

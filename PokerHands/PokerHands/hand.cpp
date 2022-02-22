@@ -1,4 +1,4 @@
-#include "hand.h"
+﻿#include "hand.h"
 #include <iostream>
 #include <vector>
 #include <algorithm>
@@ -34,13 +34,77 @@ int Hand::size()
     return this->cards.size();
 }
 
-void Hand::printCards()
+std::string Hand::printCards()
 {
+    std::string result = "";
     for (Card card : this->cards)
     {
-        cout << static_cast<underlying_type<Card::Value>::type>(card.value) << " " << (char)static_cast<underlying_type<Card::Suit>::type>(card.suit) << ", ";
+        switch (card.value)
+        {
+        case Card::Value::Two:
+            result += "2 of ";
+            break;
+        case Card::Value::Three:
+            result += "3 of ";
+            break;
+        case Card::Value::Four:
+            result += "4 of ";
+            break;
+        case Card::Value::Five:
+            result += "5 of ";
+            break;
+        case Card::Value::Six:
+            result += "6 of ";
+            break;
+        case Card::Value::Seven:
+            result += "7 of ";
+            break;
+        case Card::Value::Eight:
+            result += "8 of ";
+            break;
+        case Card::Value::Nine:
+            result += "9 of ";
+            break;
+        case Card::Value::Ten:
+            result += "10 of ";
+            break;
+        case Card::Value::Jack:
+            result += "J of ";
+            break;
+        case Card::Value::Queen:
+            result += "Q of ";
+            break;
+        case Card::Value::King:
+            result += "K of ";
+            break;
+        case Card::Value::Ace:
+            result += "A of ";
+            break;
+        default:
+            result += "ERROR of ";
+            break;
+        };
+
+        switch(card.suit)
+        {
+        case Card::Suit::Clubs:
+            result += "Clubs, ";
+            break;
+        case Card::Suit::Diamonds:
+            result += "Diamonds, ";
+            break;
+        case Card::Suit::Hearts:
+            result += "Hearts, ";
+            break;
+        case Card::Suit::Spades:
+            result += "Spades, ";
+            break;
+        default:
+            result += "ERROR, ";
+            break;
+        };
     }
-    cout << endl;
+    return result.substr(0, result.size() - 2);
 }
 
 void Hand::setHandType(HandType handType)

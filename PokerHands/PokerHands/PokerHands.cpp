@@ -8,7 +8,7 @@
 using namespace std;
 using namespace libconfig;
 
-Card makeCard(int value, string suit)
+Card makeCard(int value, std::string suit)
 {
     Card::Value cardValue = Card::Value::Invalid;
     Card::Suit cardSuit = Card::Suit::Invalid;
@@ -49,7 +49,7 @@ Card makeCard(int value, string suit)
     return Card(cardValue, cardSuit);
 }
 
-Card makeCard(string value, string suit)
+Card makeCard(std::string value, std::string suit)
 {
     Card::Value cardValue = Card::Value::Invalid;
     Card::Suit cardSuit = Card::Suit::Invalid;
@@ -119,6 +119,43 @@ Card makeCard(string value, string suit)
     return Card(cardValue, cardSuit);
 }
 
+void printResults(int lastWinIdx, vector<Hand> *players)
+{
+    cout << "(" << players->at(0).printCards() << ")";
+    for (int idx = 1; idx <= lastWinIdx; ++idx)
+    {
+        cout << ", " << "(" << players->at(idx).printCards() << ")";
+    }
+    if (lastWinIdx > 0)
+    {
+        cout << " Tie for the Win.";
+    }
+    else
+    {
+        cout << " Wins.";
+    }
+
+    bool multiLoser = false;
+    for (int idx = lastWinIdx + 1; idx < players->size(); ++idx)
+    {
+        cout << " " << "(" << players->at(idx).printCards() << ")";
+        if (idx < players->size() - 1)
+        {
+            multiLoser = true;
+            cout << " and";
+        }
+    }
+    if (multiLoser)
+    {
+        cout << " Lose.";
+    }
+    else
+    {
+        cout << " Loses.";
+    }
+    cout << endl;
+}
+
 int main(int argc, char **argv)
 {
     Scorer *scorer = new Scorer();
@@ -164,7 +201,7 @@ int main(int argc, char **argv)
                 {
                     const Setting &card = cards[cardIdx];
 
-                    string suit;
+                    std::string suit;
                     bool suitFound = false;
                     bool valueFound = false;
 
@@ -172,7 +209,7 @@ int main(int argc, char **argv)
                     if (suitFound)
                     {
                         int value;
-                        string valueString;
+                        std::string valueString;
                         valueFound = card.lookupValue("value", value);
                         if (valueFound)
                         {
@@ -200,13 +237,13 @@ int main(int argc, char **argv)
                         cout << "Could not find 'suit' and/or 'value' in Hand " << handIdx + 1 << " Card " << cardIdx + 1 << endl;
                     }
                 }
-                hand->printCards();
                 players->push_back(*hand);
             }
 
             if (players->size() > 1)
             {
                 int winnerIdx = scorer->findBestHand(players);
+                printResults(winnerIdx, players);
             }
         }
         catch (const SettingNotFoundException &nfex)
