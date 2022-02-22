@@ -1,9 +1,10 @@
-#pragma 
+#pragma once
 #include <string>
 #include <vector>
 
-class string;
 class Card;
+
+using namespace std;
 
 class Hand
 {
@@ -23,13 +24,13 @@ public:
     };
     void deal(const Card& card);
     Card discard(const Card& card);
-    std::string printCards();
+    string printCards();
     int size();
     void setHandType(HandType handType);
     HandType getHandType();
-    std::vector<Card> getCards();
+    vector<Card> getCards();
 
 private:
-    std::vector<Card> cards;
+    vector<Card> cards;
     HandType handType = HandType::None;
 };

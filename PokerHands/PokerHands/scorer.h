@@ -1,7 +1,8 @@
 #pragma once
 #include <vector>
-class Hand;
+
 class Card;
+class Hand;
 
 using namespace std;
 

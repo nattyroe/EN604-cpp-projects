@@ -8,7 +8,7 @@
 using namespace std;
 using namespace libconfig;
 
-Card makeCard(int value, std::string suit)
+Card makeCard(int value, string suit)
 {
     Card::Value cardValue = Card::Value::Invalid;
     Card::Suit cardSuit = Card::Suit::Invalid;
@@ -49,7 +49,7 @@ Card makeCard(int value, std::string suit)
     return Card(cardValue, cardSuit);
 }
 
-Card makeCard(std::string value, std::string suit)
+Card makeCard(string value, string suit)
 {
     Card::Value cardValue = Card::Value::Invalid;
     Card::Suit cardSuit = Card::Suit::Invalid;
@@ -206,7 +206,7 @@ int main(int argc, char **argv)
                 {
                     const Setting &card = cards[cardIdx];
 
-                    std::string suit;
+                    string suit;
                     bool suitFound = false;
                     bool valueFound = false;
 
@@ -214,7 +214,7 @@ int main(int argc, char **argv)
                     if (suitFound)
                     {
                         int value;
-                        std::string valueString;
+                        string valueString;
                         valueFound = card.lookupValue("value", value);
                         if (valueFound)
                         {
