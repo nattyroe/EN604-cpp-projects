@@ -31,7 +31,7 @@ Card Hand::discard(const Card& card)
 
 int Hand::size()
 {
-    return this->cards.size();
+    return static_cast<int>(this->cards.size());
 }
 
 std::string Hand::printCards()

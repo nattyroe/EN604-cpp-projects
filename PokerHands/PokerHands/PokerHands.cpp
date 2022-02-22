@@ -1,6 +1,6 @@
 ﻿#include "card.h"
 #include "hand.h"
-#include "Scorer.h"
+#include "scorer.h"
 #include <iostream>
 #include <vector>
 #include <libconfig.h++>
@@ -78,17 +78,16 @@ Card makeCard(std::string value, std::string suit)
     {
         try
         {
-
             cardValue = static_cast<Card::Value>(stoi(value));
         }
         catch (const invalid_argument &e)
         {
-            cout << "Invalid Card Value: " << value << endl;
+            cout << e.what() << ": Invalid Card Value: " << value << endl;
             cardValue = Card::Value::Invalid;
         }
         catch (const exception &e)
         {
-            cout << e.what() << endl;
+            cout << e.what() << ": Invalid Card Value: " << value << endl;
             cardValue = Card::Value::Invalid;
         }
     }
@@ -121,6 +120,12 @@ Card makeCard(std::string value, std::string suit)
 
 void printResults(int lastWinIdx, vector<Hand> *players)
 {
+    if (lastWinIdx == -1)
+    {
+        cout << "ERROR IN SCENARIO" << endl;
+        return;
+    }
+
     cout << "(" << players->at(0).printCards() << ")";
     for (int idx = 1; idx <= lastWinIdx; ++idx)
     {
@@ -149,7 +154,7 @@ void printResults(int lastWinIdx, vector<Hand> *players)
     {
         cout << " Lose.";
     }
-    else
+    else if (lastWinIdx < players->size() - 1)
     {
         cout << " Loses.";
     }
