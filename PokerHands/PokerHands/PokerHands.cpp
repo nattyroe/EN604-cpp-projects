@@ -129,7 +129,8 @@ void printResults(int lastWinIdx, vector<Hand> *players)
     cout << "(" << players->at(0).printCards() << ")";
     for (int idx = 1; idx <= lastWinIdx; ++idx)
     {
-        cout << ", " << "(" << players->at(idx).printCards() << ")";
+        cout << ", "
+             << "(" << players->at(idx).printCards() << ")";
     }
     if (lastWinIdx > 0)
     {
@@ -143,7 +144,8 @@ void printResults(int lastWinIdx, vector<Hand> *players)
     bool multiLoser = false;
     for (int idx = lastWinIdx + 1; idx < players->size(); ++idx)
     {
-        cout << " " << "(" << players->at(idx).printCards() << ")";
+        cout << " "
+             << "(" << players->at(idx).printCards() << ")";
         if (idx < players->size() - 1)
         {
             multiLoser = true;
@@ -221,7 +223,7 @@ int main(int argc, char **argv)
                             Card card = makeCard(value, suit);
                             if (card.isValid())
                             {
-                                hand->deal(card);
+                                hand->deal(&card);
                             }
                         }
                         else
@@ -232,7 +234,7 @@ int main(int argc, char **argv)
                                 Card card = makeCard(valueString, suit);
                                 if (card.isValid())
                                 {
-                                    hand->deal(card);
+                                    hand->deal(&card);
                                 }
                             }
                         }

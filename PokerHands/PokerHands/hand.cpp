@@ -1,42 +1,47 @@
 ﻿#include "hand.h"
+#include "card.h"
 #include <iostream>
 #include <vector>
 #include <algorithm>
-#include "card.h"
 
 using namespace std;
 
-void Hand::deal(const Card& card)
+// Adds Card to hand
+void Hand::deal(const Card *card)
 {
-    this->cards.push_back(card);
-    //sort(this->cards.begin(), this->cards.end());
-    //reverse(this->cards.begin(), this->cards.end());
-}
+    this->cards.push_back(*card);
+} // End function deal
 
-Card Hand::discard(const Card& card)
+// Removes Card from hand if match exists
+Card Hand::discard(const Card *card)
 {
     Card discard;
+    // Iterate through hand to find matching card
     for (unsigned int idx = 0; idx < this->cards.size(); ++idx)
     {
         Card currCard = this->cards[idx];
-        if (currCard.suit == card.suit &&
-            currCard.value == card.value)
+        // If card value and suit match, store card, and remove from hand
+        if (currCard.suit == card->suit &&
+            currCard.value == card->value)
         {
             discard = this->cards[idx];
             this->cards.erase(this->cards.begin() + idx);
         }
     }
     return discard;
-}
+} // End function discard
 
+// Get the current number of cards in the hand
 int Hand::size()
 {
     return static_cast<int>(this->cards.size());
-}
+} // End function size
 
+// Get formatted string of cards in the hand
 std::string Hand::printCards()
 {
     std::string result = "";
+    // Print Value
     for (Card card : this->cards)
     {
         switch (card.value)
@@ -85,7 +90,8 @@ std::string Hand::printCards()
             break;
         };
 
-        switch(card.suit)
+        // Print suit
+        switch (card.suit)
         {
         case Card::Suit::Clubs:
             result += "Clubs, ";
@@ -104,20 +110,24 @@ std::string Hand::printCards()
             break;
         };
     }
+
+    // Remove the extra ", " from end of string
     return result.substr(0, result.size() - 2);
-}
+} // End function printCards
 
 void Hand::setHandType(HandType handType)
 {
     this->handType = handType;
 }
 
+// Getter for Poker Hand Type, unvalidated
 Hand::HandType Hand::getHandType()
 {
     return this->handType;
-}
+} // End function getHandType
 
+// Getter for a std::vector of current Cards
 vector<Card> Hand::getCards()
 {
     return this->cards;
-}
+} // End function getHandType
