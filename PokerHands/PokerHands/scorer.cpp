@@ -33,7 +33,7 @@ int Scorer::findBestHand(vector<Hand> *hands)
         // If current best hand is better, leave vector unchanged
         else if (result == 1)
         {
-            numTied = 0;
+            continue;
         }
         // If new hand is better, move to front and reset number of ties
         else if (result == 2)
