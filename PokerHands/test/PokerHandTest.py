@@ -1,7 +1,12 @@
+""" Runs Unit Test for PokerHands c++ executable
+
+Compares output to Expected result stored in input files. The expected results are
+based on c++ output formatting, and are verified to be the correct hand ranking; 
+tests should be used to verify that code updates do not result in errors in ranking.
+"""
 import os
 import glob
 import subprocess
-
 import libconf
 
 
@@ -9,13 +14,7 @@ import libconf
 # this test manager
 EXECUTABLE_PATH = '../build/x64/PokerHands.exe'
 
-""" Runs Unit Test for PokerHands c++ executable
 
-Compares output to Expected result stored in input files. The
-expected results are based on c++ output formatting, and are
-verified to be the correct hand ranking; tests should be used
-to verify that code updates do not result in errors in ranking.
-"""
 def main():
     # Setup working directory
     start_path = os.getcwd()
@@ -29,7 +28,8 @@ def main():
         try:
             # Run Executable and Print Results
             output_bits = subprocess.check_output([exe_path, test_path])
-            output_strings = [line.rstrip() for line in output_bits.decode('UTF-8').split('\n') if line]
+            output_strings = [line.rstrip() for line in output_bits.decode(
+                'UTF-8').split('\n') if line]
             print('Output:')
             for line in output_strings:
                 print('    ', line)
@@ -51,6 +51,7 @@ def main():
 
     # Return working dir to starting location
     os.chdir(start_path)
+
 
 if __name__ == "__main__":
     main()
