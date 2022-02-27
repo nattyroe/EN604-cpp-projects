@@ -1,0 +1,300 @@
+C:\Users\nater\source\repos\PokerHands>python test\PokerHandTest.py > doc\output.txt
+
+Output:
+     C:\Users\nater\source\repos\PokerHands\test\../Input/Flush1.cfg
+     (K of Diamonds, J of Diamonds, 9 of Diamonds, 6 of Diamonds, 4 of Diamonds): Flush
+     (Q of Clubs, J of Clubs, 7 of Clubs, 6 of Clubs, 5 of Clubs): Flush
+     (K of Diamonds, J of Diamonds, 9 of Diamonds, 6 of Diamonds, 4 of Diamonds) Wins. (Q of Clubs, J of Clubs, 7 of Clubs, 6 of Clubs, 5 of Clubs) Loses.
+Test Result: PASS
+
+Output:
+     C:\Users\nater\source\repos\PokerHands\test\../Input/Flush2.cfg
+     (Q of Clubs, J of Clubs, 7 of Clubs, 6 of Clubs, 5 of Clubs): Flush
+     (J of Hearts, 10 of Hearts, 9 of Hearts, 4 of Hearts, 2 of Hearts): Flush
+     (Q of Clubs, J of Clubs, 7 of Clubs, 6 of Clubs, 5 of Clubs) Wins. (J of Hearts, 10 of Hearts, 9 of Hearts, 4 of Hearts, 2 of Hearts) Loses.
+Test Result: PASS
+
+Output:
+     C:\Users\nater\source\repos\PokerHands\test\../Input/Flush3.cfg
+     (J of Hearts, 10 of Hearts, 9 of Hearts, 4 of Hearts, 2 of Hearts): Flush
+     (J of Spades, 10 of Spades, 8 of Spades, 6 of Spades, 3 of Spades): Flush
+     (J of Hearts, 10 of Hearts, 9 of Hearts, 4 of Hearts, 2 of Hearts) Wins. (J of Spades, 10 of Spades, 8 of Spades, 6 of Spades, 3 of Spades) Loses.
+Test Result: PASS
+
+Output:
+     C:\Users\nater\source\repos\PokerHands\test\../Input/Flush4.cfg
+     (J of Spades, 10 of Spades, 8 of Spades, 6 of Spades, 3 of Spades): Flush
+     (J of Hearts, 10 of Hearts, 8 of Hearts, 4 of Hearts, 3 of Hearts): Flush
+     (J of Spades, 10 of Spades, 8 of Spades, 6 of Spades, 3 of Spades) Wins. (J of Hearts, 10 of Hearts, 8 of Hearts, 4 of Hearts, 3 of Hearts) Loses.
+Test Result: PASS
+
+Output:
+     C:\Users\nater\source\repos\PokerHands\test\../Input/Flush5.cfg
+     (J of Hearts, 10 of Hearts, 8 of Hearts, 4 of Hearts, 3 of Hearts): Flush
+     (J of Clubs, 10 of Clubs, 8 of Clubs, 4 of Clubs, 2 of Clubs): Flush
+     (J of Hearts, 10 of Hearts, 8 of Hearts, 4 of Hearts, 3 of Hearts) Wins. (J of Clubs, 10 of Clubs, 8 of Clubs, 4 of Clubs, 2 of Clubs) Loses.
+Test Result: PASS
+
+Output:
+     C:\Users\nater\source\repos\PokerHands\test\../Input/Flush6.cfg
+     (10 of Diamonds, 8 of Diamonds, 7 of Diamonds, 6 of Diamonds, 5 of Diamonds): Flush
+     (10 of Spades, 8 of Spades, 7 of Spades, 6 of Spades, 5 of Spades): Flush
+     (10 of Diamonds, 8 of Diamonds, 7 of Diamonds, 6 of Diamonds, 5 of Diamonds), (10 of Spades, 8 of Spades, 7 of Spades, 6 of Spades, 5 of Spades) Tie for the Win.
+Test Result: PASS
+
+Output:
+     C:\Users\nater\source\repos\PokerHands\test\../Input/FourOfAKind1.cfg
+     (K of Spades, K of Hearts, K of Clubs, K of Diamonds, 3 of Hearts): Four of a Kind
+     (7 of Hearts, 7 of Diamonds, 7 of Spades, 7 of Clubs, Q of Hearts): Four of a Kind
+     (K of Spades, K of Hearts, K of Clubs, K of Diamonds, 3 of Hearts) Wins. (7 of Hearts, 7 of Diamonds, 7 of Spades, 7 of Clubs, Q of Hearts) Loses.
+Test Result: PASS
+
+Output:
+     C:\Users\nater\source\repos\PokerHands\test\../Input/FourOfAKind2.cfg
+     (7 of Hearts, 7 of Diamonds, 7 of Spades, 7 of Clubs, Q of Hearts): Four of a Kind
+     (7 of Hearts, 7 of Diamonds, 7 of Spades, 7 of Clubs, 10 of Spades): Four of a Kind
+     (7 of Hearts, 7 of Diamonds, 7 of Spades, 7 of Clubs, Q of Hearts) Wins. (7 of Hearts, 7 of Diamonds, 7 of Spades, 7 of Clubs, 10 of Spades) Loses.
+Test Result: PASS
+
+Output:
+     C:\Users\nater\source\repos\PokerHands\test\../Input/FourOfAKind3.cfg
+     (4 of Clubs, 4 of Spades, 4 of Diamonds, 4 of Hearts, 9 of Clubs): Four of a Kind
+     (4 of Clubs, 4 of Spades, 4 of Diamonds, 4 of Hearts, 9 of Diamonds): Four of a Kind
+     (4 of Clubs, 4 of Spades, 4 of Diamonds, 4 of Hearts, 9 of Clubs), (4 of Clubs, 4 of Spades, 4 of Diamonds, 4 of Hearts, 9 of Diamonds) Tie for the Win.
+Test Result: PASS
+
+Output:
+     C:\Users\nater\source\repos\PokerHands\test\../Input/FullHouse1.cfg
+     (8 of Spades, 8 of Diamonds, 8 of Hearts, 7 of Diamonds, 7 of Clubs): Full House
+     (4 of Diamonds, 4 of Spades, 4 of Clubs, 9 of Diamonds, 9 of Clubs): Full House
+     (8 of Spades, 8 of Diamonds, 8 of Hearts, 7 of Diamonds, 7 of Clubs) Wins. (4 of Diamonds, 4 of Spades, 4 of Clubs, 9 of Diamonds, 9 of Clubs) Loses.
+Test Result: PASS
+
+Output:
+     C:\Users\nater\source\repos\PokerHands\test\../Input/FullHouse2.cfg
+     (4 of Diamonds, 4 of Spades, 4 of Clubs, 9 of Diamonds, 9 of Clubs): Full House
+     (4 of Diamonds, 4 of Spades, 4 of Clubs, 5 of Clubs, 5 of Diamonds): Full House
+     (4 of Diamonds, 4 of Spades, 4 of Clubs, 9 of Diamonds, 9 of Clubs) Wins. (4 of Diamonds, 4 of Spades, 4 of Clubs, 5 of Clubs, 5 of Diamonds) Loses.
+Test Result: PASS
+
+Output:
+     C:\Users\nater\source\repos\PokerHands\test\../Input/FullHouse3.cfg
+     (K of Clubs, K of Spades, K of Diamonds, J of Clubs, J of Spades): Full House
+     (K of Clubs, K of Hearts, K of Diamonds, J of Clubs, J of Hearts): Full House
+     (K of Clubs, K of Spades, K of Diamonds, J of Clubs, J of Spades), (K of Clubs, K of Hearts, K of Diamonds, J of Clubs, J of Hearts) Tie for the Win.
+Test Result: PASS
+
+Output:
+     C:\Users\nater\source\repos\PokerHands\test\../Input/HighCard1.cfg
+     (K of Spades, 6 of Clubs, 5 of Hearts, 3 of Diamonds, 2 of Clubs): High Card
+     (Q of Spades, J of Diamonds, 6 of Clubs, 5 of Hearts, 3 of Clubs): High Card
+     (K of Spades, 6 of Clubs, 5 of Hearts, 3 of Diamonds, 2 of Clubs) Wins. (Q of Spades, J of Diamonds, 6 of Clubs, 5 of Hearts, 3 of Clubs) Loses.
+Test Result: PASS
+
+Output:
+     C:\Users\nater\source\repos\PokerHands\test\../Input/HighCard2.cfg
+     (Q of Spades, J of Diamonds, 6 of Clubs, 5 of Hearts, 3 of Clubs): High Card
+     (Q of Spades, 10 of Diamonds, 8 of Clubs, 7 of Diamonds, 4 of Spades): High Card
+     (Q of Spades, J of Diamonds, 6 of Clubs, 5 of Hearts, 3 of Clubs) Wins. (Q of Spades, 10 of Diamonds, 8 of Clubs, 7 of Diamonds, 4 of Spades) Loses.
+Test Result: PASS
+
+Output:
+     C:\Users\nater\source\repos\PokerHands\test\../Input/HighCard3.cfg
+     (Q of Spades, 10 of Diamonds, 8 of Clubs, 7 of Diamonds, 4 of Spades): High Card
+     (Q of Hearts, 10 of Hearts, 7 of Clubs, 6 of Hearts, 4 of Spades): High Card
+     (Q of Spades, 10 of Diamonds, 8 of Clubs, 7 of Diamonds, 4 of Spades) Wins. (Q of Hearts, 10 of Hearts, 7 of Clubs, 6 of Hearts, 4 of Spades) Loses.
+Test Result: PASS
+
+Output:
+     C:\Users\nater\source\repos\PokerHands\test\../Input/HighCard4.cfg
+     (Q of Hearts, 10 of Hearts, 7 of Clubs, 6 of Hearts, 4 of Spades): High Card
+     (Q of Clubs, 10 of Clubs, 7 of Diamonds, 5 of Clubs, 4 of Diamonds): High Card
+     (Q of Hearts, 10 of Hearts, 7 of Clubs, 6 of Hearts, 4 of Spades) Wins. (Q of Clubs, 10 of Clubs, 7 of Diamonds, 5 of Clubs, 4 of Diamonds) Loses.
+Test Result: PASS
+
+Output:
+     C:\Users\nater\source\repos\PokerHands\test\../Input/HighCard5.cfg
+     (Q of Clubs, 10 of Clubs, 7 of Diamonds, 5 of Clubs, 4 of Diamonds): High Card
+     (Q of Hearts, 10 of Diamonds, 7 of Spades, 5 of Spades, 2 of Hearts): High Card
+     (Q of Clubs, 10 of Clubs, 7 of Diamonds, 5 of Clubs, 4 of Diamonds) Wins. (Q of Hearts, 10 of Diamonds, 7 of Spades, 5 of Spades, 2 of Hearts) Loses.
+Test Result: PASS
+
+Output:
+     C:\Users\nater\source\repos\PokerHands\test\../Input/HighCard6.cfg
+     (10 of Clubs, 8 of Spades, 7 of Spades, 6 of Hearts, 4 of Diamonds): High Card
+     (10 of Diamonds, 8 of Diamonds, 7 of Spades, 6 of Clubs, 4 of Clubs): High Card
+     (10 of Clubs, 8 of Spades, 7 of Spades, 6 of Hearts, 4 of Diamonds), (10 of Diamonds, 8 of Diamonds, 7 of Spades, 6 of Clubs, 4 of Clubs) Tie for the Win.
+Test Result: PASS
+
+Output:
+     C:\Users\nater\source\repos\PokerHands\test\../Input/OnePair1.cfg
+     (9 of Clubs, 9 of Diamonds, Q of Spades, J of Hearts, 5 of Hearts): One Pair
+     (6 of Diamonds, 6 of Hearts, K of Spades, 7 of Hearts, 4 of Clubs): One Pair
+     (9 of Clubs, 9 of Diamonds, Q of Spades, J of Hearts, 5 of Hearts) Wins. (6 of Diamonds, 6 of Hearts, K of Spades, 7 of Hearts, 4 of Clubs) Loses.
+Test Result: PASS
+
+Output:
+     C:\Users\nater\source\repos\PokerHands\test\../Input/OnePair2.cfg
+     (6 of Diamonds, 6 of Hearts, K of Spades, 7 of Hearts, 4 of Clubs): One Pair
+     (6 of Diamonds, 6 of Hearts, Q of Hearts, J of Spades, 2 of Clubs): One Pair
+     (6 of Diamonds, 6 of Hearts, K of Spades, 7 of Hearts, 4 of Clubs) Wins. (6 of Diamonds, 6 of Hearts, Q of Hearts, J of Spades, 2 of Clubs) Loses.
+Test Result: PASS
+
+Output:
+     C:\Users\nater\source\repos\PokerHands\test\../Input/OnePair3 (2 shuffle).cfg
+     (4 of Clubs, 6 of Diamonds, K of Spades, 7 of Hearts, 6 of Hearts): One Pair
+     (J of Spades, 6 of Diamonds, 6 of Hearts, 2 of Clubs, Q of Hearts): One Pair
+     (4 of Clubs, 6 of Diamonds, K of Spades, 7 of Hearts, 6 of Hearts) Wins. (J of Spades, 6 of Diamonds, 6 of Hearts, 2 of Clubs, Q of Hearts) Loses.
+Test Result: PASS
+
+Output:
+     C:\Users\nater\source\repos\PokerHands\test\../Input/OnePair4.cfg
+     (6 of Diamonds, 6 of Hearts, Q of Hearts, J of Spades, 2 of Clubs): One Pair
+     (6 of Diamonds, 6 of Hearts, Q of Spades, 8 of Clubs, 7 of Diamonds): One Pair
+     (6 of Diamonds, 6 of Hearts, Q of Hearts, J of Spades, 2 of Clubs) Wins. (6 of Diamonds, 6 of Hearts, Q of Spades, 8 of Clubs, 7 of Diamonds) Loses.
+Test Result: PASS
+
+Output:
+     C:\Users\nater\source\repos\PokerHands\test\../Input/OnePair5.cfg
+     (6 of Diamonds, 6 of Hearts, Q of Spades, 8 of Clubs, 7 of Diamonds): One Pair
+     (6 of Diamonds, 6 of Hearts, Q of Diamonds, 8 of Hearts, 3 of Spades): One Pair
+     (6 of Diamonds, 6 of Hearts, Q of Spades, 8 of Clubs, 7 of Diamonds) Wins. (6 of Diamonds, 6 of Hearts, Q of Diamonds, 8 of Hearts, 3 of Spades) Loses.
+Test Result: PASS
+
+Output:
+     C:\Users\nater\source\repos\PokerHands\test\../Input/OnePair6.cfg
+     (8 of Spades, 8 of Diamonds, 10 of Hearts, 6 of Clubs, 5 of Spades): One Pair
+     (8 of Hearts, 8 of Clubs, 10 of Clubs, 6 of Spades, 5 of Clubs): One Pair
+     (8 of Spades, 8 of Diamonds, 10 of Hearts, 6 of Clubs, 5 of Spades), (8 of Hearts, 8 of Clubs, 10 of Clubs, 6 of Spades, 5 of Clubs) Tie for the Win.
+Test Result: PASS
+
+Output:
+     C:\Users\nater\source\repos\PokerHands\test\../Input/Straight1.cfg
+     (J of Hearts, 10 of Hearts, 9 of Clubs, 8 of Spades, 7 of Hearts): Straight
+     (10 of Spades, 9 of Spades, 8 of Clubs, 7 of Hearts, 6 of Spades): Straight
+     (J of Hearts, 10 of Hearts, 9 of Clubs, 8 of Spades, 7 of Hearts) Wins. (10 of Spades, 9 of Spades, 8 of Clubs, 7 of Hearts, 6 of Spades) Loses.
+Test Result: PASS
+
+Output:
+     C:\Users\nater\source\repos\PokerHands\test\../Input/Straight2.cfg
+     (10 of Spades, 9 of Spades, 8 of Clubs, 7 of Hearts, 6 of Spades): Straight
+     (6 of Clubs, 5 of Spades, 4 of Hearts, 3 of Spades, 2 of Diamonds): Straight
+     (10 of Spades, 9 of Spades, 8 of Clubs, 7 of Hearts, 6 of Spades) Wins. (6 of Clubs, 5 of Spades, 4 of Hearts, 3 of Spades, 2 of Diamonds) Loses.
+Test Result: PASS
+
+Output:
+     C:\Users\nater\source\repos\PokerHands\test\../Input/Straight3.cfg
+     (9 of Clubs, 8 of Clubs, 7 of Clubs, 6 of Diamonds, 5 of Diamonds): Straight
+     (9 of Spades, 8 of Spades, 7 of Spades, 6 of Hearts, 5 of Hearts): Straight
+     (9 of Clubs, 8 of Clubs, 7 of Clubs, 6 of Diamonds, 5 of Diamonds), (9 of Spades, 8 of Spades, 7 of Spades, 6 of Hearts, 5 of Hearts) Tie for the Win.
+Test Result: PASS
+
+Output:
+     C:\Users\nater\source\repos\PokerHands\test\../Input/StraightFlush1.cfg
+     (10 of Clubs, 9 of Clubs, 8 of Clubs, 7 of Clubs, 6 of Clubs): Straight Flush
+     (8 of Hearts, 7 of Hearts, 6 of Hearts, 5 of Hearts, 4 of Hearts): Straight Flush
+     (10 of Clubs, 9 of Clubs, 8 of Clubs, 7 of Clubs, 6 of Clubs) Wins. (8 of Hearts, 7 of Hearts, 6 of Hearts, 5 of Hearts, 4 of Hearts) Loses.
+Test Result: PASS
+
+Output:
+     C:\Users\nater\source\repos\PokerHands\test\../Input/StraightFlush2.cfg
+     (8 of Hearts, 7 of Hearts, 6 of Hearts, 5 of Hearts, 4 of Hearts): Straight Flush
+     (6 of Spades, 5 of Spades, 4 of Spades, 3 of Spades, 2 of Spades): Straight Flush
+     (8 of Hearts, 7 of Hearts, 6 of Hearts, 5 of Hearts, 4 of Hearts) Wins. (6 of Spades, 5 of Spades, 4 of Spades, 3 of Spades, 2 of Spades) Loses.
+Test Result: PASS
+
+Output:
+     C:\Users\nater\source\repos\PokerHands\test\../Input/StraightFlush3.cfg
+     (7 of Diamonds, 6 of Diamonds, 5 of Diamonds, 4 of Diamonds, 3 of Diamonds): Straight Flush
+     (7 of Spades, 6 of Spades, 5 of Spades, 4 of Spades, 3 of Spades): Straight Flush
+     (7 of Diamonds, 6 of Diamonds, 5 of Diamonds, 4 of Diamonds, 3 of Diamonds), (7 of Spades, 6 of Spades, 5 of Spades, 4 of Spades, 3 of Spades) Tie for the Win.
+Test Result: PASS
+
+Output:
+     C:\Users\nater\source\repos\PokerHands\test\../Input/ThreeOfAKind1.cfg
+     (6 of Hearts, 6 of Diamonds, 6 of Spades, Q of Clubs, 4 of Spades): Three of a Kind
+     (3 of Diamonds, 3 of Spades, 3 of Clubs, K of Spades, 2 of Spades): Three of a Kind
+     (6 of Hearts, 6 of Diamonds, 6 of Spades, Q of Clubs, 4 of Spades) Wins. (3 of Diamonds, 3 of Spades, 3 of Clubs, K of Spades, 2 of Spades) Loses.
+Test Result: PASS
+
+Output:
+     C:\Users\nater\source\repos\PokerHands\test\../Input/ThreeOfAKind2.cfg
+     (3 of Diamonds, 3 of Spades, 3 of Clubs, K of Spades, 2 of Spades): Three of a Kind
+     (3 of Diamonds, 3 of Spades, 3 of Clubs, J of Clubs, 7 of Hearts): Three of a Kind
+     (3 of Diamonds, 3 of Spades, 3 of Clubs, K of Spades, 2 of Spades) Wins. (3 of Diamonds, 3 of Spades, 3 of Clubs, J of Clubs, 7 of Hearts) Loses.
+Test Result: PASS
+
+Output:
+     C:\Users\nater\source\repos\PokerHands\test\../Input/ThreeOfAKind3.cfg
+     (3 of Diamonds, 3 of Spades, 3 of Clubs, J of Clubs, 7 of Hearts): Three of a Kind
+     (3 of Diamonds, 3 of Spades, 3 of Clubs, J of Spades, 5 of Diamonds): Three of a Kind
+     (3 of Diamonds, 3 of Spades, 3 of Clubs, J of Clubs, 7 of Hearts) Wins. (3 of Diamonds, 3 of Spades, 3 of Clubs, J of Spades, 5 of Diamonds) Loses.
+Test Result: PASS
+
+Output:
+     C:\Users\nater\source\repos\PokerHands\test\../Input/ThreeOfAKind4.cfg
+     (9 of Spades, 9 of Hearts, 9 of Diamonds, 10 of Diamonds, 8 of Hearts): Three of a Kind
+     (9 of Clubs, 9 of Spades, 9 of Hearts, 10 of Diamonds, 8 of Diamonds): Three of a Kind
+     (9 of Spades, 9 of Hearts, 9 of Diamonds, 10 of Diamonds, 8 of Hearts), (9 of Clubs, 9 of Spades, 9 of Hearts, 10 of Diamonds, 8 of Diamonds) Tie for the Win.
+Test Result: PASS
+
+Output:
+     C:\Users\nater\source\repos\PokerHands\test\../Input/ThreeWayTie.cfg
+     (10 of Diamonds, 9 of Diamonds, 8 of Diamonds, 6 of Diamonds, 7 of Diamonds): Straight Flush
+     (10 of Clubs, 9 of Clubs, 8 of Clubs, 7 of Clubs, 6 of Clubs): Straight Flush
+     (10 of Hearts, 9 of Hearts, 8 of Hearts, 6 of Hearts, 7 of Hearts): Straight Flush
+     (3 of Hearts, 5 of Hearts, 2 of Hearts, A of Hearts, 4 of Hearts): Straight Flush
+     (10 of Diamonds, 9 of Diamonds, 8 of Diamonds, 6 of Diamonds, 7 of Diamonds), (10 of Clubs, 9 of Clubs, 8 of Clubs, 7 of Clubs, 6 of Clubs), (10 of Hearts, 9 of Hearts, 8 of Hearts, 6 of Hearts, 7 of Hearts) Tie for the Win. (3 of Hearts, 5 of Hearts, 2 of Hearts, A of Hearts, 4 of Hearts) Loses.
+Test Result: PASS
+
+Output:
+     C:\Users\nater\source\repos\PokerHands\test\../Input/TripleTest1.cfg
+     (10 of Clubs, 9 of Clubs, 8 of Clubs, 7 of Clubs, 6 of Clubs): Straight Flush
+     (8 of Hearts, 7 of Hearts, 6 of Hearts, 5 of Hearts, 4 of Hearts): Straight Flush
+     (3 of Hearts, 5 of Hearts, 2 of Hearts, A of Hearts, 4 of Hearts): Straight Flush
+     (10 of Clubs, 9 of Clubs, 8 of Clubs, 7 of Clubs, 6 of Clubs) Wins. (8 of Hearts, 7 of Hearts, 6 of Hearts, 5 of Hearts, 4 of Hearts) and (3 of Hearts, 5 of Hearts, 2 of Hearts, A of Hearts, 4 of Hearts) Lose.
+Test Result: PASS
+
+Output:
+     C:\Users\nater\source\repos\PokerHands\test\../Input/TripleTest2.cfg
+     (10 of Diamonds, 9 of Diamonds, 8 of Diamonds, 6 of Diamonds, 7 of Diamonds): Straight Flush
+     (10 of Clubs, 9 of Clubs, 8 of Clubs, 7 of Clubs, 6 of Clubs): Straight Flush
+     (3 of Hearts, 5 of Hearts, 2 of Hearts, A of Hearts, 4 of Hearts): Straight Flush
+     (10 of Diamonds, 9 of Diamonds, 8 of Diamonds, 6 of Diamonds, 7 of Diamonds), (10 of Clubs, 9 of Clubs, 8 of Clubs, 7 of Clubs, 6 of Clubs) Tie for the Win. (3 of Hearts, 5 of Hearts, 2 of Hearts, A of Hearts, 4 of Hearts) Loses.
+Test Result: PASS
+
+Output:
+     C:\Users\nater\source\repos\PokerHands\test\../Input/TwoPair1.cfg
+     (10 of Diamonds, 10 of Spades, 2 of Spades, 2 of Clubs, K of Clubs): Two Pair
+     (5 of Clubs, 5 of Spades, 4 of Diamonds, 4 of Hearts, 10 of Hearts): Two Pair
+     (10 of Diamonds, 10 of Spades, 2 of Spades, 2 of Clubs, K of Clubs) Wins. (5 of Clubs, 5 of Spades, 4 of Diamonds, 4 of Hearts, 10 of Hearts) Loses.
+Test Result: PASS
+
+Output:
+     C:\Users\nater\source\repos\PokerHands\test\../Input/TwoPair2.cfg
+     (5 of Clubs, 5 of Spades, 4 of Diamonds, 4 of Hearts, 10 of Hearts): Two Pair
+     (5 of Clubs, 5 of Spades, 3 of Clubs, 3 of Diamonds, Q of Spades): Two Pair
+     (5 of Clubs, 5 of Spades, 4 of Diamonds, 4 of Hearts, 10 of Hearts) Wins. (5 of Clubs, 5 of Spades, 3 of Clubs, 3 of Diamonds, Q of Spades) Loses.
+Test Result: PASS
+
+Output:
+     C:\Users\nater\source\repos\PokerHands\test\../Input/TwoPair3.cfg
+     (5 of Clubs, 5 of Spades, 3 of Clubs, 3 of Diamonds, Q of Spades): Two Pair
+     (5 of Clubs, 5 of Spades, 3 of Clubs, 3 of Diamonds, J of Spades): Two Pair
+     (5 of Clubs, 5 of Spades, 3 of Clubs, 3 of Diamonds, Q of Spades) Wins. (5 of Clubs, 5 of Spades, 3 of Clubs, 3 of Diamonds, J of Spades) Loses.
+Test Result: PASS
+
+Output:
+     C:\Users\nater\source\repos\PokerHands\test\../Input/TwoPair3Flipped.cfg
+     (5 of Clubs, 5 of Spades, 3 of Clubs, 3 of Diamonds, Q of Spades): Two Pair
+     (5 of Clubs, 5 of Spades, 3 of Clubs, 3 of Diamonds, J of Spades): Two Pair
+     (5 of Clubs, 5 of Spades, 3 of Clubs, 3 of Diamonds, Q of Spades) Wins. (5 of Clubs, 5 of Spades, 3 of Clubs, 3 of Diamonds, J of Spades) Loses.
+Test Result: PASS
+
+Output:
+     C:\Users\nater\source\repos\PokerHands\test\../Input/TwoPair4.cfg
+     (K of Diamonds, K of Spades, 7 of Diamonds, 7 of Hearts, 8 of Hearts): Two Pair
+     (K of Clubs, K of Spades, 7 of Clubs, 7 of Hearts, 8 of Clubs): Two Pair
+     (K of Diamonds, K of Spades, 7 of Diamonds, 7 of Hearts, 8 of Hearts), (K of Clubs, K of Spades, 7 of Clubs, 7 of Hearts, 8 of Clubs) Tie for the Win.
+Test Result: PASS
+
