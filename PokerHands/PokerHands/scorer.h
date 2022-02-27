@@ -54,64 +54,56 @@ private:
 
     // Check hand for presence of Four of a Kind
     //
-    // If type is present, sort cards for comparison to
-    // similar sets of cards
+    // If type is present, sort cards for comparison
     // @param *cards - pointer to vector of cards to check
     // @return true if hand type is present, false otherwise
     bool hasFourOfAKind(vector<Card> *cards);
 
     // Check hand for presence of Full House
     //
-    // If type is present, sort cards for comparison to
-    // similar sets of cards
+    // If type is present, sort cards for comparison
     // @param *cards - pointer to vector of cards to check
     // @return true if hand type is present, false otherwise
     bool hasFullHouse(vector<Card> *cards);
 
     // Check hand for presence of Flush
     //
-    // If type is present, sort cards for comparison to
-    // similar sets of cards
+    // If type is present, sort cards for comparison
     // @param *cards - pointer to vector of cards to check
     // @return true if hand type is present, false otherwise
     bool hasFlush(vector<Card> *cards);
 
     // Check hand for presence of Straight
     //
-    // If type is present, sort cards for comparison to
-    // similar sets of cards
+    // If type is present, sort cards for comparison
     // @param *cards - pointer to vector of cards to check
     // @return true if hand type is present, false otherwise
     bool hasStraight(vector<Card> *cards);
 
     // Check hand for presence of Three of a Kind
     //
-    // If type is present, sort cards for comparison to
-    // similar sets of cards
+    // If type is present, sort cards for comparison
     // @param *cards - pointer to vector of cards to check
     // @return true if hand type is present, false otherwise
     bool hasThreeOfAKind(vector<Card> *cards);
 
     // Check hand for presence of Two Pair
     //
-    // If type is present, sort cards for comparison to
-    // similar sets of cards
+    // If type is present, sort cards for comparison
     // @param *cards - pointer to vector of cards to check
     // @return true if hand type is present, false otherwise
     bool hasTwoPair(vector<Card> *cards);
 
     // Check hand for presence of One Pair
     //
-    // If type is present, sort cards for comparison to
-    // similar sets of cards
+    // If type is present, sort cards for comparison
     // @param *cards - pointer to vector of cards to check
     // @return true if hand type is present, false otherwise
     bool hasOnePair(vector<Card> *cards);
 
     // Check hand for presence of High Card
     //
-    // If type is present, sort cards for comparison to
-    // similar sets of cards
+    // If type is present, sort cards for comparison
     // @param *cards - pointer to vector of cards to check
     // @return true if hand type is present, false otherwise
     bool hasHighCard(vector<Card> *cards);
