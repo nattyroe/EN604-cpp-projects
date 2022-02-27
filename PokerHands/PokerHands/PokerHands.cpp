@@ -284,6 +284,10 @@ int main(int argc, char **argv)
             if (players->size() > 1)
             {
                 int winnerIdx = scorer->findBestHand(players);
+                for (Hand hand : *players)
+                {
+                    cout << "(" << hand.printCards() << "): " << hand.printHandType() << endl;
+                }
                 printResults(winnerIdx, players);
             }
         }

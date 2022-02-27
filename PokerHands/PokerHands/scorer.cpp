@@ -21,7 +21,7 @@ int Scorer::findBestHand(vector<Hand> *hands)
     // Compare remaining hands to the current best hand
     for (int idx = 1; idx < hands->size(); ++idx)
     {
-        int result = compareHands(*bestHand, hands->at(idx));
+        int result = compareHands(bestHand, &hands->at(idx));
         // If hands tie, move new hand to front section of vector
         if (result == 0)
         {
@@ -53,22 +53,22 @@ int Scorer::findBestHand(vector<Hand> *hands)
 } // End function findBestHand
 
 // Compare two Hands to determine which is better
-int Scorer::compareHands(Hand hand1, Hand hand2)
+int Scorer::compareHands(Hand *hand1, Hand *hand2)
 {
     // If hands are not sets of 5 cards, return error
-    if (!(hand1.size() == HAND_SIZE) ||
-        !(hand2.size() == HAND_SIZE))
+    if (!(hand1->size() == HAND_SIZE) ||
+        !(hand2->size() == HAND_SIZE))
     {
         return -1;
     }
 
     // Check type of each hand, and prep cards for comparison
-    vector<Card> cards1 = checkHandType(&hand1);
-    vector<Card> cards2 = checkHandType(&hand2);
+    vector<Card> cards1 = checkHandType(hand1);
+    vector<Card> cards2 = checkHandType(hand2);
 
     // Verify that each hand is a valid Poker Hand Type
-    if (hand1.getHandType() == Hand::HandType::None ||
-        hand2.getHandType() == Hand::HandType::None)
+    if (hand1->getHandType() == Hand::HandType::None ||
+        hand2->getHandType() == Hand::HandType::None)
     {
         return -1;
     }
@@ -76,11 +76,11 @@ int Scorer::compareHands(Hand hand1, Hand hand2)
     int result = -1;
 
     // Check to see if one Hand is a higher rank than the other
-    if (hand1.getHandType() > hand2.getHandType())
+    if (hand1->getHandType() > hand2->getHandType())
     {
         result = 1;
     }
-    else if (hand1.getHandType() < hand2.getHandType())
+    else if (hand1->getHandType() < hand2->getHandType())
     {
         result = 2;
     }

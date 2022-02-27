@@ -46,6 +46,11 @@ public:
     // @return std::string of cards giving value and suit
     string printCards();
 
+    // Get string of hand type
+    //
+    // @return std::string of cards giving value and suit
+    string printHandType();
+
     // Get the current number of cards in the hand
     //
     // @return an int containing the hand size

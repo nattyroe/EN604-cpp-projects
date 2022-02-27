@@ -42,7 +42,7 @@ private:
     // @param hand2 - Second Hand for comparing
     // @return 1 for hand1, 2 for hand2, 0 for tie,
     //    or -1 for error
-    int compareHands(Hand hand1, Hand hand2);
+    int compareHands(Hand *hand1, Hand *hand2);
 
     // Check hand for presence of Straight Flush
     //
