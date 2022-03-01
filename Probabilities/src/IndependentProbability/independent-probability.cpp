@@ -8,7 +8,6 @@ IndependentProbability::IndependentProbability(double probability)
     }
     else
     {
-        // TODO: Throw Error
-        return;
+        throw invalidprobex;
     }
 }

@@ -27,9 +27,14 @@ int main(int argc, char *argv[])
             a = new IndependentProbability(x);
         }
         // Catch inputs that can't be converted to numbers
-        catch (const std::invalid_argument &e)
+        catch (const invalid_argument &e)
         {
             cout << e.what() << ": Could not interpret <" << argv[1] << "> as a double." << endl;
+            return EXIT_FAILURE;
+        }
+        catch (const IndependentProbability::invalidProbability &e)
+        {
+            cout << e.what() << ": argv[1]" << endl;
             return EXIT_FAILURE;
         }
         // Add numbers to distribution
@@ -39,9 +44,14 @@ int main(int argc, char *argv[])
             b = new IndependentProbability(y);
         }
         // Catch inputs that can't be converted to numbers
-        catch (const std::invalid_argument &e)
+        catch (const invalid_argument &e)
         {
             cout << e.what() << ": Could not interpret <" << argv[2] << "> as a double." << endl;
+            return EXIT_FAILURE;
+        }
+        catch (const IndependentProbability::invalidProbability &e)
+        {
+            cout << e.what() << ": " << argv[2] << endl;
             return EXIT_FAILURE;
         }
     }
