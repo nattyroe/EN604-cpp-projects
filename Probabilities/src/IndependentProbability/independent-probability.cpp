@@ -11,3 +11,28 @@ IndependentProbability::IndependentProbability(double probability)
         throw invalidprobex;
     }
 }
+
+double operator~(const IndependentProbability &probA)
+{
+    return 1.0 - probA.getProbability();
+}
+
+double operator&(const IndependentProbability &probA, const IndependentProbability &probB)
+{
+    return probA.getProbability() * probB.getProbability();
+}
+
+double operator|(const IndependentProbability &probA, const IndependentProbability &probB)
+{
+    return 1.0 - (~probA * ~probB);
+}
+
+double operator^(const IndependentProbability &probA, const IndependentProbability &probB)
+{
+    return (probA | probB) - (probA & probB);
+}
+
+double operator-(const IndependentProbability &probA, const IndependentProbability &probB)
+{
+    return probA.getProbability() * ~probB;
+}

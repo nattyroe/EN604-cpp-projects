@@ -25,6 +25,7 @@ int main(int argc, char *argv[])
         {
             double x = stod(argv[1]);
             a = new IndependentProbability(x);
+            cout << "P(A) = " << a->getProbability() << endl;
         }
         // Catch inputs that can't be converted to numbers
         catch (const invalid_argument &e)
@@ -34,7 +35,7 @@ int main(int argc, char *argv[])
         }
         catch (const IndependentProbability::invalidProbability &e)
         {
-            cout << e.what() << ": argv[1]" << endl;
+            cout << e.what() << ": " << argv[1] << endl;
             return EXIT_FAILURE;
         }
         // Add numbers to distribution
@@ -42,6 +43,7 @@ int main(int argc, char *argv[])
         {
             double y = stod(argv[2]);
             b = new IndependentProbability(y);
+            cout << "P(B) = " << b->getProbability() << endl;
         }
         // Catch inputs that can't be converted to numbers
         catch (const invalid_argument &e)
@@ -54,6 +56,14 @@ int main(int argc, char *argv[])
             cout << e.what() << ": " << argv[2] << endl;
             return EXIT_FAILURE;
         }
+
+        cout << "P(~A) = " << ~*a << endl;
+        cout << "P(~B) = " << ~*b << endl;
+        cout << "P(A & B) = " << (*a & *b) << endl;
+        cout << "P(A | B) = " << (*a | *b) << endl;
+        cout << "P(A ^ B) = " << (*a ^ *b) << endl;
+        cout << "P(A - B) = " << (*a - *b) << endl;
+        cout << "P(B - A) = " << (*b - *a) << endl;
     }
     return EXIT_SUCCESS;
 } // End function main
