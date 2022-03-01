@@ -1,0 +1,2 @@
+To push work to the Public branch:
+`git push Public main` 

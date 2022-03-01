@@ -8,7 +8,7 @@ IndependentProbability::IndependentProbability(double probability)
     }
     else
     {
-        throw invalidprobex;
+        throw invalidProbEx;
     }
 }
 

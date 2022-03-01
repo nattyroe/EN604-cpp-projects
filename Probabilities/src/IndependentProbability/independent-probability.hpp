@@ -14,7 +14,7 @@ public:
         {
             return "Probability not between 0.0 and 1.0";
         }
-    } invalidprobex;
+    } invalidProbEx;
 
 private:
     double probability = 0.0;
