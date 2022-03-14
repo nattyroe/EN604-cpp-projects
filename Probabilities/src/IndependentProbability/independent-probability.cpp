@@ -1,6 +1,8 @@
 #include "independent-probability.hpp"
 
-IndependentProbability::IndependentProbability(double probability)
+// Independent Probability object constructor; stores
+// given probability.
+IndependentProb::IndependentProb(double probability)
 {
     if (probability >= 0.0 && probability <= 1.0)
     {
@@ -10,29 +12,34 @@ IndependentProbability::IndependentProbability(double probability)
     {
         throw invalidProbEx;
     }
+} // End constructor
+
+// NOT operator for finding P(NOT A)
+IndependentProb operator~(const IndependentProb &probA)
+{
+    return IndependentProb(1.0 - probA.getProbability());
 }
 
-double operator~(const IndependentProbability &probA)
+// AND operator for finding P(A AND B)
+IndependentProb operator&(const IndependentProb &probA, const IndependentProb &probB)
 {
-    return 1.0 - probA.getProbability();
+    return IndependentProb(probA.getProbability() * probB.getProbability());
 }
 
-double operator&(const IndependentProbability &probA, const IndependentProbability &probB)
+// OR operator for finding P(A AND/OR B)
+IndependentProb operator|(const IndependentProb &probA, const IndependentProb &probB)
 {
-    return probA.getProbability() * probB.getProbability();
+    return IndependentProb(1.0 - ((~probA).getProbability() * (~probB).getProbability()));
 }
 
-double operator|(const IndependentProbability &probA, const IndependentProbability &probB)
+// EXCLUSIVE OR operator for finding P(A XOR B)
+IndependentProb operator^(const IndependentProb &probA, const IndependentProb &probB)
 {
-    return 1.0 - (~probA * ~probB);
+    return IndependentProb((probA | probB).getProbability() - (probA & probB).getProbability());
 }
 
-double operator^(const IndependentProbability &probA, const IndependentProbability &probB)
+// EXCLUSIVE operator for finding P(A BUT NOT B)
+IndependentProb operator-(const IndependentProb &probA, const IndependentProb &probB)
 {
-    return (probA | probB) - (probA & probB);
-}
-
-double operator-(const IndependentProbability &probA, const IndependentProbability &probB)
-{
-    return probA.getProbability() * ~probB;
+    return IndependentProb(probA.getProbability() * (~probB).getProbability());
 }

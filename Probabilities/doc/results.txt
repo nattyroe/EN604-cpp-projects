@@ -1,0 +1,72 @@
+Running Probability Tests
+
+P(A) = 0
+P(B) = 1
+P(~A) = 1
+P(~B) = 0
+P(A & B) = 0
+P(A | B) = 1
+P(A ^ B) = 1
+P(A - B) = 0
+P(B - A) = 1
+
+
+P(A) = 1
+P(B) = 0
+P(~A) = 0
+P(~B) = 1
+P(A & B) = 0
+P(A | B) = 1
+P(A ^ B) = 1
+P(A - B) = 1
+P(B - A) = 0
+
+
+P(A) = 0.25
+P(B) = 0.75
+P(~A) = 0.75
+P(~B) = 0.25
+P(A & B) = 0.1875
+P(A | B) = 0.8125
+P(A ^ B) = 0.625
+P(A - B) = 0.0625
+P(B - A) = 0.5625
+
+
+P(A) = 0.5
+P(B) = 0.5
+P(~A) = 0.5
+P(~B) = 0.5
+P(A & B) = 0.25
+P(A | B) = 0.75
+P(A ^ B) = 0.5
+P(A - B) = 0.25
+P(B - A) = 0.25
+
+
+P(A) = 0
+P(B) = 0
+P(~A) = 1
+P(~B) = 1
+P(A & B) = 0
+P(A | B) = 0
+P(A ^ B) = 0
+P(A - B) = 0
+P(B - A) = 0
+
+
+P(A) = 1
+P(B) = 1
+P(~A) = 0
+P(~B) = 0
+P(A & B) = 1
+P(A | B) = 1
+P(A ^ B) = 0
+P(A - B) = 0
+P(B - A) = 0
+
+
+Probability not between 0.0 and 1.0: 1.1  0.2
+
+Probability not between 0.0 and 1.0: 0.2  1.1
+
