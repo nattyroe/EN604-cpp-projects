@@ -15,6 +15,8 @@ Probabilities/ProbabilityTest
 *.obj
 **/temp/
 **/x64/
+**/.vs/
+**/build/
 
 # Precompiled Headers
 *.gch
