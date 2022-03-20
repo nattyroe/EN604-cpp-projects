@@ -11,8 +11,6 @@ using namespace std;
 
 int main()
 {
-    BaseNode *baseNode = new BaseNode();
-
     Constant *constant = new Constant(1.1);
 
     Variable *variable = new Variable("X");

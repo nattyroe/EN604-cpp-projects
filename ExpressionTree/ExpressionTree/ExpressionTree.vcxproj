@@ -144,6 +144,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="BaseNode.cpp" />
+    <ClCompile Include="BaseTree.cpp" />
     <ClCompile Include="Constant.cpp" />
     <ClCompile Include="ExpressionTree.cpp" />
     <ClCompile Include="Operator.cpp" />
@@ -151,6 +152,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BaseNode.h" />
+    <ClInclude Include="BaseTree.h" />
     <ClInclude Include="Constant.h" />
     <ClInclude Include="Operator.h" />
     <ClInclude Include="Variable.h" />

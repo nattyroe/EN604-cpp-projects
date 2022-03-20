@@ -13,7 +13,7 @@ public:
 
     string getData() { return this->data; };
 
-    virtual double evaluate(const map<string, double> *variableTable);
+    virtual double evaluate(const map<string, double> *variableTable) = 0;
 
 protected:
     BaseNode *left = nullptr;
