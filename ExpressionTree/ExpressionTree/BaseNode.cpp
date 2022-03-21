@@ -4,8 +4,22 @@
 
 using namespace std;
 
+BaseNode::~BaseNode()
+{
+    delete left;
+    delete right;
+}
+
 ostream &operator<<(ostream &os, BaseNode &node)
 {
-    os << node.getData();
+    if (node.left)
+    {
+        os << *node.left;
+    }
+    os << node.data;
+    if (node.right)
+    {
+        os << *node.right;
+    }
     return os;
 }
