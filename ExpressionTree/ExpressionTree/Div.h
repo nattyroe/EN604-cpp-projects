@@ -9,6 +9,8 @@ public:
     Div(BaseNode *left, BaseTree *right) : BaseTree(left, right, '/') {};
     Div(BaseTree *left, BaseTree *right) : BaseTree(left, right, '/') {};
 
+    BaseTree* clone();
+
 protected:
 
 };

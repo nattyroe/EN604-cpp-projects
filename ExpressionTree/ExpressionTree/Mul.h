@@ -9,6 +9,8 @@ public:
     Mul(BaseNode *left, BaseTree *right) : BaseTree(left, right, '*') {};
     Mul(BaseTree *left, BaseTree *right) : BaseTree(left, right, '*') {};
 
+    BaseTree* clone();
+
 protected:
 
 };

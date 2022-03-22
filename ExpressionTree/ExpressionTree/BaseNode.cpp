@@ -10,6 +10,30 @@ BaseNode::~BaseNode()
     delete right;
 }
 
+BaseNode *BaseNode::getLeftClone()
+{
+    if (this->left)
+    {
+        return this->left->clone();
+    }
+    else
+    {
+        return nullptr;
+    }
+}
+
+BaseNode *BaseNode::getRightClone()
+{
+    if (this->right)
+    {
+        return this->right->clone();
+    }
+    else
+    {
+        return nullptr;
+    }
+}
+
 ostream &operator<<(ostream &os, BaseNode &node)
 {
     if (node.left)

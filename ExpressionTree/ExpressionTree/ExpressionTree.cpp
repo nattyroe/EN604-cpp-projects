@@ -31,7 +31,7 @@ int main()
     cout << *tree2 << "=" << tree2->evaluate() << endl;
 
 
-    BaseTree* t = new Add(new Mul(new Constant(2.3),
+    BaseTree *t = new Add(new Mul(new Constant(2.3),
                                   new Variable("Xray")),
                           new Mul(new Variable("Yellow"),
                                   new Sub(new Variable("Zebra"),
@@ -39,5 +39,8 @@ int main()
     t->let("Xray", 2.0);
     t->let("Yellow", 3.0);
     t->let("Zebra", 5.0);
-    cout << *t << "=" << t->evaluate();
+    cout << *t << "=" << t->evaluate() << endl;
+
+    BaseTree *t2 = t->clone();
+    cout << *t2 << "=" << t2->evaluate() << endl;
 }

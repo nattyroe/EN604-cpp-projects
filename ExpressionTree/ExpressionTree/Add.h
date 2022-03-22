@@ -9,6 +9,8 @@ public:
     Add(BaseNode *left, BaseTree *right) : BaseTree(left, right, '+') {};
     Add(BaseTree *left, BaseTree *right) : BaseTree(left, right, '+') {};
 
+    BaseTree *clone();
+
 protected:
 
 };

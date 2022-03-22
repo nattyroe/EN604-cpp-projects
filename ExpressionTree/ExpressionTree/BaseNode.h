@@ -18,6 +18,8 @@ public:
     virtual double evaluate(const map<string, double> *variableTable) = 0;
 
     virtual BaseNode *clone() = 0;
+    BaseNode *getLeftClone();
+    BaseNode *getRightClone();
 
 protected:
     friend ostream& operator<<(ostream& os, BaseNode& node);

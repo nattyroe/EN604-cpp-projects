@@ -9,6 +9,8 @@ public:
     Sub(BaseNode *left, BaseTree *right) : BaseTree(left, right, '-') {};
     Sub(BaseTree *left, BaseTree *right) : BaseTree(left, right, '-') {};
 
+    BaseTree* clone();
+
 protected:
 
 };

@@ -15,6 +15,7 @@ public:
 
     map<string, double> getVariableTable() { return this->variableTable; };
     BaseNode* cloneSubStructure();
+    virtual BaseTree *clone() = 0;
 
 protected:
     friend ostream& operator<<(ostream& os, BaseTree& tree);
