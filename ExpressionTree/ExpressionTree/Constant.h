@@ -11,6 +11,8 @@ public:
 
     double evaluate(const map<string, double> *variableTable);
 
+    BaseNode* clone();
+
 private:
     double value = numeric_limits<double>::signaling_NaN();
 };

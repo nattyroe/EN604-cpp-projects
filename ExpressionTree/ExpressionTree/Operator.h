@@ -12,6 +12,8 @@ public:
 
     double evaluate(const map<string, double> *variableTable);
 
+    BaseNode* clone();
+
     class invalidOperator : public std::exception
     {
     public:

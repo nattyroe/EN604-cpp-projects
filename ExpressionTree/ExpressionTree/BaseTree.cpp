@@ -10,6 +10,11 @@ void BaseTree::let(string variableName, double value)
     this->variableTable.insert(pair<string, double>(variableName, value));
 }
 
+BaseNode* BaseTree::cloneSubStructure()
+{
+    return this->root->clone();
+}
+
 ostream& operator<<(ostream& os, BaseTree& tree)
 {
     map<string, double>::iterator itr;

@@ -143,18 +143,26 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Add.cpp" />
     <ClCompile Include="BaseNode.cpp" />
     <ClCompile Include="BaseTree.cpp" />
     <ClCompile Include="Constant.cpp" />
+    <ClCompile Include="Div.cpp" />
     <ClCompile Include="ExpressionTree.cpp" />
+    <ClCompile Include="Mul.cpp" />
     <ClCompile Include="Operator.cpp" />
+    <ClCompile Include="Sub.cpp" />
     <ClCompile Include="Variable.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Add.h" />
     <ClInclude Include="BaseNode.h" />
     <ClInclude Include="BaseTree.h" />
     <ClInclude Include="Constant.h" />
+    <ClInclude Include="Div.h" />
+    <ClInclude Include="Mul.h" />
     <ClInclude Include="Operator.h" />
+    <ClInclude Include="Sub.h" />
     <ClInclude Include="Variable.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

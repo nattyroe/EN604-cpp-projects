@@ -17,3 +17,17 @@ double Variable::evaluate(const map<string, double> *variableTable)
     }
     return result->second;
 }
+
+BaseNode* Variable::clone()
+{
+    BaseNode* clone = new Variable(this->data);
+    if (this->left)
+    {
+        clone->setLeft(this->left->clone());
+    }
+    if (this->right)
+    {
+        clone->setRight(this->right->clone());
+    }
+    return clone;
+}

@@ -14,12 +14,12 @@ ostream &operator<<(ostream &os, BaseNode &node)
 {
     if (node.left)
     {
-        os << *node.left;
+        os << "(" << * node.left;
     }
     os << node.data;
     if (node.right)
     {
-        os << *node.right;
+        os << *node.right << ")";
     }
     return os;
 }

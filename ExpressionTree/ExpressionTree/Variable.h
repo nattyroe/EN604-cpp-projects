@@ -12,7 +12,9 @@ public:
     Variable(string name);
 
     double evaluate(const map<string, double> *variableTable);
-    
+
+    BaseNode* clone();
+
     class valuelessVariable : public std::exception
     {
     public:
