@@ -1,16 +1,15 @@
 #pragma once
 #include "BaseTree.h"
-class Sub :
-    public BaseTree
+
+class Sub : public BaseTree
 {
 public:
-    Sub(BaseNode* left, BaseNode* right);
-    Sub(BaseTree* left, BaseNode* right);
-    Sub(BaseNode* left, BaseTree* right);
-    Sub(BaseTree* left, BaseTree* right);
+    Sub(BaseNode *left, BaseNode *right) : BaseTree(left, right, '-') {};
+    Sub(BaseTree *left, BaseNode *right) : BaseTree(left, right, '-') {};
+    Sub(BaseNode *left, BaseTree *right) : BaseTree(left, right, '-') {};
+    Sub(BaseTree *left, BaseTree *right) : BaseTree(left, right, '-') {};
 
 protected:
-    void createRoot();
 
 };
 

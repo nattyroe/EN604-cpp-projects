@@ -5,6 +5,11 @@
 class BaseTree
 {
 public:
+    BaseTree(BaseNode* left, BaseNode* right, char oper);
+    BaseTree(BaseTree* left, BaseNode* right, char oper);
+    BaseTree(BaseNode* left, BaseTree* right, char oper);
+    BaseTree(BaseTree* left, BaseTree* right, char oper);
+
     double evaluate() { return this->root->evaluate(&this->variableTable); };
     void let(string variableName, double value);
 
@@ -13,7 +18,6 @@ public:
 
 protected:
     friend ostream& operator<<(ostream& os, BaseTree& tree);
-    virtual void createRoot() = 0;
     BaseNode* root = nullptr;
     map<string, double> variableTable;
 

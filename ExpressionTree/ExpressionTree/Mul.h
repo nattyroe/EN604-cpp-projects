@@ -1,20 +1,15 @@
 #pragma once
 #include "BaseTree.h"
 
-class BaseNode;
-
-using namespace std;
-
 class Mul : public BaseTree
 {
 public:
-    Mul(BaseNode *left, BaseNode *right);
-    Mul(BaseTree *left, BaseNode *right);
-    Mul(BaseNode *left, BaseTree *right);
-    Mul(BaseTree *left, BaseTree *right);
+    Mul(BaseNode *left, BaseNode *right) : BaseTree(left, right, '*') {};
+    Mul(BaseTree *left, BaseNode *right) : BaseTree(left, right, '*') {};
+    Mul(BaseNode *left, BaseTree *right) : BaseTree(left, right, '*') {};
+    Mul(BaseTree *left, BaseTree *right) : BaseTree(left, right, '*') {};
 
 protected:
-    void createRoot();
 
 };
 
