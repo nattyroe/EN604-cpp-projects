@@ -11,7 +11,10 @@ public:
 
     BaseTree* clone();
 
+    BaseTree* derivative(string variable);
+
 protected:
 
+private:
+    Mul(BaseNode* root) : BaseTree(root) {};
 };
-

@@ -12,6 +12,7 @@ public:
     Variable(string name);
 
     double evaluate(const map<string, double> *variableTable);
+    BaseNode* derive(string variable);
 
     BaseNode* clone();
 
@@ -24,4 +25,3 @@ public:
         }
     } valuelessVariable;
 };
-

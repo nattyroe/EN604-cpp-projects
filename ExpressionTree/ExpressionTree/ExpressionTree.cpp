@@ -20,7 +20,6 @@ int main()
 
     Variable *variable = new Variable("X");
 
-
     BaseTree* tree = new Mul(constant, variable);
     tree->let("X", 5.0);
 
@@ -43,4 +42,7 @@ int main()
 
     BaseTree *t2 = t->clone();
     cout << *t2 << "=" << t2->evaluate() << endl;
+
+    BaseTree *derived = t->derivative("Xray");
+    cout << *derived << "=" << derived->evaluate() << endl;
 }

@@ -16,6 +16,7 @@ public:
     string getData() { return this->data; };
 
     virtual double evaluate(const map<string, double> *variableTable) = 0;
+    virtual BaseNode *derive(string variable) = 0;
 
     virtual BaseNode *clone() = 0;
     BaseNode *getLeftClone();

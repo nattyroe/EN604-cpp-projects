@@ -10,8 +10,9 @@ public:
     Constant(double value);
 
     double evaluate(const map<string, double> *variableTable);
+    BaseNode *derive(string variable);
 
-    BaseNode* clone();
+    BaseNode *clone();
 
 private:
     double value = numeric_limits<double>::signaling_NaN();

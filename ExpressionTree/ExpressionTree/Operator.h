@@ -11,8 +11,9 @@ public:
     Operator(char oper);
 
     double evaluate(const map<string, double> *variableTable);
+    BaseNode *derive(string variable);
 
-    BaseNode* clone();
+    BaseNode *clone();
 
     class invalidOperator : public std::exception
     {

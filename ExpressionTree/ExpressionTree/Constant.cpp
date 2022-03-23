@@ -11,7 +11,7 @@ double Constant::evaluate(const map<string, double> *variableTable)
     return this->value;
 }
 
-BaseNode* Constant::clone()
+BaseNode *Constant::clone()
 {
     BaseNode* clone = new Constant(this->value);
     if (this->left)
@@ -23,4 +23,9 @@ BaseNode* Constant::clone()
         clone->setRight(this->right->clone());
     }
     return clone;
+}
+
+BaseNode *Constant::derive(string variable)
+{
+    return new Constant(0.0);
 }

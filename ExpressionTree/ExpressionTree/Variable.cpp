@@ -1,4 +1,5 @@
 #include "Variable.h"
+#include "Constant.h"
 #include <string>
 
 using namespace std;
@@ -18,7 +19,7 @@ double Variable::evaluate(const map<string, double> *variableTable)
     return result->second;
 }
 
-BaseNode* Variable::clone()
+BaseNode *Variable::clone()
 {
     BaseNode* clone = new Variable(this->data);
     if (this->left)
@@ -30,4 +31,13 @@ BaseNode* Variable::clone()
         clone->setRight(this->right->clone());
     }
     return clone;
+}
+
+BaseNode *Variable::derive(string variable)
+{
+    if (variable == this->data)
+    {
+        return new Constant(1.0);
+    }
+    return new Constant(0.0);
 }

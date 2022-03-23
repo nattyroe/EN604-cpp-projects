@@ -34,14 +34,28 @@ BaseTree::BaseTree(BaseTree* left, BaseTree* right, char oper)
     this->root->setRight(right->cloneSubStructure());
 }
 
+BaseTree::BaseTree(BaseNode* root)
+{
+    this->root = root->clone();
+}
+
 void BaseTree::let(string variableName, double value)
 {
     this->variableTable.insert(pair<string, double>(variableName, value));
 }
 
-BaseNode* BaseTree::cloneSubStructure()
+BaseNode *BaseTree::cloneSubStructure()
 {
     return this->root->clone();
+}
+
+void BaseTree::copyVariableTableTo(BaseTree* newTree)
+{
+    map<string, double>::iterator itr;
+    for (itr = this->variableTable.begin(); itr != this->variableTable.end(); ++itr)
+    {
+        newTree->let(itr->first, itr->second);
+    }
 }
 
 ostream& operator<<(ostream& os, BaseTree& tree)

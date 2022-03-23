@@ -1,5 +1,8 @@
 #pragma once
 #include "BaseTree.h"
+#include <string>
+
+using namespace std;
 
 class Add : public BaseTree
 {
@@ -11,7 +14,10 @@ public:
 
     BaseTree *clone();
 
+    BaseTree *derivative(string variable);
+
 protected:
 
+private:
+    Add(BaseNode *root) : BaseTree(root) {};
 };
-

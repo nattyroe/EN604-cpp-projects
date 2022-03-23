@@ -8,10 +8,16 @@ BaseTree* Sub::clone()
     BaseNode* right = this->root->getRightClone();
     BaseTree* clone = new Sub(left, right);
 
-    map<string, double>::iterator itr;
-    for (itr = this->variableTable.begin(); itr != this->variableTable.end(); ++itr)
-    {
-        clone->let(itr->first, itr->second);
-    }
+    copyVariableTableTo(clone);
     return clone;
+}
+
+BaseTree* Sub::derivative(string variable)
+{
+    BaseNode* derivationNode = this->root->derive(variable);
+    BaseTree* derivation = new Sub(derivationNode);
+    delete derivationNode;
+
+    copyVariableTableTo(derivation);
+    return derivation;
 }
