@@ -2,20 +2,20 @@
 #include "BaseTree.h"
 #include "BaseNode.h"
 
-BaseTree* Sub::clone()
+BaseTree *Sub::clone()
 {
-    BaseNode* left = this->root->getLeftClone();
-    BaseNode* right = this->root->getRightClone();
-    BaseTree* clone = new Sub(left, right);
+    BaseNode *left = this->root->getLeftClone();
+    BaseNode *right = this->root->getRightClone();
+    BaseTree *clone = new Sub(left, right);
 
     copyVariableTableTo(clone);
     return clone;
 }
 
-BaseTree* Sub::derivative(string variable)
+BaseTree *Sub::derivative(string variable)
 {
-    BaseNode* derivationNode = this->root->derive(variable);
-    BaseTree* derivation = new Sub(derivationNode);
+    BaseNode *derivationNode = this->root->derive(variable);
+    BaseTree *derivation = new Sub(derivationNode);
     delete derivationNode;
 
     copyVariableTableTo(derivation);

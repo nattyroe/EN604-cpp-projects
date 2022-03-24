@@ -36,7 +36,7 @@ double Operator::evaluate(const map<string, double> *variableTable)
 
 BaseNode *Operator::clone()
 {
-    BaseNode* clone = new Operator(this->oper);
+    BaseNode *clone = new Operator(this->oper);
     if (this->left)
     {
         clone->setLeft(this->left->clone());
@@ -91,7 +91,7 @@ BaseNode *Operator::derive(string variable)
         return newOper;
 
     case '/':
-        newOper = new Operator('-');
+        newOper = new Operator('/');
 
         numerator = new Operator('-');
 

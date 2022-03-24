@@ -2,11 +2,11 @@
 #include "BaseTree.h"
 #include "BaseNode.h"
 
-BaseTree* Add::clone()
+BaseTree *Add::clone()
 {
-    BaseNode* left = this->root->getLeftClone();
-    BaseNode* right = this->root->getRightClone();
-    BaseTree* clone = new Add(left, right);
+    BaseNode *left = this->root->getLeftClone();
+    BaseNode *right = this->root->getRightClone();
+    BaseTree *clone = new Add(left, right);
 
     copyVariableTableTo(clone);
     return clone;

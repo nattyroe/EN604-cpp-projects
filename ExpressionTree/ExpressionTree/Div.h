@@ -9,13 +9,12 @@ public:
     Div(BaseNode *left, BaseTree *right) : BaseTree(left, right, '/') {};
     Div(BaseTree *left, BaseTree *right) : BaseTree(left, right, '/') {};
 
-    BaseTree* clone();
+    BaseTree *clone();
 
-    BaseTree* derivative(string variable);
+    BaseTree *derivative(string variable);
 
 protected:
 
 private:
-    Div(BaseNode* root) : BaseTree(root) {};
+    Div(BaseNode *root) : BaseTree(root) {};
 };
-

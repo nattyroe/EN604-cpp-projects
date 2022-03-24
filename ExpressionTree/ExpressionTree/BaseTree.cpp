@@ -6,35 +6,35 @@
 
 using namespace std; 
 
-BaseTree::BaseTree(BaseNode* left, BaseNode* right, char oper)
+BaseTree::BaseTree(BaseNode *left, BaseNode *right, char oper)
 {
     this->root = new Operator(oper);
     this->root->setLeft(left->clone());
     this->root->setRight(right->clone());
 }
 
-BaseTree::BaseTree(BaseTree* left, BaseNode* right, char oper)
+BaseTree::BaseTree(BaseTree *left, BaseNode *right, char oper)
 {
     this->root = new Operator(oper);
     this->root->setLeft(left->cloneSubStructure());
     this->root->setRight(right->clone());
 }
 
-BaseTree::BaseTree(BaseNode* left, BaseTree* right, char oper)
+BaseTree::BaseTree(BaseNode *left, BaseTree *right, char oper)
 {
     this->root = new Operator(oper);
     this->root->setLeft(left->clone());
     this->root->setRight(right->cloneSubStructure());
 }
 
-BaseTree::BaseTree(BaseTree* left, BaseTree* right, char oper)
+BaseTree::BaseTree(BaseTree *left, BaseTree *right, char oper)
 {
     this->root = new Operator(oper);
     this->root->setLeft(left->cloneSubStructure());
     this->root->setRight(right->cloneSubStructure());
 }
 
-BaseTree::BaseTree(BaseNode* root)
+BaseTree::BaseTree(BaseNode *root)
 {
     this->root = root->clone();
 }
@@ -49,7 +49,7 @@ BaseNode *BaseTree::cloneSubStructure()
     return this->root->clone();
 }
 
-void BaseTree::copyVariableTableTo(BaseTree* newTree)
+void BaseTree::copyVariableTableTo(BaseTree *newTree)
 {
     map<string, double>::iterator itr;
     for (itr = this->variableTable.begin(); itr != this->variableTable.end(); ++itr)

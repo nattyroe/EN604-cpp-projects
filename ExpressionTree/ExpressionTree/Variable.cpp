@@ -21,7 +21,7 @@ double Variable::evaluate(const map<string, double> *variableTable)
 
 BaseNode *Variable::clone()
 {
-    BaseNode* clone = new Variable(this->data);
+    BaseNode *clone = new Variable(this->data);
     if (this->left)
     {
         clone->setLeft(this->left->clone());

@@ -12,13 +12,12 @@ public:
     Sub(BaseNode *left, BaseTree *right) : BaseTree(left, right, '-') {};
     Sub(BaseTree *left, BaseTree *right) : BaseTree(left, right, '-') {};
 
-    BaseTree* clone();
+    BaseTree *clone();
 
-    BaseTree* derivative(string variable);
+    BaseTree *derivative(string variable);
 
 protected:
 
 private:
-    Sub(BaseNode* root) : BaseTree(root) {};
+    Sub(BaseNode *root) : BaseTree(root) {};
 };
-

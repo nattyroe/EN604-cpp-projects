@@ -2,7 +2,7 @@
 #include "BaseTree.h"
 #include "BaseNode.h"
 
-BaseTree* Div::clone()
+BaseTree *Div::clone()
 {
     BaseNode *left = this->root->getLeftClone();
     BaseNode *right = this->root->getRightClone();
@@ -13,10 +13,10 @@ BaseTree* Div::clone()
     return clone;
 }
 
-BaseTree* Div::derivative(string variable)
+BaseTree *Div::derivative(string variable)
 {
-    BaseNode* derivationNode = this->root->derive(variable);
-    BaseTree* derivation = new Div(derivationNode);
+    BaseNode *derivationNode = this->root->derive(variable);
+    BaseTree *derivation = new Div(derivationNode);
     delete derivationNode;
 
     copyVariableTableTo(derivation);

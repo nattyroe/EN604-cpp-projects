@@ -9,12 +9,12 @@ public:
     Mul(BaseNode *left, BaseTree *right) : BaseTree(left, right, '*') {};
     Mul(BaseTree *left, BaseTree *right) : BaseTree(left, right, '*') {};
 
-    BaseTree* clone();
+    BaseTree *clone();
 
-    BaseTree* derivative(string variable);
+    BaseTree *derivative(string variable);
 
 protected:
 
 private:
-    Mul(BaseNode* root) : BaseTree(root) {};
+    Mul(BaseNode *root) : BaseTree(root) {};
 };
