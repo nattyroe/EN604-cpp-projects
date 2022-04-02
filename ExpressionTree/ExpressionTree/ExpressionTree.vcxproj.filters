@@ -13,66 +13,78 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Header Files\Nodes">
+      <UniqueIdentifier>{27e5729e-f11d-483e-bf90-d0ab9f655f8f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Trees">
+      <UniqueIdentifier>{b43fc5fa-a269-484e-af79-1cea6503793b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Trees">
+      <UniqueIdentifier>{e414b026-2ca4-4b04-9b6e-ef4c51f41f65}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Nodes">
+      <UniqueIdentifier>{78d2ac03-9f87-44ae-a5df-3d1f834b008f}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="ExpressionTree.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="BaseNode.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Constant.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Variable.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Operator.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="BaseTree.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Mul.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Div.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\Trees</Filter>
     </ClCompile>
     <ClCompile Include="Add.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\Trees</Filter>
+    </ClCompile>
+    <ClCompile Include="Div.cpp">
+      <Filter>Source Files\Trees</Filter>
+    </ClCompile>
+    <ClCompile Include="Mul.cpp">
+      <Filter>Source Files\Trees</Filter>
     </ClCompile>
     <ClCompile Include="Sub.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\Trees</Filter>
+    </ClCompile>
+    <ClCompile Include="BaseNode.cpp">
+      <Filter>Source Files\Nodes</Filter>
+    </ClCompile>
+    <ClCompile Include="Constant.cpp">
+      <Filter>Source Files\Nodes</Filter>
+    </ClCompile>
+    <ClCompile Include="Operator.cpp">
+      <Filter>Source Files\Nodes</Filter>
+    </ClCompile>
+    <ClCompile Include="Variable.cpp">
+      <Filter>Source Files\Nodes</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="BaseNode.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Constant.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\Nodes</Filter>
     </ClInclude>
-    <ClInclude Include="Variable.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="BaseNode.h">
+      <Filter>Header Files\Nodes</Filter>
     </ClInclude>
     <ClInclude Include="Operator.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\Nodes</Filter>
     </ClInclude>
-    <ClInclude Include="BaseTree.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Mul.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Div.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="Variable.h">
+      <Filter>Header Files\Nodes</Filter>
     </ClInclude>
     <ClInclude Include="Add.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\Trees</Filter>
+    </ClInclude>
+    <ClInclude Include="BaseTree.h">
+      <Filter>Header Files\Trees</Filter>
+    </ClInclude>
+    <ClInclude Include="Div.h">
+      <Filter>Header Files\Trees</Filter>
+    </ClInclude>
+    <ClInclude Include="Mul.h">
+      <Filter>Header Files\Trees</Filter>
     </ClInclude>
     <ClInclude Include="Sub.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\Trees</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
