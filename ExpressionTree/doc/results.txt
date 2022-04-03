@@ -1,0 +1,46 @@
+Test Addition Tree
+Xray = 2
+Yellow = 3
+Zebra = 5
+((2.300000*Xray)+(Yellow*(Zebra-Xray)))=13.6
+Test Addition Tree derivation
+Xray = 2
+Yellow = 3
+Zebra = 5
+(((2.300000*1.000000)+(0.000000*Xray))+((Yellow*(0.000000-1.000000))+(0.000000*(Zebra-Xray))))=-0.7
+
+Test Clone Capability
+Xray = 2
+Yellow = 3
+Zebra = 5
+((2.300000*Xray)+(Yellow*(Zebra-Xray)))=13.6
+
+Test Subtraction Tree and Derivation
+Xray = 2
+Yellow = 3
+Zebra = 5
+((2.300000*Xray)-(Yellow*(Zebra-Xray)))=-4.4
+Xray = 2
+Yellow = 3
+Zebra = 5
+(((2.300000*1.000000)+(0.000000*Xray))-((Yellow*(0.000000-1.000000))+(0.000000*(Zebra-Xray))))=5.3
+
+Test Multiplication Tree and Derivation
+Xray = 2
+Yellow = 3
+Zebra = 5
+((2.300000*Xray)*(Yellow*(Zebra-Xray)))=41.4
+Xray = 2
+Yellow = 3
+Zebra = 5
+(((2.300000*Xray)*((Yellow*(0.000000-1.000000))+(0.000000*(Zebra-Xray))))+(((2.300000*1.000000)+(0.000000*Xray))*(Yellow*(Zebra-Xray))))=6.9
+
+Test Division Tree and Derivation
+Xray = 2
+Yellow = 3
+Zebra = 5
+((2.300000*Xray)/(Yellow*(Zebra-Xray)))=0.511111
+Xray = 2
+Yellow = 3
+Zebra = 5
+((((2.300000*Xray)*((Yellow*(0.000000-1.000000))+(0.000000*(Zebra-Xray))))-(((2.300000*1.000000)+(0.000000*Xray))*(Yellow*(Zebra-Xray))))/((Yellow*(Zebra-Xray))*(Yellow*(Zebra-Xray))))=-0.425926
