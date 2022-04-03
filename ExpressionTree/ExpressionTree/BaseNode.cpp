@@ -4,12 +4,14 @@
 
 using namespace std;
 
+/// Default destructor for BaseTree objects
 BaseNode::~BaseNode()
 {
     delete left;
     delete right;
 }
 
+/// Return clone of just left sub-node structure
 BaseNode *BaseNode::getLeftClone()
 {
     if (this->left)
@@ -22,6 +24,7 @@ BaseNode *BaseNode::getLeftClone()
     }
 }
 
+/// Return clone of just right sub-node structure
 BaseNode *BaseNode::getRightClone()
 {
     if (this->right)
@@ -34,12 +37,15 @@ BaseNode *BaseNode::getRightClone()
     }
 }
 
+/// Stream insertion override for printing node info
 ostream &operator<<(ostream &os, BaseNode &node)
 {
+    // Add parenthesis if there are left/right nodes
     if (node.left)
     {
         os << "(" << * node.left;
     }
+    // Print node data
     os << node.data;
     if (node.right)
     {
