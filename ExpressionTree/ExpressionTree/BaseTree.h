@@ -35,7 +35,7 @@ public:
 
     /// Evaluate equation based on current variable values
     ///
-    /// Returns a float of the calculated equation value
+    /// Returns a double of the calculated equation value
     double evaluate() { return this->root->evaluate(&this->variableTable); };
 
     /// Set given variable to provided value
