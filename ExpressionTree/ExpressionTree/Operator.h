@@ -29,7 +29,7 @@ public:
     /// Returns BaseNode pointer with derivative based on operator type
     BaseNode *derive(string variable);
 
-    /// Create clone of current constant node
+    /// Create clone of current operator node
     BaseNode *clone();
 
     /// Error for creating an operator of an invalid type or

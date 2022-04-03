@@ -12,7 +12,7 @@ BaseTree *Div::clone()
     copyVariableTableTo(clone);
 
     return clone;
-}
+} // End function clone
 
 /// Find the drivative of given division tree on the given variable
 BaseTree *Div::derivative(string variable)
@@ -26,4 +26,4 @@ BaseTree *Div::derivative(string variable)
     // Copy variable table to new tree
     copyVariableTableTo(derivation);
     return derivation;
-}
+} // End function derivative

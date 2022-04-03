@@ -9,7 +9,7 @@ BaseNode::~BaseNode()
 {
     delete left;
     delete right;
-}
+} // End function ~BaseNode
 
 /// Return clone of just left sub-node structure
 BaseNode *BaseNode::getLeftClone()
@@ -22,7 +22,7 @@ BaseNode *BaseNode::getLeftClone()
     {
         return nullptr;
     }
-}
+} // End function getLeftClone
 
 /// Return clone of just right sub-node structure
 BaseNode *BaseNode::getRightClone()
@@ -35,7 +35,7 @@ BaseNode *BaseNode::getRightClone()
     {
         return nullptr;
     }
-}
+} // End function getRightClone
 
 /// Stream insertion override for printing node info
 ostream &operator<<(ostream &os, BaseNode &node)
@@ -52,4 +52,4 @@ ostream &operator<<(ostream &os, BaseNode &node)
         os << *node.right << ")";
     }
     return os;
-}
+} // End function << override

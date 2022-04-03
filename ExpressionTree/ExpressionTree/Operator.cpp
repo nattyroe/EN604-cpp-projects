@@ -14,7 +14,7 @@ Operator::Operator(char oper)
     }
     this->oper = oper;
     this->data = this->oper;
-}
+} // End function Operator constructor
 
 /// Evaluate equation by finding the result of left *oper* right
 double Operator::evaluate(const map<string, double> *variableTable)
@@ -43,7 +43,7 @@ double Operator::evaluate(const map<string, double> *variableTable)
     default:
         throw invalidOperator;
     }
-}
+} // End function evaluate
 
 /// Create clone of current operator node
 BaseNode *Operator::clone()
@@ -60,7 +60,7 @@ BaseNode *Operator::clone()
         clone->setRight(this->right->clone());
     }
     return clone;
-}
+} // End function clone
 
 /// Return derivative of this operator and linked nodes
 BaseNode *Operator::derive(string variable)
@@ -142,4 +142,4 @@ BaseNode *Operator::derive(string variable)
     default:
         throw invalidOperator;
     }
-}
+} // End function derive

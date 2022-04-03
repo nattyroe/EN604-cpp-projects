@@ -11,7 +11,7 @@ BaseTree *Add::clone()
 
     copyVariableTableTo(clone);
     return clone;
-}
+} // End function clone
 
 /// Find the drivative of given addition tree on the given variable
 BaseTree *Add::derivative(string variable)
@@ -25,4 +25,4 @@ BaseTree *Add::derivative(string variable)
     // Copy variable table to new tree
     copyVariableTableTo(derivation);
     return derivation;
-}
+} // End function derivative

@@ -8,7 +8,7 @@ using namespace std;
 Variable::Variable(string name)
 {
     this->data = name;
-}
+} // End function Variable constructor
 
 /// Evaluate variable based on given variable table
 double Variable::evaluate(const map<string, double> *variableTable)
@@ -22,14 +22,14 @@ double Variable::evaluate(const map<string, double> *variableTable)
     }
     // If variable is found, return value
     return result->second;
-}
+} // End function evaluate
 
 /// Create clone of current variable node
 BaseNode *Variable::clone()
 {
     BaseNode *clone = new Variable(this->data);
     return clone;
-}
+} // End function clone
 
 /// Return derivative of this variable
 BaseNode *Variable::derive(string variable)
@@ -41,4 +41,4 @@ BaseNode *Variable::derive(string variable)
     }
     // Otherwise, return 0
     return new Constant(0.0);
-}
+} // End function derive

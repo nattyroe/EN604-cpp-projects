@@ -11,7 +11,7 @@ BaseTree *Mul::clone()
 
     copyVariableTableTo(clone);
     return clone;
-}
+} // End function clone
 
 /// Find the drivative of given multiplication tree on the given variable
 BaseTree *Mul::derivative(string variable)
@@ -25,4 +25,4 @@ BaseTree *Mul::derivative(string variable)
     // Copy variable table to new tree
     copyVariableTableTo(derivation);
     return derivation;
-}
+} // End function derivative
