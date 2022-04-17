@@ -81,7 +81,7 @@ public:
 
     /// Add given Passenger to Elevator
     /// @param *passenger - Pointer to boarding Passenger
-    void receivePassenger(Passenger *passenger) { this->passengers.push_back(passenger); };
+    void receivePassenger(Passenger *p);
 
 private:
     Building *building;

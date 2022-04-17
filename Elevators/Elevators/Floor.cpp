@@ -54,16 +54,19 @@ void Floor::shiftPassengers()
             Passenger *p = this->futurePassengers.top();
             if (p->getStartFloor() > p->getEndFloor())
             {
+                cout << "\tPassenger " << p << " now waiting to go UP" << endl;
                 this->waitingDownPassengers.push(p);
                 this->elevatorCalled = true;
             }
             else if (p->getStartFloor() < p->getEndFloor())
             {
+                cout << "\tPassenger " << p << " now waiting to go DOWN" << endl;
                 this->waitingUpPassengers.push(p);
                 this->elevatorCalled = true;
             }
             else
             {
+                cout << "\tPassenger " << p << " started at destination" << endl;
                 this->building->completePassenger(p);
             }
             this->futurePassengers.pop();

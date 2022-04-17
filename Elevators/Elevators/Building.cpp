@@ -105,6 +105,7 @@ void Building::runElevatorSim()
         if (!(callingFloor == NOCALL))
         {
             // Call elevator to first floor with passengers
+            cout << "\tFloor " << callingFloor << " calling Elevator" << endl;
             commandElevator(callingFloor);
         }
     }

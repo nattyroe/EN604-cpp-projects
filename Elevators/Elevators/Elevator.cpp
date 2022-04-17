@@ -38,6 +38,7 @@ void Elevator::incrementTime()
     else if (this->status == Status::STOPPING)
     {
         this->status = Status::STOPPED;
+        cout << "\tElevator " << this << " stopped at floor " << this->floor << endl;
         // Move passengers between elevator/floor
         movePassengers();
         // Reset elevator direction if there are no
@@ -56,18 +57,21 @@ void Elevator::incrementTime()
         // If at bottom of building, come to a stop
         if (this->floor == this->numFloors - 1)
         {
+            cout << "\tElevator " << this << " stopping at floor " << this->floor << endl;
             this->status = Status::STOPPING;
             this->remainingTime = stopTime;
         }
         // Check to see if stop is needed
         else if (shouldStop())
         {
+            cout << "\tElevator " << this << " stopping at floor " << this->floor << endl;
             this->status = Status::STOPPING;
             this->remainingTime = stopTime;
         }
         // Otherwise, continue moving up
         else
         {
+            cout << "\tElevator " << this << " continuing Up" << endl;
             this->remainingTime = this->speed;
         }
     }
@@ -80,18 +84,21 @@ void Elevator::incrementTime()
         // If at top of building, come to a stop
         if (this->floor == 0)
         {
+            cout << "\tElevator " << this << " stopping at floor " << this->floor << endl;
             this->status = Status::STOPPING;
             this->remainingTime = stopTime;
         }
         // Check to see if stop is needed
         else if (shouldStop())
         {
+            cout << "\tElevator " << this << " stopping at floor " << this->floor << endl;
             this->status = Status::STOPPING;
             this->remainingTime = stopTime;
         }
         // Otherwise, continue moving down
         else
         {
+            cout << "\tElevator " << this << " continuing Up" << endl;
             this->remainingTime = this->speed;
         }
     }
@@ -101,12 +108,14 @@ void Elevator::incrementTime()
         // Return to moving up
         if (this->direction == Direction::UP)
         {
+            cout << "\tElevator " << this << " starting Up" << endl;
             this->status = Status::MOVING_UP;
             this->remainingTime = speed;
         }
         // Return to moving down
         else if (this->direction == Direction::DOWN)
         {
+            cout << "\tElevator " << this << " starting Down" << endl;
             this->status = Status::MOVING_DOWN;
             this->remainingTime = speed;
         }
@@ -211,9 +220,10 @@ void Elevator::movePassengers()
     list<Passenger*>::iterator iter = this->passengers.begin();
     while (iter != this->passengers.end())
     {
-        Passenger* p = *iter;
+        Passenger *p = *iter;
         if (p->getEndFloor() == this->floor)
         {
+            cout << "\tPassenger " << &p << " exiting elevator " << this << " at floor " << this->floor << endl;
             this->building->completePassenger(p);
             this->passengers.erase(iter++);
         }
@@ -258,3 +268,10 @@ void Elevator::movePassengers()
         }
     }
 } // End function movePassengers
+
+/// Add given Passenger to Elevator
+void Elevator::receivePassenger(Passenger *p)
+{
+    cout << "\tPassenger " << &p << " entering elevator " << this << " at floor " << this->floor << endl;
+    this->passengers.push_back(p); 
+}

@@ -31,6 +31,7 @@ vector<Passenger*> readElevatorInput(string inputFile = "../Input/Elevators.csv"
     // Verify file exists
     if (file)
     {
+        cout << "Reading Passengers from File " << inputFile << endl;
         string line;
         char delimeter = ',';
         int passengerNum;
@@ -152,14 +153,18 @@ int main()
     }
 
     // Run 10s TimeToFloor Simulation
+    cout << "Running Sim with Elevator TimeToFloor " << START_SPEED << endl;
     origBuilding->runElevatorSim();
     double waitTime1 = origBuilding->getAvgWaitTime();
     double travelTime1 = origBuilding->getAvgTravelTime();
+    cout << "Sim Complete" << endl;
 
+    cout << "Running Sim with Elevator TimeToFloor " << NEW_SPEED << endl;
     // Run 5s TimeToFloor Simulation
     newBuilding->runElevatorSim();
     double waitTime2 = newBuilding->getAvgWaitTime();
     double travelTime2 = newBuilding->getAvgTravelTime();
+    cout << "Sim Complete" << endl;
 
     // Calculate runtime reductions
     double waitReduction = (waitTime1 - waitTime2) / waitTime1 * 100;
