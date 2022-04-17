@@ -1,8 +1,14 @@
+/// @file
+/// @author Nathan Roe
 #pragma once
 #include <iostream>
 
 using namespace std;
 
+/// Object to represent a Passenger in an Elevator Sim
+/// 
+/// Tracks Passenger start floor, destination floor,
+/// arrival time, and durations of Waiting and Traveling
 class Passenger
 {
 public:
