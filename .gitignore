@@ -17,6 +17,7 @@ Probabilities/ProbabilityTest
 **/x64/
 **/.vs/
 **/build/
+**/Debug
 
 # Precompiled Headers
 *.gch
