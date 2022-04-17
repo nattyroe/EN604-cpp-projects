@@ -10,11 +10,6 @@ Passenger::Passenger(int startFloor, int endFloor, int startTime)
     this->startTime = startTime;
 }
 
-Passenger::~Passenger()
-{
-    return;
-}
-
 // Less-than operator for comparing Passengers
 bool Passenger::operator<(const Passenger &passenger)
 {
@@ -37,7 +32,7 @@ bool Passenger::operator==(const Passenger &passenger)
 ostream &operator<<(ostream &os, Passenger &passenger)
 {
     // Print out tree nodes
-    os << "Passenger:\n";
+    os << "Passenger " << &passenger << ":\n";
     os << "\tStart Time: " << passenger.getStartTime() << "\n";
     os << "\tStart Floor: " << passenger.getStartFloor() << "\n";
     os << "\tEnd Floor: " << passenger.getEndFloor() << "\n";
