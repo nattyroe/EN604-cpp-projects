@@ -2,6 +2,7 @@
 /// @author Nathan Roe
 #pragma once
 #include <queue>
+#include <list>
 #include <utility>
 
 class Building;
@@ -78,7 +79,7 @@ private:
 
     bool elevatorCalled = false;
 
-    priority_queue<Passenger*> futurePassengers;
+    list<Passenger*> futurePassengers;
     queue<Passenger*> waitingUpPassengers;
     queue<Passenger*> waitingDownPassengers;
 

@@ -145,7 +145,7 @@
   <ItemGroup>
     <ClCompile Include="Building.cpp" />
     <ClCompile Include="Elevator.cpp" />
-    <ClCompile Include="Elevators.cpp" />
+    <ClCompile Include="ElevatorSim.cpp" />
     <ClCompile Include="Floor.cpp" />
     <ClCompile Include="Passenger.cpp" />
     <ClCompile Include="Statistic.cpp" />

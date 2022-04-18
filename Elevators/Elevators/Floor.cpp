@@ -9,8 +9,8 @@ Floor::~Floor()
     // Delete future passengers
     while (!this->futurePassengers.empty())
     {
-        delete this->futurePassengers.top();
-        this->futurePassengers.pop();
+        delete this->futurePassengers.front();
+        this->futurePassengers.pop_front();
     }
     // Delete waiting up passengers
     while (!this->waitingUpPassengers.empty())
@@ -29,7 +29,8 @@ Floor::~Floor()
 /// Adds provided passenger to the floor
 void Floor::addPassenger(Passenger *passenger)
 {
-    this->futurePassengers.push(passenger);
+    this->futurePassengers.push_back(passenger);
+    this->futurePassengers.sort();
 } // End function addPassenger
 
 /// Notify Floor that sim time has upticked 1 second
@@ -44,14 +45,14 @@ void Floor::shiftPassengers()
     while (!this->futurePassengers.empty())
     {
         // Check to see whether any passengers arrive at this second
-        if (this->futurePassengers.top()->getStartTime() > this->building->getSimTime())
+        if (this->futurePassengers.front()->getStartTime() > this->building->getSimTime())
         {
             break;
         }
         // If Passenger arrives, move to appropriate queue (up/down)
         else
         {
-            Passenger *p = this->futurePassengers.top();
+            Passenger *p = this->futurePassengers.front();
             if (p->getStartFloor() > p->getEndFloor())
             {
                 cout << "\tPassenger " << p << " now waiting to go UP" << endl;
@@ -69,7 +70,7 @@ void Floor::shiftPassengers()
                 cout << "\tPassenger " << p << " started at destination" << endl;
                 this->building->completePassenger(p);
             }
-            this->futurePassengers.pop();
+            this->futurePassengers.pop_front();
         }
     }
 } // End function shiftPassengers
