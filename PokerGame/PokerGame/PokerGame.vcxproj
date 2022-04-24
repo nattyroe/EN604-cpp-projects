@@ -29,8 +29,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{aa2806ac-6f5c-4294-b4ef-64050d941486}</ProjectGuid>
-    <RootNamespace>PokerHands</RootNamespace>
+    <ProjectGuid>{80939100-7c06-4813-8595-9279d5d6a049}</ProjectGuid>
+    <RootNamespace>PokerGame</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -48,7 +48,7 @@
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
-    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v143</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
@@ -93,12 +93,10 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
     <OutDir>$(SolutionDir)build\$(Platform)\</OutDir>
-    <IntDir>$(SolutionDir)build\temp\pokerhands\$(Platform)\$(Configuration)\</IntDir>
+    <IntDir>$(SolutionDir)build\temp\pokergame\$(Platform)\$(Configuration)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
-    <OutDir>$(SolutionDir)build\$(Platform)\</OutDir>
-    <IntDir>$(SolutionDir)build\temp\pokerhands\$(Platform)\$(Configuration)\</IntDir>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -106,12 +104,10 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\Users\nater\source\libconfig-1.7.3\lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>C:\Users\nater\source\libconfig-1.7.3\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -136,15 +132,13 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\Users\nater\source\libconfig-1.7.3\lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <AdditionalModuleDependencies>
-      </AdditionalModuleDependencies>
+      <AdditionalIncludeDirectories>C:\Users\nater\source\libconfig-1.7.3\lib;C:\Users\nater\source\repos\PokerHands\PokerHands;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>C:\Users\nater\source\repos\PokerHands\build\x64</AdditionalLibraryDirectories>
-      <AdditionalDependencies>libconfig++d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\Users\nater\source\repos\PokerGame\build\x64</AdditionalLibraryDirectories>
+      <AdditionalDependencies>libconfig++d.lib;PokerHands.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -155,30 +149,17 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\Users\nater\source\libconfig-1.7.3\lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>libconfig++d.dll;PokerHands.dll;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="card.cpp" />
-    <ClCompile Include="hand.cpp" />
-    <ClCompile Include="PokerHands.cpp" />
-    <ClCompile Include="Scorer.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="card.h" />
-    <ClInclude Include="hand.h" />
-    <ClInclude Include="Scorer.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\..\libconfig-1.7.3\lib\libconfig++.vcxproj">
-      <Project>{a0c36ce7-d908-4573-8b69-249eeeb7d2be}</Project>
-    </ProjectReference>
+    <ClCompile Include="PokerGame.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
