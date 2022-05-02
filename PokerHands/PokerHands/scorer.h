@@ -25,7 +25,7 @@ public:
     // @param *hands - pointer to vector of Hands to evaluate and rank
     // @return the index of the final winner in the partially
     //     sorted vector
-    int findBestHand(vector<Hand> *hands);
+    int findBestHand(vector<Hand*> *hands);
 
     // Determines and sets the HandType for a given poker hand
     //

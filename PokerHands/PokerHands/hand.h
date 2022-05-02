@@ -1,8 +1,7 @@
 #pragma once
 #include <string>
 #include <vector>
-
-class Card;
+#include "card.h"
 
 using namespace std;
 
@@ -71,7 +70,7 @@ public:
     // @return the current hand of Cards in a vector
     vector<Card> getCards();
 
-private:
+protected:
     // Vector for storing current hand
     vector<Card> cards;
     // Variable for storing HandType

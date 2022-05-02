@@ -132,7 +132,7 @@ Card makeCard(string value, string suit)
 } // End function makeCard
 
 // Format and print test results for input files
-void printResults(int lastWinIdx, vector<Hand> *players)
+void printResults(int lastWinIdx, vector<Hand*> *players)
 {
     // Print out error message if error value returned
     if (lastWinIdx == -1)
@@ -142,11 +142,11 @@ void printResults(int lastWinIdx, vector<Hand> *players)
     }
 
     // Print out winning hands
-    cout << "(" << players->at(0).printCards() << ")";
+    cout << "(" << players->at(0)->printCards() << ")";
     for (int idx = 1; idx <= lastWinIdx; ++idx)
     {
         cout << ", "
-             << "(" << players->at(idx).printCards() << ")";
+             << "(" << players->at(idx)->printCards() << ")";
     }
     // Format string based on whether ties are present
     if (lastWinIdx > 0)
@@ -163,7 +163,7 @@ void printResults(int lastWinIdx, vector<Hand> *players)
     for (int idx = lastWinIdx + 1; idx < players->size(); ++idx)
     {
         cout << " "
-             << "(" << players->at(idx).printCards() << ")";
+             << "(" << players->at(idx)->printCards() << ")";
         if (idx < players->size() - 1)
         {
             multiLoser = true;
@@ -213,7 +213,7 @@ int main(int argc, char **argv)
             return (EXIT_FAILURE);
         }
 
-        vector<Hand> *players = new vector<Hand>;
+        vector<Hand*> *players = new vector<Hand*>;
 
         const Setting &root = cfg->getRoot();
         // Find "hands" data set in config file
@@ -277,16 +277,16 @@ int main(int argc, char **argv)
                         cout << "Could not find 'suit' and/or 'value' in Hand " << handIdx + 1 << " Card " << cardIdx + 1 << endl;
                     }
                 }
-                players->push_back(*hand);
+                players->push_back(hand);
             }
 
             // Run scorer if multiple hands present
             if (players->size() > 1)
             {
                 int winnerIdx = scorer->findBestHand(players);
-                for (Hand hand : *players)
+                for (Hand *hand : *players)
                 {
-                    cout << "(" << hand.printCards() << "): " << hand.printHandType() << endl;
+                    cout << "(" << hand->printCards() << "): " << hand->printHandType() << endl;
                 }
                 printResults(winnerIdx, players);
             }

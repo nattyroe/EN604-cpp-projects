@@ -7,7 +7,7 @@
 using namespace std;
 
 // Evaluates a set of hands to determine winner(s)
-int Scorer::findBestHand(vector<Hand> *hands)
+int Scorer::findBestHand(vector<Hand*> *hands)
 {
     // Return error if not enough hands to score
     if (hands->size() < 2)
@@ -17,16 +17,16 @@ int Scorer::findBestHand(vector<Hand> *hands)
 
     int numTied = 0;
     // Begin with first hand as current best
-    Hand *bestHand = &hands->at(0);
+    Hand *bestHand = hands->at(0);
     // Compare remaining hands to the current best hand
     for (int idx = 1; idx < hands->size(); ++idx)
     {
-        int result = compareHands(bestHand, &hands->at(idx));
+        int result = compareHands(bestHand, hands->at(idx));
         // If hands tie, move new hand to front section of vector
         if (result == 0)
         {
             ++numTied;
-            Hand hand = hands->at(idx);
+            Hand *hand = hands->at(idx);
             hands->erase(hands->begin() + idx);
             hands->insert(hands->begin() + numTied, hand);
         }
@@ -39,7 +39,7 @@ int Scorer::findBestHand(vector<Hand> *hands)
         else if (result == 2)
         {
             numTied = 0;
-            Hand hand = hands->at(idx);
+            Hand *hand = hands->at(idx);
             hands->erase(hands->begin() + idx);
             hands->insert(hands->begin(), hand);
         }
