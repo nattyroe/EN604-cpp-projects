@@ -159,7 +159,19 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="deck.cpp" />
+    <ClCompile Include="game.cpp" />
+    <ClCompile Include="npc.cpp" />
+    <ClCompile Include="pc.cpp" />
+    <ClCompile Include="player.cpp" />
     <ClCompile Include="PokerGame.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="deck.h" />
+    <ClInclude Include="game.h" />
+    <ClInclude Include="npc.h" />
+    <ClInclude Include="pc.h" />
+    <ClInclude Include="player.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
