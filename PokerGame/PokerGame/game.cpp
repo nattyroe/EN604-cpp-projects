@@ -6,6 +6,7 @@
 #include "Scorer.h"
 #include <iostream>
 
+/// Game object for playing a game of 5-Card Draw Poker
 Game::Game(int numHumans, int numComputers, int buyIn, int blind)
 {
     int numPlayers = numHumans + numComputers;
@@ -15,11 +16,13 @@ Game::Game(int numHumans, int numComputers, int buyIn, int blind)
         throw InvalidGameException(numPlayers);
     }
 
+    // Add PCs
     for (int num = 0; num < numHumans; ++num)
     {
         Player *player = new PC(this, buyIn);
         this->players.push_back(player);
     }
+    // Add NPCs
     for (int num = 0; num < numComputers; ++num)
     {
         Player *player = new NPC(this, buyIn);
@@ -29,8 +32,9 @@ Game::Game(int numHumans, int numComputers, int buyIn, int blind)
     this->blind = blind;
     this->scorer = new Scorer();
     this->deck = new Deck();
-}
+} // End Game constructor
 
+/// Start main game loop (Bet, Draw, Bet, Score)
 void Game::playGame()
 {
     while (players.size() > 1)
@@ -56,7 +60,7 @@ void Game::playGame()
         // Let players redraw
         discardRound();
 
-        // Betting rounds
+        // Betting round, no blinds
         vector<BetType> newBets(this->remainingPlayers.size(), BetType::NONE);
         this->betTypes = newBets;
         conductBets(false);
@@ -92,17 +96,18 @@ void Game::playGame()
         ++this->blindIdx;
         this->blindIdx %= this->players.size();
     }
-}
+} // End function playGame
 
+// Remove players from the round who have folded
 void Game::dropPlayers()
 {
-    // Remove Players who folded
     vector<Player*>::iterator iter = this->remainingPlayers.begin();
     vector<BetType>::iterator betIter = this->betTypes.begin();
     vector<int>::iterator cashIter = this->amountIn.begin();
     while (iter != this->remainingPlayers.end())
     {
         BetType b = *betIter;
+        // Remove Players who folded
         if (b == BetType::FOLD)
         {
             iter = this->remainingPlayers.erase(iter);
@@ -116,8 +121,9 @@ void Game::dropPlayers()
             ++cashIter;
         }
     }
-}
+} // End function dropPlayers
 
+// Deal 5 cards to each player
 void Game::dealCards()
 {
     this->deck->shuffle();
@@ -129,10 +135,12 @@ void Game::dealCards()
             player->deal(this->deck->deal());
         }
     }
-}
+} // End function dealCards
 
+// Run a round of bets
 void Game::conductBets(bool requireBlinds)
 {
+    // Exit if too few players
     if (this->remainingPlayers.size() < 2)
     {
         return;
@@ -154,6 +162,7 @@ void Game::conductBets(bool requireBlinds)
         cout << "Player " << p << " bet $" << bet << endl << endl;
         pot += bet;
         this->amountIn[playerIdx] += bet;
+        // Handle scenario when player can't afford small blind
         if (bet < this->blind)
         {
             this->betTypes[playerIdx] = BetType::ALL_IN;
@@ -178,6 +187,7 @@ void Game::conductBets(bool requireBlinds)
             baseBet += (bet - amountToCall);
         }
         this->amountIn[playerIdx] += bet;
+        // Handle scenario when player can't afford big blind
         if (bet < 2 * this->blind)
         {
             this->betTypes[playerIdx] = BetType::ALL_IN;
@@ -190,35 +200,43 @@ void Game::conductBets(bool requireBlinds)
         playerIdx %= this->remainingPlayers.size();
     }
 
+    // Main betting loop
     while (true)
     {
+        // Check whether player needs to bet
         if (!(this->betTypes[playerIdx] == BetType::FOLD ||
               this->betTypes[playerIdx] == BetType::ALL_IN))
         {
             p = this->remainingPlayers[playerIdx];
+            // Get required bet amount to avoid folding
             amountToCall = baseBet - this->amountIn[playerIdx];
             bet = p->getBet(amountToCall);
             pot += bet;
+            // See if bet is a raise or a call
             if (bet >= amountToCall)
             {
                 baseBet += (bet - amountToCall);
             }
             this->amountIn[playerIdx] += bet;
+            // Handle Calls
             if (bet == amountToCall)
             {
                 this->betTypes[playerIdx] = BetType::CALL;
                 cout << "Player " << p << " Calls" << endl << endl;
             }
+            // Handle All In
             else if (p->getRemainingFunds() == 0)
             {
                 this->betTypes[playerIdx] = BetType::ALL_IN;
                 cout << "Player " << p << " is All In" << endl << endl;
             }
+            // Handle Folds
             else if (bet == 0)
             {
                 this->betTypes[playerIdx] = BetType::FOLD;
                 cout << "Player " << p << " Folds" << endl << endl;
             }
+            // Other bets are raises
             else
             {
                 this->betTypes[playerIdx] = BetType::RAISE;
@@ -243,42 +261,50 @@ void Game::conductBets(bool requireBlinds)
         ++playerIdx;
         playerIdx %= this->remainingPlayers.size();
     }
-}
+} // End function conductBets
 
+// Handle round for redraws
 void Game::discardRound()
 {
     int discardingPlayers = this->remainingPlayers.size();
+    // Find cards availible to redraw
     int remainingCards = this->deck->cardsRemaining();
     int playerIdx = 0;
     int discard = 0;
     Player *p;
+    // Let each player discard
     for (int idx = 0; idx < discardingPlayers; ++idx)
     {
         playerIdx = (this->blindIdx + idx) % discardingPlayers;
         p = this->remainingPlayers.at(playerIdx);
         discard = p->chooseDiscard(remainingCards);
         cout << "Player " << p << " discarded " << discard << " cards" << endl << endl;
+        // Deal new card for each discard
         for (int n = 0; n < discard; n++)
         {
             p->deal(this->deck->deal());
         }
     }
-}
+} // End function discardRound
 
+// Score players who are still in, and distribute winnings
 void Game::scoreRound()
 {
     int winIdx = -1;
     vector<Hand*> temp(this->remainingPlayers.begin(), this->remainingPlayers.end());
+    // Print player hands
     for (Player *p : this->remainingPlayers)
     {
         cout << "Player " << p << "'s hand: " << p->printCards() << endl;
     }
 
+    // Find number of winning hands, and bring winners to front
     if (this->remainingPlayers.size() > 1)
     {
         winIdx = this->scorer->findBestHand(&temp);
     }
 
+    // If only one player is left, give pot to player
     if (this->remainingPlayers.size() == 1)
     {
         int idx = 0;
@@ -287,6 +313,7 @@ void Game::scoreRound()
         cout << "Player " << p << " Wins $" << this->pot << endl << endl;
         this->pot = 0;
     }
+    // If multiple players left, distribute winnings amongst winners
     else if (winIdx >= 0)
     {
         int winnings = this->pot / (winIdx + 1);
@@ -298,4 +325,4 @@ void Game::scoreRound()
             cout << "Player " << p << " Wins $" << winnings << endl << endl;
         }
     }
-}
+} // End function scoreRound
