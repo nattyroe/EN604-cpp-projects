@@ -1,0 +1,819 @@
+Player 000001476AC3F8E0 is the Small Blind
+Player 000001476AC3F8E0's Turn
+Your Cards: 8 of Hearts, 7 of Spades, J of Clubs, K of Hearts, 3 of Diamonds
+Minimum Bet is $3
+The previous raise was $0
+You have $100
+Enter your bet, or $0 to fold: 3
+Player 000001476AC3F8E0 bet $3
+
+Player 000001476AC39E40 is the Big Blind
+Player 000001476AC39E40 bet $6
+
+Player 000001476AC37E50 Calls
+
+Player 000001476AC3F8E0's Turn
+Your Cards: 8 of Hearts, 7 of Spades, J of Clubs, K of Hearts, 3 of Diamonds
+The previous raise was $3
+You have $97
+Enter your bet, or $0 to fold: 6
+Player 000001476AC3F8E0 Raises $3
+
+Player 000001476AC39E40 Calls
+
+Player 000001476AC37E50 Calls
+
+Player 000001476AC3F8E0's Turn
+Your Cards: 8 of Hearts, 7 of Spades, J of Clubs, K of Hearts, 3 of Diamonds
+The previous raise was $0
+You have $91
+Enter your bet, or $0 to fold: 5
+Player 000001476AC3F8E0 Raises $5
+
+Player 000001476AC39E40 Calls
+
+Player 000001476AC37E50 Calls
+
+Player 000001476AC3F8E0's Turn
+Your Cards: 8 of Hearts, 7 of Spades, J of Clubs, K of Hearts, 3 of Diamonds
+The previous raise was $0
+You have $86
+Enter your bet, or $0 to fold: 0
+Player 000001476AC3F8E0 Calls
+
+Player 000001476AC3F8E0's Turn to Discard
+You may discard up to 5 cards.
+8 of Hearts, 7 of Spades, J of Clubs, K of Hearts, 3 of Diamonds
+Choose a card to discard (1-5), or 0 to Stop: 5
+8 of Hearts, 7 of Spades, J of Clubs, K of Hearts
+Choose a card to discard (1-4), or 0 to Stop: 1
+7 of Spades, J of Clubs, K of Hearts
+Choose a card to discard (1-3), or 0 to Stop: 1
+J of Clubs, K of Hearts
+Choose a card to discard (1-2), or 0 to Stop: 0
+Player 000001476AC3F8E0 discarded 3 cards
+
+Player 000001476AC39E40 discarded 0 cards
+
+Player 000001476AC37E50 discarded 4 cards
+
+Player 000001476AC3F8E0's Turn
+Your Cards: J of Clubs, K of Hearts, J of Spades, K of Diamonds, J of Diamonds
+The previous raise was $0
+You have $86
+Enter your bet, or $0 to fold: 10
+Player 000001476AC3F8E0 Raises $10
+
+Player 000001476AC39E40 Calls
+
+Player 000001476AC37E50 Calls
+
+Player 000001476AC3F8E0's Turn
+Your Cards: J of Clubs, K of Hearts, J of Spades, K of Diamonds, J of Diamonds
+The previous raise was $0
+You have $76
+Enter your bet, or $0 to fold: 5
+Player 000001476AC3F8E0 Raises $5
+
+Player 000001476AC39E40 Calls
+
+Player 000001476AC37E50 Calls
+
+Player 000001476AC3F8E0's Turn
+Your Cards: J of Clubs, K of Hearts, J of Spades, K of Diamonds, J of Diamonds
+The previous raise was $0
+You have $71
+Enter your bet, or $0 to fold: 0
+Player 000001476AC3F8E0 Calls
+
+Player 000001476AC3F8E0's hand: J of Clubs, K of Hearts, J of Spades, K of Diamonds, J of Diamonds
+Player 000001476AC39E40's hand: 4 of Clubs, 5 of Spades, 7 of Diamonds, Q of Spades, Q of Hearts
+Player 000001476AC37E50's hand: 2 of Spades, J of Hearts, 9 of Spades, 7 of Clubs, 2 of Diamonds
+Player 000001476AC3F8E0 Wins $87
+
+Player 000001476AC39E40 is the Small Blind
+Player 000001476AC39E40 bet $3
+
+Player 000001476AC37E50 is the Big Blind
+Player 000001476AC37E50 bet $6
+
+Player 000001476AC3F8E0's Turn
+Your Cards: J of Diamonds, 8 of Hearts, J of Clubs, 9 of Hearts, 10 of Clubs
+The previous raise was $6
+You have $158
+Enter your bet, or $0 to fold: 6
+Player 000001476AC3F8E0 Calls
+
+Player 000001476AC39E40 Calls
+
+Player 000001476AC37E50 Calls
+
+Player 000001476AC39E40 discarded 4 cards
+
+Player 000001476AC37E50 discarded 3 cards
+
+Player 000001476AC3F8E0's Turn to Discard
+You may discard up to 5 cards.
+J of Diamonds, 8 of Hearts, J of Clubs, 9 of Hearts, 10 of Clubs
+Choose a card to discard (1-5), or 0 to Stop: 2
+J of Diamonds, J of Clubs, 9 of Hearts, 10 of Clubs
+Choose a card to discard (1-4), or 0 to Stop: 0
+Player 000001476AC3F8E0 discarded 1 cards
+
+Player 000001476AC39E40 Calls
+
+Player 000001476AC37E50 Calls
+
+Player 000001476AC3F8E0's Turn
+Your Cards: J of Diamonds, J of Clubs, 9 of Hearts, 10 of Clubs, 6 of Diamonds
+The previous raise was $0
+You have $152
+Enter your bet, or $0 to fold: 5
+Player 000001476AC3F8E0 Raises $5
+
+Player 000001476AC39E40 Calls
+
+Player 000001476AC37E50 Calls
+
+Player 000001476AC3F8E0's Turn
+Your Cards: J of Diamonds, J of Clubs, 9 of Hearts, 10 of Clubs, 6 of Diamonds
+The previous raise was $0
+You have $147
+Enter your bet, or $0 to fold: 0
+Player 000001476AC3F8E0 Calls
+
+Player 000001476AC3F8E0's hand: J of Diamonds, J of Clubs, 9 of Hearts, 10 of Clubs, 6 of Diamonds
+Player 000001476AC39E40's hand: 4 of Hearts, A of Spades, K of Diamonds, 4 of Diamonds, 3 of Clubs
+Player 000001476AC37E50's hand: 7 of Hearts, 8 of Diamonds, K of Clubs, A of Clubs, J of Spades
+Player 000001476AC3F8E0 Wins $33
+
+Player 000001476AC37E50 is the Small Blind
+Player 000001476AC37E50 bet $3
+
+Player 000001476AC3F8E0 is the Big Blind
+Player 000001476AC3F8E0's Turn
+Your Cards: Q of Spades, 3 of Hearts, 10 of Spades, 5 of Spades, 7 of Spades
+Minimum Bet is $6
+The previous raise was $3
+You have $180
+Enter your bet, or $0 to fold: 6
+Player 000001476AC3F8E0 bet $6
+
+Player 000001476AC39E40 Calls
+
+Player 000001476AC37E50 Calls
+
+Player 000001476AC3F8E0's Turn
+Your Cards: Q of Spades, 3 of Hearts, 10 of Spades, 5 of Spades, 7 of Spades
+The previous raise was $0
+You have $174
+Enter your bet, or $0 to fold: 3
+Player 000001476AC3F8E0 Raises $3
+
+Player 000001476AC39E40 Calls
+
+Player 000001476AC37E50 Calls
+
+Player 000001476AC3F8E0's Turn
+Your Cards: Q of Spades, 3 of Hearts, 10 of Spades, 5 of Spades, 7 of Spades
+The previous raise was $0
+You have $171
+Enter your bet, or $0 to fold: 0
+Player 000001476AC3F8E0 Calls
+
+Player 000001476AC37E50 discarded 1 cards
+
+Player 000001476AC3F8E0's Turn to Discard
+You may discard up to 5 cards.
+Q of Spades, 3 of Hearts, 10 of Spades, 5 of Spades, 7 of Spades
+Choose a card to discard (1-5), or 0 to Stop: 2
+Q of Spades, 10 of Spades, 5 of Spades, 7 of Spades
+Choose a card to discard (1-4), or 0 to Stop: 0
+Player 000001476AC3F8E0 discarded 1 cards
+
+Player 000001476AC39E40 discarded 1 cards
+
+Player 000001476AC37E50 Calls
+
+Player 000001476AC3F8E0's Turn
+Your Cards: Q of Spades, 10 of Spades, 5 of Spades, 7 of Spades, J of Spades
+The previous raise was $0
+You have $171
+Enter your bet, or $0 to fold: 10
+Player 000001476AC3F8E0 Raises $10
+
+Player 000001476AC39E40 Calls
+
+Player 000001476AC37E50 Calls
+
+Player 000001476AC3F8E0's Turn
+Your Cards: Q of Spades, 10 of Spades, 5 of Spades, 7 of Spades, J of Spades
+The previous raise was $0
+You have $161
+Enter your bet, or $0 to fold: 10
+Player 000001476AC3F8E0 Raises $10
+
+Player 000001476AC39E40 Calls
+
+Player 000001476AC37E50 Calls
+
+Player 000001476AC3F8E0's Turn
+Your Cards: Q of Spades, 10 of Spades, 5 of Spades, 7 of Spades, J of Spades
+The previous raise was $0
+You have $151
+Enter your bet, or $0 to fold: 10
+Player 000001476AC3F8E0 Raises $10
+
+Player 000001476AC39E40 Calls
+
+Player 000001476AC37E50 Calls
+
+Player 000001476AC3F8E0's Turn
+Your Cards: Q of Spades, 10 of Spades, 5 of Spades, 7 of Spades, J of Spades
+The previous raise was $0
+You have $141
+Enter your bet, or $0 to fold: 0
+Player 000001476AC3F8E0 Calls
+
+Player 000001476AC3F8E0's hand: Q of Spades, 10 of Spades, 5 of Spades, 7 of Spades, J of Spades
+Player 000001476AC39E40's hand: 2 of Clubs, 4 of Diamonds, 6 of Spades, J of Clubs, A of Hearts
+Player 000001476AC37E50's hand: 2 of Hearts, 4 of Spades, 7 of Hearts, J of Hearts, K of Hearts
+Player 000001476AC3F8E0 Wins $117
+
+Player 000001476AC3F8E0 is the Small Blind
+Player 000001476AC3F8E0's Turn
+Your Cards: 9 of Spades, A of Hearts, 4 of Spades, 9 of Diamonds, 8 of Diamonds
+Minimum Bet is $3
+The previous raise was $0
+You have $258
+Enter your bet, or $0 to fold: 3
+Player 000001476AC3F8E0 bet $3
+
+Player 000001476AC39E40 is the Big Blind
+Player 000001476AC39E40 bet $6
+
+Player 000001476AC37E50 Calls
+
+Player 000001476AC3F8E0's Turn
+Your Cards: 9 of Spades, A of Hearts, 4 of Spades, 9 of Diamonds, 8 of Diamonds
+The previous raise was $3
+You have $255
+Enter your bet, or $0 to fold: 3
+Player 000001476AC3F8E0 Calls
+
+Player 000001476AC39E40 Calls
+
+Player 000001476AC3F8E0's Turn to Discard
+You may discard up to 5 cards.
+9 of Spades, A of Hearts, 4 of Spades, 9 of Diamonds, 8 of Diamonds
+Choose a card to discard (1-5), or 0 to Stop: 0
+Player 000001476AC3F8E0 discarded 0 cards
+
+Player 000001476AC39E40 discarded 3 cards
+
+Player 000001476AC37E50 discarded 4 cards
+
+Player 000001476AC3F8E0's Turn
+Your Cards: 9 of Spades, A of Hearts, 4 of Spades, 9 of Diamonds, 8 of Diamonds
+The previous raise was $0
+You have $252
+Enter your bet, or $0 to fold: 8
+Player 000001476AC3F8E0 Raises $8
+
+Player 000001476AC39E40 Calls
+
+Player 000001476AC37E50 Calls
+
+Player 000001476AC3F8E0's Turn
+Your Cards: 9 of Spades, A of Hearts, 4 of Spades, 9 of Diamonds, 8 of Diamonds
+The previous raise was $0
+You have $244
+Enter your bet, or $0 to fold: 8
+Player 000001476AC3F8E0 Raises $8
+
+Player 000001476AC39E40 Folds
+
+Player 000001476AC37E50 Folds
+
+Player 000001476AC3F8E0's Turn
+Your Cards: 9 of Spades, A of Hearts, 4 of Spades, 9 of Diamonds, 8 of Diamonds
+The previous raise was $0
+You have $236
+Enter your bet, or $0 to fold: 0
+Player 000001476AC3F8E0 Calls
+
+Player 000001476AC3F8E0's hand: 9 of Spades, A of Hearts, 4 of Spades, 9 of Diamonds, 8 of Diamonds
+Player 000001476AC3F8E0 Wins $0
+
+Player 000001476AC39E40 is the Small Blind
+Player 000001476AC39E40 bet $3
+
+Player 000001476AC37E50 is the Big Blind
+Player 000001476AC37E50 bet $6
+
+Player 000001476AC3F8E0's Turn
+Your Cards: 2 of Diamonds, J of Clubs, K of Hearts, 5 of Hearts, 7 of Diamonds
+The previous raise was $6
+You have $286
+Enter your bet, or $0 to fold: 6
+Player 000001476AC3F8E0 Calls
+
+Player 000001476AC39E40 Calls
+
+Player 000001476AC37E50 Calls
+
+Player 000001476AC39E40 discarded 4 cards
+
+Player 000001476AC37E50 discarded 2 cards
+
+Player 000001476AC3F8E0's Turn to Discard
+You may discard up to 5 cards.
+2 of Diamonds, J of Clubs, K of Hearts, 5 of Hearts, 7 of Diamonds
+Choose a card to discard (1-5), or 0 to Stop: 1
+J of Clubs, K of Hearts, 5 of Hearts, 7 of Diamonds
+Choose a card to discard (1-4), or 0 to Stop: 4
+J of Clubs, K of Hearts, 5 of Hearts
+Choose a card to discard (1-3), or 0 to Stop: 3
+J of Clubs, K of Hearts
+Choose a card to discard (1-2), or 0 to Stop: 0
+Player 000001476AC3F8E0 discarded 3 cards
+
+Player 000001476AC39E40 Calls
+
+Player 000001476AC37E50 Calls
+
+Player 000001476AC3F8E0's Turn
+Your Cards: J of Clubs, K of Hearts, K of Clubs, 4 of Diamonds, Q of Diamonds
+The previous raise was $0
+You have $280
+Enter your bet, or $0 to fold: 5
+Player 000001476AC3F8E0 Raises $5
+
+Player 000001476AC39E40 Folds
+
+Player 000001476AC37E50 Folds
+
+Player 000001476AC3F8E0's Turn
+Your Cards: J of Clubs, K of Hearts, K of Clubs, 4 of Diamonds, Q of Diamonds
+The previous raise was $0
+You have $275
+Enter your bet, or $0 to fold: 0
+Player 000001476AC3F8E0 Calls
+
+Player 000001476AC3F8E0's hand: J of Clubs, K of Hearts, K of Clubs, 4 of Diamonds, Q of Diamonds
+Player 000001476AC3F8E0 Wins $23
+
+Player 000001476AC37E50 is the Small Blind
+Player 000001476AC37E50 bet $1
+
+Player 000001476AC3F8E0 is the Big Blind
+Player 000001476AC3F8E0's Turn
+Your Cards: A of Clubs, 2 of Clubs, J of Diamonds, 2 of Diamonds, 9 of Hearts
+Minimum Bet is $6
+The previous raise was $1
+You have $298
+Enter your bet, or $0 to fold: 6
+Player 000001476AC3F8E0 bet $6
+
+Player 000001476AC39E40 Folds
+
+Player 000001476AC3F8E0's Turn
+Your Cards: A of Clubs, 2 of Clubs, J of Diamonds, 2 of Diamonds, 9 of Hearts
+The previous raise was $0
+You have $292
+Enter your bet, or $0 to fold: 0
+Player 000001476AC3F8E0 Calls
+
+Player 000001476AC3F8E0's Turn to Discard
+You may discard up to 5 cards.
+A of Clubs, 2 of Clubs, J of Diamonds, 2 of Diamonds, 9 of Hearts
+Choose a card to discard (1-5), or 0 to Stop: 0
+Player 000001476AC3F8E0 discarded 0 cards
+
+Player 000001476AC37E50 discarded 2 cards
+
+Player 000001476AC3F8E0's Turn
+Your Cards: A of Clubs, 2 of Clubs, J of Diamonds, 2 of Diamonds, 9 of Hearts
+The previous raise was $0
+You have $292
+Enter your bet, or $0 to fold: 0
+Player 000001476AC3F8E0 Calls
+
+Player 000001476AC37E50 is All In
+
+Player 000001476AC3F8E0's hand: A of Clubs, 2 of Clubs, J of Diamonds, 2 of Diamonds, 9 of Hearts
+Player 000001476AC37E50's hand: 5 of Diamonds, 5 of Clubs, 10 of Hearts, A of Hearts, Q of Diamonds
+Player 000001476AC37E50 Wins $7
+
+Player 000001476AC3F8E0 is the Small Blind
+Player 000001476AC3F8E0's Turn
+Your Cards: 8 of Clubs, 10 of Hearts, A of Clubs, 2 of Hearts, 6 of Diamonds
+Minimum Bet is $3
+The previous raise was $0
+You have $292
+Enter your bet, or $0 to fold: 3
+Player 000001476AC3F8E0 bet $3
+
+Player 000001476AC39E40 is the Big Blind
+Player 000001476AC39E40 bet $1
+
+Player 000001476AC37E50 Calls
+
+Player 000001476AC3F8E0's Turn
+Your Cards: 8 of Clubs, 10 of Hearts, A of Clubs, 2 of Hearts, 6 of Diamonds
+The previous raise was $0
+You have $289
+Enter your bet, or $0 to fold: 0
+Player 000001476AC3F8E0 Calls
+
+Player 000001476AC3F8E0's Turn to Discard
+You may discard up to 5 cards.
+8 of Clubs, 10 of Hearts, A of Clubs, 2 of Hearts, 6 of Diamonds
+Choose a card to discard (1-5), or 0 to Stop: 4
+8 of Clubs, 10 of Hearts, A of Clubs, 6 of Diamonds
+Choose a card to discard (1-4), or 0 to Stop: 4
+8 of Clubs, 10 of Hearts, A of Clubs
+Choose a card to discard (1-3), or 0 to Stop: 0
+Player 000001476AC3F8E0 discarded 2 cards
+
+Player 000001476AC39E40 discarded 4 cards
+
+Player 000001476AC37E50 discarded 4 cards
+
+Player 000001476AC3F8E0's Turn
+Your Cards: 8 of Clubs, 10 of Hearts, A of Clubs, 9 of Spades, 3 of Hearts
+The previous raise was $0
+You have $289
+Enter your bet, or $0 to fold: 2
+Player 000001476AC3F8E0 Raises $2
+
+Player 000001476AC39E40 is All In
+
+Player 000001476AC37E50 Calls
+
+Player 000001476AC3F8E0's Turn
+Your Cards: 8 of Clubs, 10 of Hearts, A of Clubs, 9 of Spades, 3 of Hearts
+The previous raise was $0
+You have $287
+Enter your bet, or $0 to fold: 0
+Player 000001476AC3F8E0 Calls
+
+Player 000001476AC3F8E0's hand: 8 of Clubs, 10 of Hearts, A of Clubs, 9 of Spades, 3 of Hearts
+Player 000001476AC39E40's hand: 2 of Spades, 7 of Hearts, 7 of Diamonds, 9 of Hearts, Q of Diamonds
+Player 000001476AC37E50's hand: 5 of Clubs, 6 of Hearts, 10 of Diamonds, Q of Spades, 8 of Spades
+Player 000001476AC39E40 Wins $11
+
+Player 000001476AC39E40 is the Small Blind
+Player 000001476AC39E40 bet $3
+
+Player 000001476AC37E50 is the Big Blind
+Player 000001476AC37E50 bet $2
+
+Player 000001476AC3F8E0's Turn
+Your Cards: 8 of Diamonds, 7 of Diamonds, 10 of Clubs, 5 of Hearts, Q of Clubs
+The previous raise was $3
+You have $287
+Enter your bet, or $0 to fold: 3
+Player 000001476AC3F8E0 Calls
+
+Player 000001476AC39E40 Calls
+
+Player 000001476AC39E40 discarded 3 cards
+
+Player 000001476AC37E50 discarded 4 cards
+
+Player 000001476AC3F8E0's Turn to Discard
+You may discard up to 5 cards.
+8 of Diamonds, 7 of Diamonds, 10 of Clubs, 5 of Hearts, Q of Clubs
+Choose a card to discard (1-5), or 0 to Stop: 0
+Player 000001476AC3F8E0 discarded 0 cards
+
+Player 000001476AC39E40 Calls
+
+Player 000001476AC37E50 is All In
+
+Player 000001476AC3F8E0's Turn
+Your Cards: 8 of Diamonds, 7 of Diamonds, 10 of Clubs, 5 of Hearts, Q of Clubs
+The previous raise was $0
+You have $284
+Enter your bet, or $0 to fold: 0
+Player 000001476AC3F8E0 Calls
+
+Player 000001476AC3F8E0's hand: 8 of Diamonds, 7 of Diamonds, 10 of Clubs, 5 of Hearts, Q of Clubs
+Player 000001476AC39E40's hand: 7 of Spades, 9 of Clubs, 8 of Spades, 4 of Diamonds, 4 of Clubs
+Player 000001476AC37E50's hand: 3 of Clubs, K of Diamonds, 10 of Hearts, K of Spades, J of Spades
+Player 000001476AC37E50 Wins $8
+
+Player 000001476AC37E50 is the Small Blind
+Player 000001476AC37E50 bet $3
+
+Player 000001476AC3F8E0 is the Big Blind
+Player 000001476AC3F8E0's Turn
+Your Cards: 8 of Clubs, A of Clubs, 6 of Clubs, A of Diamonds, 7 of Spades
+Minimum Bet is $6
+The previous raise was $3
+You have $284
+Enter your bet, or $0 to fold: 6
+Player 000001476AC3F8E0 bet $6
+
+Player 000001476AC39E40 Calls
+
+Player 000001476AC37E50 Calls
+
+Player 000001476AC3F8E0's Turn
+Your Cards: 8 of Clubs, A of Clubs, 6 of Clubs, A of Diamonds, 7 of Spades
+The previous raise was $0
+You have $278
+Enter your bet, or $0 to fold: 1
+Player 000001476AC3F8E0 Raises $1
+
+Player 000001476AC39E40 Calls
+
+Player 000001476AC37E50 Calls
+
+Player 000001476AC3F8E0's Turn
+Your Cards: 8 of Clubs, A of Clubs, 6 of Clubs, A of Diamonds, 7 of Spades
+The previous raise was $0
+You have $277
+Enter your bet, or $0 to fold: 1
+Player 000001476AC3F8E0 Raises $1
+
+Player 000001476AC39E40 Folds
+
+Player 000001476AC37E50 Folds
+
+Player 000001476AC3F8E0's Turn
+Your Cards: 8 of Clubs, A of Clubs, 6 of Clubs, A of Diamonds, 7 of Spades
+The previous raise was $0
+You have $276
+Enter your bet, or $0 to fold: 1
+Player 000001476AC3F8E0 Raises $1
+
+Player 000001476AC3F8E0's Turn
+Your Cards: 8 of Clubs, A of Clubs, 6 of Clubs, A of Diamonds, 7 of Spades
+The previous raise was $0
+You have $275
+Enter your bet, or $0 to fold: 1
+Player 000001476AC3F8E0 Raises $1
+
+Player 000001476AC3F8E0's Turn
+Your Cards: 8 of Clubs, A of Clubs, 6 of Clubs, A of Diamonds, 7 of Spades
+The previous raise was $0
+You have $274
+Enter your bet, or $0 to fold: 1
+Player 000001476AC3F8E0 Raises $1
+
+Player 000001476AC3F8E0's Turn
+Your Cards: 8 of Clubs, A of Clubs, 6 of Clubs, A of Diamonds, 7 of Spades
+The previous raise was $0
+You have $273
+Enter your bet, or $0 to fold: 1
+Player 000001476AC3F8E0 Raises $1
+
+Player 000001476AC3F8E0's Turn
+Your Cards: 8 of Clubs, A of Clubs, 6 of Clubs, A of Diamonds, 7 of Spades
+The previous raise was $0
+You have $272
+Enter your bet, or $0 to fold: 0
+Player 000001476AC3F8E0 Calls
+
+Player 000001476AC3F8E0's Turn to Discard
+You may discard up to 5 cards.
+8 of Clubs, A of Clubs, 6 of Clubs, A of Diamonds, 7 of Spades
+Choose a card to discard (1-5), or 0 to Stop: 0
+Player 000001476AC3F8E0 discarded 0 cards
+
+Player 000001476AC3F8E0's hand: 8 of Clubs, A of Clubs, 6 of Clubs, A of Diamonds, 7 of Spades
+Player 000001476AC3F8E0 Wins $26
+
+Player 000001476AC3F8E0 is the Small Blind
+Player 000001476AC3F8E0's Turn
+Your Cards: 10 of Diamonds, Q of Diamonds, A of Spades, K of Hearts, 9 of Clubs
+Minimum Bet is $3
+The previous raise was $0
+You have $298
+Enter your bet, or $0 to fold: 3
+Player 000001476AC3F8E0 bet $3
+
+Player 000001476AC39E40 is the Big Blind
+Player 000001476AC39E40 bet $1
+
+Player 000001476AC37E50 Folds
+
+Player 000001476AC3F8E0's Turn
+Your Cards: 10 of Diamonds, Q of Diamonds, A of Spades, K of Hearts, 9 of Clubs
+The previous raise was $0
+You have $295
+Enter your bet, or $0 to fold: 1
+Player 000001476AC3F8E0 Raises $1
+
+Player 000001476AC3F8E0's Turn
+Your Cards: 10 of Diamonds, Q of Diamonds, A of Spades, K of Hearts, 9 of Clubs
+The previous raise was $0
+You have $294
+Enter your bet, or $0 to fold: 0
+Player 000001476AC3F8E0 Calls
+
+Player 000001476AC3F8E0's Turn to Discard
+You may discard up to 5 cards.
+10 of Diamonds, Q of Diamonds, A of Spades, K of Hearts, 9 of Clubs
+Choose a card to discard (1-5), or 0 to Stop: 0
+Player 000001476AC3F8E0 discarded 0 cards
+
+Player 000001476AC39E40 discarded 4 cards
+
+Player 000001476AC3F8E0's Turn
+Your Cards: 10 of Diamonds, Q of Diamonds, A of Spades, K of Hearts, 9 of Clubs
+The previous raise was $0
+You have $294
+Enter your bet, or $0 to fold: 0
+Player 000001476AC3F8E0 Calls
+
+Player 000001476AC39E40 is All In
+
+Player 000001476AC3F8E0's hand: 10 of Diamonds, Q of Diamonds, A of Spades, K of Hearts, 9 of Clubs
+Player 000001476AC39E40's hand: 4 of Clubs, 8 of Hearts, 8 of Clubs, 7 of Spades, 5 of Clubs
+Player 000001476AC39E40 Wins $5
+
+Player 000001476AC39E40 is the Small Blind
+Player 000001476AC39E40 bet $3
+
+Player 000001476AC37E50 is the Big Blind
+Player 000001476AC37E50 bet $1
+
+Player 000001476AC3F8E0's Turn
+Your Cards: Q of Spades, 2 of Clubs, K of Clubs, 4 of Diamonds, A of Spades
+The previous raise was $3
+You have $294
+Enter your bet, or $0 to fold: 3
+Player 000001476AC3F8E0 Calls
+
+Player 000001476AC39E40 Calls
+
+Player 000001476AC39E40 discarded 4 cards
+
+Player 000001476AC37E50 discarded 0 cards
+
+Player 000001476AC3F8E0's Turn to Discard
+You may discard up to 5 cards.
+Q of Spades, 2 of Clubs, K of Clubs, 4 of Diamonds, A of Spades
+Choose a card to discard (1-5), or 0 to Stop: 2
+Q of Spades, K of Clubs, 4 of Diamonds, A of Spades
+Choose a card to discard (1-4), or 0 to Stop: 3
+Q of Spades, K of Clubs, A of Spades
+Choose a card to discard (1-3), or 0 to Stop: 0
+Player 000001476AC3F8E0 discarded 2 cards
+
+Player 000001476AC39E40 Calls
+
+Player 000001476AC37E50 is All In
+
+Player 000001476AC3F8E0's Turn
+Your Cards: Q of Spades, K of Clubs, A of Spades, J of Spades, 10 of Clubs
+The previous raise was $0
+You have $291
+Enter your bet, or $0 to fold: 1
+Player 000001476AC3F8E0 Raises $1
+
+Player 000001476AC39E40 Calls
+
+Player 000001476AC3F8E0's Turn
+Your Cards: Q of Spades, K of Clubs, A of Spades, J of Spades, 10 of Clubs
+The previous raise was $0
+You have $290
+Enter your bet, or $0 to fold: 1
+Player 000001476AC3F8E0 Raises $1
+
+Player 000001476AC39E40 Folds
+
+Player 000001476AC3F8E0's Turn
+Your Cards: Q of Spades, K of Clubs, A of Spades, J of Spades, 10 of Clubs
+The previous raise was $0
+You have $289
+Enter your bet, or $0 to fold: 0
+Player 000001476AC3F8E0 Calls
+
+Player 000001476AC3F8E0's hand: Q of Spades, K of Clubs, A of Spades, J of Spades, 10 of Clubs
+Player 000001476AC37E50's hand: 2 of Diamonds, 4 of Clubs, 9 of Hearts, K of Hearts, A of Clubs
+Player 000001476AC3F8E0 Wins $10
+
+Player 000001476AC37E50 is out of funds.
+Player 000001476AC3F8E0 is the Small Blind
+Player 000001476AC3F8E0's Turn
+Your Cards: 5 of Spades, Q of Spades, K of Spades, 10 of Diamonds, A of Hearts
+Minimum Bet is $3
+The previous raise was $0
+You have $299
+Enter your bet, or $0 to fold: 3
+Player 000001476AC3F8E0 bet $3
+
+Player 000001476AC39E40 is the Big Blind
+Player 000001476AC39E40 bet $1
+
+Player 000001476AC3F8E0's Turn
+Your Cards: 5 of Spades, Q of Spades, K of Spades, 10 of Diamonds, A of Hearts
+The previous raise was $0
+You have $296
+Enter your bet, or $0 to fold: 0
+Player 000001476AC3F8E0 Calls
+
+Player 000001476AC3F8E0's Turn to Discard
+You may discard up to 5 cards.
+5 of Spades, Q of Spades, K of Spades, 10 of Diamonds, A of Hearts
+Choose a card to discard (1-5), or 0 to Stop: 0
+Player 000001476AC3F8E0 discarded 0 cards
+
+Player 000001476AC39E40 discarded 1 cards
+
+Player 000001476AC3F8E0's Turn
+Your Cards: 5 of Spades, Q of Spades, K of Spades, 10 of Diamonds, A of Hearts
+The previous raise was $0
+You have $296
+Enter your bet, or $0 to fold: 0
+Player 000001476AC3F8E0 Calls
+
+Player 000001476AC39E40 is All In
+
+Player 000001476AC3F8E0's hand: 5 of Spades, Q of Spades, K of Spades, 10 of Diamonds, A of Hearts
+Player 000001476AC39E40's hand: 3 of Spades, 7 of Diamonds, 10 of Spades, K of Hearts, 10 of Clubs
+Player 000001476AC39E40 Wins $4
+
+Player 000001476AC39E40 is the Small Blind
+Player 000001476AC39E40 bet $3
+
+Player 000001476AC3F8E0 is the Big Blind
+Player 000001476AC3F8E0's Turn
+Your Cards: 3 of Clubs, K of Spades, J of Spades, 5 of Hearts, J of Clubs
+Minimum Bet is $6
+The previous raise was $3
+You have $296
+Enter your bet, or $0 to fold: 6
+Player 000001476AC3F8E0 bet $6
+
+Player 000001476AC39E40 Folds
+
+Player 000001476AC3F8E0's Turn
+Your Cards: 3 of Clubs, K of Spades, J of Spades, 5 of Hearts, J of Clubs
+The previous raise was $0
+You have $290
+Enter your bet, or $0 to fold: 0
+Player 000001476AC3F8E0 Calls
+
+Player 000001476AC3F8E0's Turn to Discard
+You may discard up to 5 cards.
+3 of Clubs, K of Spades, J of Spades, 5 of Hearts, J of Clubs
+Choose a card to discard (1-5), or 0 to Stop: 0
+Player 000001476AC3F8E0 discarded 0 cards
+
+Player 000001476AC3F8E0's hand: 3 of Clubs, K of Spades, J of Spades, 5 of Hearts, J of Clubs
+Player 000001476AC3F8E0 Wins $9
+
+Player 000001476AC3F8E0 is the Small Blind
+Player 000001476AC3F8E0's Turn
+Your Cards: 4 of Clubs, 6 of Clubs, 7 of Hearts, 2 of Clubs, 10 of Diamonds
+Minimum Bet is $3
+The previous raise was $0
+You have $299
+Enter your bet, or $0 to fold: 3
+Player 000001476AC3F8E0 bet $3
+
+Player 000001476AC39E40 is the Big Blind
+Player 000001476AC39E40 bet $1
+
+Player 000001476AC3F8E0's Turn
+Your Cards: 4 of Clubs, 6 of Clubs, 7 of Hearts, 2 of Clubs, 10 of Diamonds
+The previous raise was $0
+You have $296
+Enter your bet, or $0 to fold: 0
+Player 000001476AC3F8E0 Calls
+
+Player 000001476AC3F8E0's Turn to Discard
+You may discard up to 5 cards.
+4 of Clubs, 6 of Clubs, 7 of Hearts, 2 of Clubs, 10 of Diamonds
+Choose a card to discard (1-5), or 0 to Stop: 1
+6 of Clubs, 7 of Hearts, 2 of Clubs, 10 of Diamonds
+Choose a card to discard (1-4), or 0 to Stop: 1
+7 of Hearts, 2 of Clubs, 10 of Diamonds
+Choose a card to discard (1-3), or 0 to Stop: 1
+2 of Clubs, 10 of Diamonds
+Choose a card to discard (1-2), or 0 to Stop: 1
+10 of Diamonds
+Choose a card to discard (1-1), or 0 to Stop: 1
+Player 000001476AC3F8E0 discarded 5 cards
+
+Player 000001476AC39E40 discarded 4 cards
+
+Player 000001476AC3F8E0's Turn
+Your Cards: 9 of Spades, Q of Clubs, 3 of Clubs, 9 of Diamonds, J of Clubs
+The previous raise was $0
+You have $296
+Enter your bet, or $0 to fold: 0
+Player 000001476AC3F8E0 Calls
+
+Player 000001476AC39E40 is All In
+
+Player 000001476AC3F8E0's hand: 9 of Spades, Q of Clubs, 3 of Clubs, 9 of Diamonds, J of Clubs
+Player 000001476AC39E40's hand: 6 of Hearts, 4 of Diamonds, 2 of Hearts, 10 of Hearts, 8 of Clubs
+Player 000001476AC3F8E0 Wins $4
+
+Player 000001476AC39E40 is out of funds.
