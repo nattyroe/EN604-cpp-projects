@@ -37,9 +37,9 @@ public:
 
     /// Getter for cards left in deck
     /// Return the number of cards remaining in the deck
-    int cardsRemaining() { return this->unused_cards.size(); };
+    int cardsRemaining() { return this->unusedCards.size(); };
 
 private:
-    vector<Card> unused_cards;
-    vector<Card> dealt_cards;
+    vector<Card> unusedCards;
+    vector<Card> dealtCards;
 };

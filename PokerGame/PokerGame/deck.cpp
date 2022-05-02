@@ -27,7 +27,7 @@ Deck::Deck()
         for (Card::Value value : values)
         {
             Card *card = new Card(value, suit);
-            this->unused_cards.push_back(*card);
+            this->unusedCards.push_back(*card);
         }
     }
 } // End Deck constructor
@@ -36,31 +36,31 @@ Deck::Deck()
 void Deck::shuffle()
 {
     // Return dealt cards to deck
-    while (!this->dealt_cards.empty())
+    while (!this->dealtCards.empty())
     {
-        this->unused_cards.push_back(this->dealt_cards.back());
-        this->dealt_cards.pop_back();
+        this->unusedCards.push_back(this->dealtCards.back());
+        this->dealtCards.pop_back();
     }
-    sort(this->unused_cards.begin(), this->unused_cards.end());
+    sort(this->unusedCards.begin(), this->unusedCards.end());
 
     // Shuffle using Fisher-Yates (https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle)
-    for (unsigned int idx = 0; idx < this->unused_cards.size(); ++idx)
+    for (unsigned int idx = 0; idx < this->unusedCards.size(); ++idx)
     {
-        int swapIdx = rand() % this->unused_cards.size();
-        swap(this->unused_cards[idx], this->unused_cards[swapIdx]);
+        int swapIdx = rand() % this->unusedCards.size();
+        swap(this->unusedCards[idx], this->unusedCards[swapIdx]);
     }
 } // End function shuffle
 
 // Deal a card
 Card *Deck::deal()
 {
-    if (!this->unused_cards.empty())
+    if (!this->unusedCards.empty())
     {
         // Shift card from unused to dealt
-        this->dealt_cards.push_back(this->unused_cards.back());
-        this->unused_cards.pop_back();
+        this->dealtCards.push_back(this->unusedCards.back());
+        this->unusedCards.pop_back();
         // Return pointer to dealt card
-        return &this->dealt_cards.back();
+        return &this->dealtCards.back();
     }
     // Throw error if deck is empty
     else
